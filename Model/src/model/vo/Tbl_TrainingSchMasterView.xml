@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_TrainingSchMasterView"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Proj_Comp_Name_LOV1_1"
+    ViewObjectName="model.lov.Proj_Comp_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Proj_Comp_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Course_Name_LOV1_1"
+    ViewObjectName="model.lov.Course_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Course_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Module_Name_LOV1_1"
+    ViewObjectName="model.lov.Module_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Module_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Cluster_Name_LOV1_1"
+    ViewObjectName="model.lov.Cluster_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Cluster_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Team_Name_LOV1_1"
+    ViewObjectName="model.lov.Team_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Team_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ProjCompId"
+    ListVOName="AppModule_Proj_Comp_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjCompId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ProjCompId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CourseId"
+    ListVOName="AppModule_Course_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CourseId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CourseId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ModuleId"
+    ListVOName="AppModule_Module_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ModuleId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ModuleId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ClusterId"
+    ListVOName="AppModule_Cluster_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TeamId"
+    ListVOName="AppModule_Team_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TeamId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="TeamId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="Tbl_TrainingSchMaster"
+    Entity="model.eo.Tbl_TrainingSchMaster"/>
+  <EntityUsage
+    Name="Tbl_ProjComp"
+    Entity="model.eo.Tbl_ProjComp"
+    Association="model.eo.FkTblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.FkTblTrainingSchMasterFkAssoc.Tbl_ProjComp"
+    SourceUsage="model.vo.Tbl_TrainingSchMasterView.Tbl_TrainingSchMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_ProjComp.ProjCompId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_TrainingSchMaster.ProjCompId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="Tbl_Course"
+    Entity="model.eo.Tbl_Course"
+    Association="model.eo.Fk2TblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.Fk2TblTrainingSchMasterFkAssoc.Tbl_Course"
+    SourceUsage="model.vo.Tbl_TrainingSchMasterView.Tbl_TrainingSchMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_Course.CourseId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_TrainingSchMaster.CourseId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="Tbl_Module"
+    Entity="model.eo.Tbl_Module"
+    Association="model.eo.Fk3TblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.Fk3TblTrainingSchMasterFkAssoc.Tbl_Module"
+    SourceUsage="model.vo.Tbl_TrainingSchMasterView.Tbl_TrainingSchMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_Module.ModuleId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_TrainingSchMaster.ModuleId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="Tbl_Cluster"
+    Entity="model.eo.Tbl_Cluster"
+    Association="model.eo.Fk4TblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.Fk4TblTrainingSchMasterFkAssoc.Tbl_Cluster"
+    SourceUsage="model.vo.Tbl_TrainingSchMasterView.Tbl_TrainingSchMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_Cluster.ClusterId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_TrainingSchMaster.ClusterId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="Tbl_Team"
+    Entity="model.eo.Tbl_Team"
+    Association="model.eo.Fk5TblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.Fk5TblTrainingSchMasterFkAssoc.Tbl_Team"
+    SourceUsage="model.vo.Tbl_TrainingSchMasterView.Tbl_TrainingSchMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_Team.TeamId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_TrainingSchMaster.TeamId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="Tbl_Trainer"
+    Entity="model.eo.Tbl_Trainer"
+    Association="model.eo.Fk6TblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.Fk6TblTrainingSchMasterFkAssoc.Tbl_Trainer"
+    SourceUsage="model.vo.Tbl_TrainingSchMasterView.Tbl_TrainingSchMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_Trainer.TrainerId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_TrainingSchMaster.TrainerId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="TrainingSchMasterId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TrainingSchMasterId"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="TRAINING_SCH_MASTER_ID"/>
+  <ViewAttribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjCompId"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="PROJ_COMP_ID"
+    LOVName="LOV_ProjCompId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CourseId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CourseId"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="COURSE_ID"
+    LOVName="LOV_CourseId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ModuleId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ModuleId"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="MODULE_ID"
+    LOVName="LOV_ModuleId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ClusterId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ClusterId"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="CLUSTER_ID"
+    LOVName="LOV_ClusterId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="TeamId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TeamId"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="TEAM_ID"
+    LOVName="LOV_TeamId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="TrainerId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TrainerId"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="TRAINER_ID"/>
+  <ViewAttribute
+    Name="Dated"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="DATED"/>
+  <ViewAttribute
+    Name="Status"
+    PrecisionRule="true"
+    EntityAttrName="Status"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="STATUS"/>
+  <ViewAttribute
+    Name="Mon"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Mon"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="MON"/>
+  <ViewAttribute
+    Name="StDate"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="StDate"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="ST_DATE"/>
+  <ViewAttribute
+    Name="EnDate"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="EnDate"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="EN_DATE"/>
+  <ViewAttribute
+    Name="Remarks"
+    PrecisionRule="true"
+    EntityAttrName="Remarks"
+    EntityUsage="Tbl_TrainingSchMaster"
+    AliasName="REMARKS"/>
+  <ViewAttribute
+    Name="Proj_Comp_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_ProjComp"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="ProjCompId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjCompId"
+    EntityUsage="Tbl_ProjComp"
+    AliasName="PROJ_COMP_ID1"/>
+  <ViewAttribute
+    Name="Course_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_Course"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="CourseId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CourseId"
+    EntityUsage="Tbl_Course"
+    AliasName="COURSE_ID1"/>
+  <ViewAttribute
+    Name="Module_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_Module"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="ModuleId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ModuleId"
+    EntityUsage="Tbl_Module"
+    AliasName="MODULE_ID1"/>
+  <ViewAttribute
+    Name="Cluster_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_Cluster"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="ClusterId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ClusterId"
+    EntityUsage="Tbl_Cluster"
+    AliasName="CLUSTER_ID1"/>
+  <ViewAttribute
+    Name="Team_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_Team"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="TeamId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TeamId"
+    EntityUsage="Tbl_Team"
+    AliasName="TEAM_ID1"/>
+  <ViewAttribute
+    Name="Trainer_Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_Trainer"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="TrainerId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TrainerId"
+    EntityUsage="Tbl_Trainer"
+    AliasName="TRAINER_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="TrainingSchMasterId"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="Tbl_TrainingSchDetailView"
+    ViewLink="model.vo.FkTblTrainingSchDetailFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblProjCompView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink2"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblCourseView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink3"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblModuleView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink4"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblClusterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink5"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+</ViewObject>

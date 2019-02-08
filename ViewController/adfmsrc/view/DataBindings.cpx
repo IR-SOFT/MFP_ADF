@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Program.jsf" usageId="view_Prog_SetupPageDef"/>
+    <page path="/Project.jsf" usageId="view_Project_SetupPageDef"/>
+    <page path="/Project_Crops.jsf" usageId="view_Project_CropsPageDef"/>
+    <page path="/mainPage.jsf" usageId="view_mainPagePageDef"/>
+    <page path="/Project_Components.jsf" usageId="view_Project_ComponentsPageDef"/>
+    <page path="/Clusters_Setup.jsf" usageId="view_Clusters_SetupPageDef"/>
+    <page path="/untitled1.jsf" usageId="view_untitled1PageDef"/>
+    <page path="/Course_Setup.jsf" usageId="view_course_setupPageDef"/>
+    <page path="/Module_Setup.jsf" usageId="view_Module_SetupPageDef"/>
+    <page path="/Topic_Setup.jsf" usageId="view_Topic_SetupPageDef"/>
+    <page path="/Output_Indicators.jsf" usageId="view_Output_IndicatorsPageDef"/>
+    <page path="/Monitoring_Parameters.jsf" usageId="view_Monitoring_ParametersPageDef"/>
+    <page path="/Target_Crops.jsf" usageId="view_Target_CropsPageDef"/>
+    <page path="/Certification_Setup.jsf" usageId="view_Certification_SetupPageDef"/>
+    <page path="/Farmer_Registration.jsf" usageId="view_Farmer_RegistrationPageDef"/>
+    <page path="/Cluster_Detail.jsf" usageId="view_Cluster_DetailPageDef"/>
+    <page path="/Team_Setup.jsf" usageId="view_Team_SetupPageDef"/>
+    <page path="/Trainer.jsf" usageId="view_TrainerPageDef"/>
+    <page path="/Training_Setup.jsf" usageId="view_Training_SetupPageDef"/>
+    <page path="/Training_Sched.jsf" usageId="view_Training_SchedPageDef"/>
+    <page path="/Supplier_Setup.jsf" usageId="view_Supplier_SetupPageDef"/>
+    <page path="/Supplier_Rate_Setup.jsf" usageId="view_Supplier_Rate_SetupPageDef"/>
+    <page path="/Machinery_Setup.jsf" usageId="view_Machinery_SetupPageDef"/>
+    <page path="/Attendance_Detail.jsf" usageId="view_Attendance_DetailPageDef"/>
+    <page path="/Library.jsf" usageId="view_LibraryPageDef"/>
+    <page path="/Users.jsf" usageId="view_UsersPageDef"/>
+    <page path="/Users_Role.jsf" usageId="view_Users_RolePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
+    <page id="view_Prog_SetupPageDef" path="view.pageDefs.Prog_SetupPageDef"/>
+    <page id="view_Project_SetupPageDef" path="view.pageDefs.Project_SetupPageDef"/>
+    <page id="view_Project_CropsPageDef" path="view.pageDefs.Project_CropsPageDef"/>
+    <page id="view_Prog_OfficesPageDef" path="view.pageDefs.Prog_OfficesPageDef"/>
+    <page id="view_mainPagePageDef" path="view.pageDefs.mainPagePageDef"/>
+    <page id="view_Project_ComponentsPageDef" path="view.pageDefs.Project_ComponentsPageDef"/>
+    <page id="view_Clusters_SetupPageDef" path="view.pageDefs.Clusters_SetupPageDef"/>
+    <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
+    <page id="view_course_setupPageDef" path="view.pageDefs.course_setupPageDef"/>
+    <page id="view_Module_SetupPageDef" path="view.pageDefs.Module_SetupPageDef"/>
+    <page id="view_Topic_SetupPageDef" path="view.pageDefs.Topic_SetupPageDef"/>
+    <page id="view_Output_IndicatorsPageDef" path="view.pageDefs.Output_IndicatorsPageDef"/>
+    <page id="view_Monitoring_ParametersPageDef" path="view.pageDefs.Monitoring_ParametersPageDef"/>
+    <page id="view_Target_CropsPageDef" path="view.pageDefs.Target_CropsPageDef"/>
+    <page id="view_Certification_SetupPageDef" path="view.pageDefs.Certification_SetupPageDef"/>
+    <page id="view_Farmer_RegistrationPageDef" path="view.pageDefs.Farmer_RegistrationPageDef"/>
+    <page id="view_Cluster_DetailPageDef" path="view.pageDefs.Cluster_DetailPageDef"/>
+    <page id="view_Team_SetupPageDef" path="view.pageDefs.Team_SetupPageDef"/>
+    <page id="view_TrainerPageDef" path="view.pageDefs.TrainerPageDef"/>
+    <page id="view_Training_SetupPageDef" path="view.pageDefs.Training_SetupPageDef"/>
+    <page id="view_Training_SchedPageDef" path="view.pageDefs.Training_SchedPageDef"/>
+    <page id="view_Supplier_SetupPageDef" path="view.pageDefs.Supplier_SetupPageDef"/>
+    <page id="view_Supplier_Rate_SetupPageDef" path="view.pageDefs.Supplier_Rate_SetupPageDef"/>
+    <page id="view_Machinery_SetupPageDef" path="view.pageDefs.Machinery_SetupPageDef"/>
+    <page id="view_Attendance_DetailPageDef" path="view.pageDefs.Attendance_DetailPageDef"/>
+    <page id="view_LibraryPageDef" path="view.pageDefs.LibraryPageDef"/>
+    <page id="view_UsersPageDef" path="view.pageDefs.UsersPageDef"/>
+    <page id="view_Users_RolePageDef" path="view.pageDefs.Users_RolePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl1" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl2" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl3" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl4" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl5" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl6" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl7" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl8" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView"
+                 listener="#{backingBeanScope.backing_login.checkSession('Monitoring_Parameters')}"/>
+    </f:metadata>
+    <af:document title="Monitoring_Parameters.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
+                                <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;"
+                                                   rendered="#{backingBeanScope.backing_login.get_user_role_master_name() != null}">
+                                    <af:showDetailItem id="sdi1" text="Monitoring">
+                                        <af:spacer width="190" height="10" id="s1"/>
+                                        <af:button text="Project Components" id="b1" inlineStyle="width:190px;"
+                                                   destination="Project_Components.jsf"
+                                                   icon="#{resource['images:project_components.png']}"/>
+                                        <af:spacer width="190" height="10" id="s3"/>
+                                        <af:button id="b3" inlineStyle="width:190px;" text="Output Indicators"
+                                                   destination="Output_Indicators.jsf"
+                                                   icon="#{resource['images:output_indicator.png']}"/>
+                                        <af:spacer width="190" height="10" id="s5"/>
+                                        <af:button id="b5" inlineStyle="width:190px;" text="Monitoring Parameters"
+                                                   destination="Monitoring_Parameters.jsf"
+                                                   icon="#{resource['images:monitoring_parameteres.png']}"/>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == 'Y'}"
+                                                   inlineStyle="height:811px; width:1030px;">
+                                    <af:showDetailItem id="pane2" text="Monitoring Parameters">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:665px;">
+                                                        <af:showDetailItem id="tab1" text="Output Indicators">
+                                                            <af:table value="#{bindings.TblMonitoringOutputIndView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblMonitoringOutputIndView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblMonitoringOutputIndView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblMonitoringOutputIndView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblMonitoringOutputIndView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblMonitoringOutputIndView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblMonitoringOutputIndView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblMonitoringOutputIndView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1" width="648">
+                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Project_Comp_Output_Name.name}"
+                                                                           filterable="true"
+                                                                           headerText="Output Component" id="c10"
+                                                                           width="250">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Project_Comp_Output_Name}"
+                                                                                      id="id4" placeholder="Search Output Component">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
+                                                                    <af:outputText value="#{row.Project_Comp_Output_Name}"
+                                                                                   shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.Project_Comp_Output_Name.tooltip}"
+                                                                                   id="ot5"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Name.name}"
+                                                                           filterable="true"
+                                                                           headerText="Output Indicator" id="c3"
+                                                                           width="300">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     
+                                                                                     id="it5" placeholder="Search Output Indicator">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                            
+                                                                    <af:outputText value="#{row.Name}"
+                                                                                   shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.Name.tooltip}"
+                                                                                   id="ot3"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Ast.name}"
+                                                                           filterable="true" headerText="Active" id="c4"
+                                                                           width="60">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it6" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
+                                                                    <af:outputText value="#{row.Ast}"
+                                                                                   shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.Ast.tooltip}"
+                                                                                   id="ot4"/>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:935px;">
+                                                        <af:showDetailItem id="tab2" text="Monitoring Parameters">
+                                                            <af:table value="#{bindings.TblMonitoringMonParamView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblMonitoringMonParamView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblMonitoringMonParamView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblMonitoringMonParamView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblMonitoringMonParamView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblMonitoringMonParamView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblMonitoringMonParamView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblMonitoringMonParamView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b4 ::b6 ::b7" width="918">
+                                                                <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           align="center"
+                                                                           headerText="Output Indicator ID" id="c6"
+                                                                           width="80">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.OutputIndId}"
+                                                                                     id="it7" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
+                                                                    <af:inputText value="#{row.bindings.OutputIndId.inputValue}"
+                                                                                  label="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.label}"
+                                                                                  required="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.mandatory}"
+                                                                                  columns="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.precision}"
+                                                                                  shortDesc="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.tooltip}"
+                                                                                  id="it2" >
+                                                                        <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           align="center"
+                                                                           headerText="Monitoring Parameter ID" id="c5"
+                                                                           width="90">
+                                                                           
+                                                                               <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.MonParamId}"
+                                                                                    id="it8" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
+                                                                    <af:inputText value="#{row.bindings.MonParamId.inputValue}"
+                                                                                  label="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.label}"
+                                                                                  required="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.mandatory}"
+                                                                                  columns="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.precision}"
+                                                                                  shortDesc="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.tooltip}"
+                                                                                  id="it1" readOnly="true">
+                                                                        <f:validator binding="#{row.bindings.MonParamId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Monitoring Parameter" id="c7"
+                                                                           width="350">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it9" placeholder="Search Monitoring Parameter">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblMonitoringMonParamView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblMonitoringMonParamView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblMonitoringMonParamView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblMonitoringMonParamView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblMonitoringMonParamView3.hints.Name.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Perc.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Perquisites" id="c8" width="275">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Perc}"
+                                                                                      id="it10" placeholder="Search Perquisites">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
+                                                                    <af:inputText value="#{row.bindings.Perc.inputValue}"
+                                                                                  label="#{bindings.TblMonitoringMonParamView3.hints.Perc.label}"
+                                                                                  required="#{bindings.TblMonitoringMonParamView3.hints.Perc.mandatory}"
+                                                                                  columns="#{bindings.TblMonitoringMonParamView3.hints.Perc.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblMonitoringMonParamView3.hints.Perc.precision}"
+                                                                                  shortDesc="#{bindings.TblMonitoringMonParamView3.hints.Perc.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Perc.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblMonitoringMonParamView3.hints.Perc.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active" id="c9" width="60">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it11" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblMonitoringMonParamView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblMonitoringMonParamView3.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:spacer width="320" height="20" id="s2"/>
+                                                    <h:panelGroup id="pg1">
+                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                                   text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
+                                                                   icon="#{resource['images:add.png']}"
+                                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b4"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
+                                                                   text="Edit"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
+                                                                   icon="#{resource['images:edit.png']}"
+                                                                   disabled="#{!bindings.Execute.enabled}" id="b6"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}"
+                                                                   text="Delete" disabled="#{!bindings.Delete.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
+                                                                   icon="#{resource['images:delete.png']}" id="b7"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s7"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                   icon="#{resource['images:save.png']}" text="Save"
+                                                                   disabled="#{!bindings.Commit.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
+                                                                   id="b8"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                    </h:panelGroup>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"/>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>
