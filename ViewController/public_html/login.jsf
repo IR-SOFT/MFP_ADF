@@ -46,14 +46,15 @@
                                 <af:spacer width="115" height="100" id="s9"
                                            binding="#{backingBeanScope.backing_login.s9}"/>
                                 <af:image id="i4" binding="#{backingBeanScope.backing_login.i4}"
-                                          source="#{resource['images:main_login.png']}"
-                                          inlineStyle="width:67px; height:63px;"/>
+                                          inlineStyle="width:67px; height:63px;"
+                                          source="#{resource['images:login.png']}"/>
                                 <af:panelGroupLayout layout="horizontal" id="pgl2"
                                                      binding="#{backingBeanScope.backing_login.pgl2}">
                                     <af:spacer width="10" height="10" id="s5"
                                                binding="#{backingBeanScope.backing_login.s5}"/>
-                                    <af:image source="#{resource['images:user_login.png']}" id="i3"
-                                              binding="#{backingBeanScope.backing_login.i3}"/>
+                                    <af:image id="i3"
+                                              binding="#{backingBeanScope.backing_login.i3}"
+                                              source="#{resource['images:useer_loogin.png']}"/>
                                     <af:inputText id="it1" binding="#{backingBeanScope.backing_login.it1}"
                                                   placeholder="User Name" columns="30" rows="1"/>
                                 </af:panelGroupLayout>
@@ -67,8 +68,9 @@
                                               source="#{resource['images:password_login.png']}"/>
                                     <af:inputText id="it2" binding="#{backingBeanScope.backing_login.it2}"
                                                   placeholder="Password" columns="30" rows="1"/>
-                                
                                 </af:panelGroupLayout>
+                                 <af:spacer width="10" height="100" id="s1"
+                                               binding="#{backingBeanScope.backing_login.s6}"/>
                                
                                 <af:panelGroupLayout id="pgl4" binding="#{backingBeanScope.backing_login.pgl4}">
                                     <af:spacer width="50" height="20" id="s4"
