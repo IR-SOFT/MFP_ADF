@@ -122,21 +122,24 @@
                                                                    text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                    rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
                                                                    id="b6" icon="#{resource['images:edit.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   destination="Certification_Setup.jsf"
+                                                                   />
                                                         <af:spacer width="5" height="10" id="s6"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
                                                                    id="b7"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;" immediate="true"/>
                                                         <af:spacer width="5" height="10" id="s7"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
                                                                    id="b8"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:save.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   />
                                                         <af:button actionListener="#{bindings.removeRowWithKey.execute}"
                                                                    text="removeRowWithKey"
                                                                    disabled="#{!bindings.removeRowWithKey.enabled}"
