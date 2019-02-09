@@ -1010,13 +1010,6 @@ public class Login {
         return s2;
     }
 
-    public void setS3(RichSpacer s3) {
-        this.s3 = s3;
-    }
-
-    public RichSpacer getS3() {
-        return s3;
-    }
 
     public void setPg1(HtmlPanelGroup pg1) {
         this.pg1 = pg1;
@@ -1169,6 +1162,15 @@ public class Login {
 
     public RichLink getL1() {
         return l1;
+    }
+
+
+    public void setS3(RichSpacer s3) {
+        this.s3 = s3;
+    }
+
+    public RichSpacer getS3() {
+        return s3;
     }
 }
 
