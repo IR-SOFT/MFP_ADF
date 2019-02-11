@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblCropType"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_CROP_TYPE"
+  AliasName="TblCropType"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="CropTypeId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CROP_TYPE_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CROP_TYPE"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CropId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CROP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CROP_TYPE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CROP_TYPE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblCrop"
+    Association="model.eo.FKTblCropTypeFKAssoc"
+    AssociationEnd="model.eo.FKTblCropTypeFKAssoc.TblCrop"
+    AssociationOtherEnd="model.eo.FKTblCropTypeFKAssoc.TblCropType"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <ViewLinkAccessor
+    Name="TblCropView"
+    ViewLink="model.vo.FKTblCropTypeFKLink"
+    ViewLinkEnd="model.vo.FKTblCropTypeFKLink.TblCropView"
+    ViewLinkOtherEnd="model.vo.FKTblCropTypeFKLink.TblCropTypeView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblCropTypePk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_CROP_TYPE_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblCropType.CropTypeId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblCropTypeUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_CROP_TYPE_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblCropType.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblCropTypeFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_CROP_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_CROP_TYPE_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblCropType.CropId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TblCropType">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_CROP_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_CROP_TYPE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblCropType.CropId"/>
+    </AttrArray>
+  </Key>
+</Entity>

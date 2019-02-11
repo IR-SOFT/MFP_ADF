@@ -184,4 +184,9 @@
     ViewLink="model.vo.FKTblClusterTargetCropsFKLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblCropTypeView"
+    ViewLink="model.vo.FKTblCropTypeFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

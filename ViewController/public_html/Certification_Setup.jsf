@@ -41,7 +41,7 @@
                                                                     inlineStyle="width:1011px;">
                                                         <af:showDetailItem id="tab1" text="Certification Setup">
                                                             <af:table value="#{bindings.TblCertificationView1.collectionModel}"
-                                                                      var="row"
+                                                                      var="row" 
                                                                       rows="#{bindings.TblCertificationView1.rangeSize}"
                                                                       emptyText="#{bindings.TblCertificationView1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                                                       rowBandingInterval="0"
@@ -101,7 +101,7 @@
                                                                                        id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:selectOneChoice>
-                                                                </af:column>
+                                                                </af:column> 
                                                             </af:table>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>

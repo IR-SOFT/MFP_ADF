@@ -709,6 +709,12 @@
   <ViewUsage
     Name="TblPagesView4"
     ViewObjectName="model.queryBasedVO.TblPagesView"/>
+  <ViewUsage
+    Name="TblCropTypeView1"
+    ViewObjectName="model.vo.TblCropTypeView"/>
+  <ViewUsage
+    Name="TblCropTypeView2"
+    ViewObjectName="model.queryBasedVO.TblCropTypeView"/>
   <ViewLinkUsage
     Name="FkTblProgOffTblProgFkLink1"
     ViewLinkObjectName="model.vo.FkTblProgOffTblProgFkLink"
