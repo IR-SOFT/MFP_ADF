@@ -146,4 +146,10 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Designation"
+    PrecisionRule="true"
+    EntityAttrName="Designation"
+    EntityUsage="TblProjOff"
+    AliasName="DESIGNATION"/>
 </ViewObject>

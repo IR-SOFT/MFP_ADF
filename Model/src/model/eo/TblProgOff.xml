@@ -144,6 +144,18 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Designation"
+    Precision="100"
+    ColumnName="DESIGNATION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PROG_OFF">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblProg"
     Association="model.eo.FkTblProgOffTblProgFkAssoc"

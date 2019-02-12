@@ -305,6 +305,25 @@
                                                                         <f:validator binding="#{row.bindings.ContactPer.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column  filterable="true" sortable="true"
+                                                                            headerText="#{bindings.TblProjOffView3.hints.Designation.label}"
+                                                                           id="c2">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Designation}"
+                                                                        id="it26" placeholder="Search Designation ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.Designation.inputValue}"
+                                                                                  label="#{bindings.TblProjOffView3.hints.Designation.label}"
+                                                                                  required="#{bindings.TblProjOffView3.hints.Designation.mandatory}"
+                                                                                  columns="#{bindings.TblProjOffView3.hints.Designation.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjOffView3.hints.Designation.precision}"
+                                                                                  shortDesc="#{bindings.TblProjOffView3.hints.Designation.tooltip}"
+                                                                                  id="it25">
+                                                                        <f:validator binding="#{row.bindings.Designation.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.Address.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjOffView3.hints.Address.label}"
