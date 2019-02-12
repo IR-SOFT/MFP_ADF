@@ -60,7 +60,8 @@
                                                                       filterModel="#{bindings.TblProjCompInput1View1Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProjCompInput1View1Query.processQuery}"
-                                                                      varStatus="vs" id="t1">
+                                                                      varStatus="vs" id="t1" partialTriggers="::b9"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.Proj_Comp_Name.name}"
                                                                            filterable="true" headerText="Component"
                                                                            id="c13" width="400">
@@ -100,6 +101,11 @@
                                                                                    id="ot4"/>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute2.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute2.enabled}"
+                                                                       id="b9"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -125,7 +131,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblClusterView2Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b2 ::b6 ::b7" width="996">
+                                                                      partialTriggers="::b2 ::b6 ::b7 ::b10" width="996"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.ProjCompInputId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Component Input ID" id="c6"
@@ -311,6 +318,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b10"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -336,7 +348,8 @@
                                                                    text="Delete" disabled="#{!bindings.Delete1.enabled}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    id="b7" icon="#{resource['images:delete.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   immediate="true" action="Clusters_Setup.jsf"/>
                                                         <af:spacer width="5" height="10" id="s8"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"

@@ -75,7 +75,9 @@
                                                                       filterModel="#{bindings.TblProjCompInput2View11Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProjCompInput2View11Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="719">
+                                                                      varStatus="vs" id="t1" width="719"
+                                                                      partialTriggers="::b13"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Project_Comp_Name.name}"
                                                                            filterable="true"
                                                                            headerText="Project Component" id="c9"
@@ -115,6 +117,11 @@
                                                                                    id="ot4"/>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b13"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -140,7 +147,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCourseView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7" width="718">
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b14" width="718"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.ProjCompInputId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Component Input ID"
@@ -218,6 +226,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b14"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -245,7 +258,8 @@
                                                                    id="b7"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   immediate="true" action="Course_Setup.jsf"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"

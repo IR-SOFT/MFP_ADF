@@ -109,6 +109,11 @@
                                                                 </af:inputText>
                                                                 <f:facet name="footer"></f:facet>
                                                             </af:panelFormLayout>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b17"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -160,7 +165,8 @@
                                                                        rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                        icon="#{resource['images:delete.png']}"
                                                                        disabled="#{!bindings.Delete1.enabled}" id="b15"
-                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                       immediate="true" action="Cluster_Detail.jsf"/>
                                                             <af:spacer width="5" height="20" id="s10"/>
                                                             <af:button actionListener="#{bindings.Commit.execute}"
                                                                        text="Save"
@@ -190,7 +196,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblClusterDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b11 ::b12 ::b13">
+                                                                      partialTriggers="::b11 ::b12 ::b13 ::b18"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Master ID" id="c2" width="91"
@@ -209,6 +216,7 @@
                                                                                   id="it6">
                                                                         <f:validator binding="#{row.bindings.ClusterMasterId.validator}"/>
                                                                     </af:inputText>
+                                                                    
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.name}"
                                                                            filterable="true" sortable="true"
@@ -286,6 +294,11 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b18"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -312,7 +325,8 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    disabled="#{!bindings.Delete.enabled}"
                                                                    icon="#{resource['images:delete.png']}" id="b13"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   immediate="true" action="Cluster_Detail.jsf"/>
                                                         <af:spacer width="5" height="20" id="s9"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save"

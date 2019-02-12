@@ -4,10 +4,10 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblCourseView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblCourseView1Iterator"/>
+    <iterator Binds="TblCourseView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblCourseView1Iterator"/>
     <searchRegion Binds="TblCourseView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblCourseView1Query"/>
-    <iterator Binds="TblModuleView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblModuleView3Iterator"/>
+    <iterator Binds="TblModuleView3" RangeSize="7" DataControl="AppModuleDataControl" id="TblModuleView3Iterator"/>
     <searchRegion Binds="TblModuleView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblModuleView3Query"/>
   </executables>
@@ -37,5 +37,6 @@
     <action IterBinding="TblModuleView3Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblModuleView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblCourseView1Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
   </bindings>
 </pageDefinition>

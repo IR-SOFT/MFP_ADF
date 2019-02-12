@@ -55,7 +55,6 @@
                                                                       queryListener="#{bindings.TblCertificationView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b4 ::b6 ::b7 ::b2"
-                                                                      styleClass="AFStretchWidth"
                                                                       autoHeightRows="0"
                                                                       >
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.CertificationId.name}"
