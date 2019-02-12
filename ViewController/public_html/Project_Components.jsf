@@ -58,7 +58,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProjCompView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b13 ::b14 ::b15" width="795">
+                                                                      partialTriggers="::b13 ::b14 ::b15 ::b2" width="795"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project"
@@ -145,6 +146,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute2.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute2.enabled}"
+                                                                       id="b2"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -172,7 +178,8 @@
                                                                text="Delete" disabled="#{!bindings.Delete2.enabled}"
                                                                id="b15"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   immediate="true" action="Project_Components.jsf" />
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                     icon="#{resource['images:save.png']}" text="Save"

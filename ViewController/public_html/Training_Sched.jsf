@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Training_Sched')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Training_Sched.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -229,7 +229,8 @@
                                                         <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                     icon="#{resource['images:delete.png']}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b9"/>
+                                                               disabled="#{!bindings.Delete.enabled}" id="b9"
+                                                               immediate="true" action="Training_Sched.jsf" />
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button text="Save" id="b21"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"

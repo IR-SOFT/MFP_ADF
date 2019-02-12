@@ -57,7 +57,9 @@
                                                                       filterModel="#{bindings.TblMonitoringOutputIndView1Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonitoringOutputIndView1Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="648">
+                                                                      varStatus="vs" id="t1" width="648"
+                                                                      partialTriggers="::b9"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Project_Comp_Output_Name.name}"
                                                                            filterable="true"
                                                                            headerText="Output Component" id="c10"
@@ -104,6 +106,11 @@
                                                                                    id="ot4"/>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b9"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -129,7 +136,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonitoringMonParamView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7" width="918">
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b2" width="918"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.name}"
                                                                            filterable="true" sortable="true"
                                                                            align="center"
@@ -237,7 +245,12 @@
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
+                                                                
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}" id="b2"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -264,7 +277,8 @@
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}" id="b7"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   immediate="true" action="Monitoring_Parameters.jsf" />
                                                         <af:spacer width="5" height="10" id="s7"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    icon="#{resource['images:save.png']}" text="Save"

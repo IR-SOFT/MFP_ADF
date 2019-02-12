@@ -4,12 +4,12 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="Tbl_ATT_ClusterAttMasterView1_1" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="Tbl_ATT_ClusterAttMasterView1_1" RangeSize="7" DataControl="AppModuleDataControl"
               id="Tbl_ATT_ClusterAttMasterView1_1Iterator"/>
     <searchRegion Binds="Tbl_ATT_ClusterAttMasterView1_1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="Tbl_ATT_ClusterAttMasterView1_1Query"/>
-    <iterator Binds="Tbl_ATT_ClusterAttDetailView1_2" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="Tbl_ATT_ClusterAttDetailView1_2" RangeSize="7" DataControl="AppModuleDataControl"
               id="Tbl_ATT_ClusterAttDetailView1_2Iterator"/>
     <searchRegion Binds="Tbl_ATT_ClusterAttDetailView1_2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"

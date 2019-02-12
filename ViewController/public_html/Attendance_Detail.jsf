@@ -76,7 +76,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_ATT_ClusterAttMasterView1_1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b8 ::b9 ::b10">
+                                                                      partialTriggers="::b8 ::b9 ::b10 ::b15"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster Attendance Master ID"
@@ -207,6 +208,11 @@
                                                                 </af:column>
                                                                 
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b15"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -231,7 +237,8 @@
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" icon="#{resource['images:delete.png']}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
-                                                                   disabled="#{!bindings.Delete.enabled}" id="b7"/>
+                                                                   disabled="#{!bindings.Delete.enabled}" id="b7"
+                                                                   immediate="true" action="Attendance_Detail.jsf" />
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
@@ -261,7 +268,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_ATT_ClusterAttDetailView1_2Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b11 ::b12 ::b13" width="1011">
+                                                                      partialTriggers="::b11 ::b12 ::b13 ::b18" width="1011"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true" align="center"
@@ -410,6 +418,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b18"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -432,7 +445,8 @@
                                                         <af:button actionListener="#{bindings.Delete1.execute}"
                                                                    icon="#{resource['images:delete.png']}" text="Delete"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
-                                                                   disabled="#{!bindings.Delete1.enabled}" id="b13"/>
+                                                                   disabled="#{!bindings.Delete1.enabled}" id="b13"
+                                                                   immediate="true" action="Attendance_Detail.jsf" />
                                                         <af:spacer width="5" height="10" id="s15"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
