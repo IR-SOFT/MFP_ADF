@@ -4,11 +4,11 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblClusterProjOffView1" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblClusterProjOffView1" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblClusterProjOffView1Iterator"/>
     <searchRegion Binds="TblClusterProjOffView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblClusterProjOffView1Query"/>
-    <iterator Binds="TblClusterTargetCropsView3" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblClusterTargetCropsView3" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblClusterTargetCropsView3Iterator"/>
     <searchRegion Binds="TblClusterTargetCropsView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblClusterTargetCropsView3Query"/>
@@ -51,5 +51,7 @@
     <action IterBinding="TblClusterTargetCropsView3Iterator" id="Delete" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblClusterProjOffView1Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
   </bindings>
 </pageDefinition>
