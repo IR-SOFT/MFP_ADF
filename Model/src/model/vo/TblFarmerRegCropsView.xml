@@ -68,6 +68,24 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="AnnualProd"
+    PrecisionRule="true"
+    EntityAttrName="AnnualProd"
+    EntityUsage="TblFarmerRegCrops"
+    AliasName="ANNUAL_PROD"/>
+  <ViewAttribute
+    Name="MainBuyer"
+    PrecisionRule="true"
+    EntityAttrName="MainBuyer"
+    EntityUsage="TblFarmerRegCrops"
+    AliasName="MAIN_BUYER"/>
+  <ViewAttribute
+    Name="YearlySales"
+    PrecisionRule="true"
+    EntityAttrName="YearlySales"
+    EntityUsage="TblFarmerRegCrops"
+    AliasName="YEARLY_SALES"/>
   <ViewLinkAccessor
     Name="TblCropView"
     ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"

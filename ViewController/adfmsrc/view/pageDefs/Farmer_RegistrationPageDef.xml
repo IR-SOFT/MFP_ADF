@@ -160,6 +160,9 @@
           <Item Value="FarmerRegCropsId"/>
           <Item Value="FarmerRegId"/>
           <Item Value="CropId"/>
+          <Item Value="AnnualProd"/>
+          <Item Value="MainBuyer"/>
+          <Item Value="YearlySales"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

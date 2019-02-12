@@ -964,7 +964,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegCropsView7Query.processQuery}"
                                                                       varStatus="vs" id="t4"
-                                                                      partialTriggers="::b23 ::b24 ::b25" width="323">
+                                                                      partialTriggers="::b23 ::b24 ::b25" width="707">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Farmer Reg Crops ID"
@@ -1007,7 +1007,7 @@
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop"
-                                                                           id="c32">
+                                                                           id="c32" width="100">
                                                                              <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.CropId}"
                                                                                      id="it67" placeholder="Search Crop">
@@ -1023,10 +1023,69 @@
                                                                         <f:validator binding="#{row.bindings.CropId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
+                                                                <af:column filterable="true" sortable="true"
+                                                                            headerText="Annual Production (Tones)"
+                                                                           id="c11" align="center" width="100">
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.AnnualProd}"
+                                                                                     id="it70" placeholder="Search Annual Production">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.AnnualProd.inputValue}"
+                                                                                  label="#{bindings.TblFarmerRegCropsView7.hints.AnnualProd.label}"
+                                                                                  required="#{bindings.TblFarmerRegCropsView7.hints.AnnualProd.mandatory}"
+                                                                                  columns="#{bindings.TblFarmerRegCropsView7.hints.AnnualProd.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblFarmerRegCropsView7.hints.AnnualProd.precision}"
+                                                                                  shortDesc="#{bindings.TblFarmerRegCropsView7.hints.AnnualProd.tooltip}"
+                                                                                  id="it6" inlineStyle="text-align: center;" >
+                                                                        <f:validator binding="#{row.bindings.AnnualProd.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblFarmerRegCropsView7.hints.AnnualProd.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column filterable="true" sortable="true"
+                                                                            headerText="Yearly Sales"
+                                                                           id="c34" align="center" width="100">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.YearlySales}"
+                                                                                     id="it72" placeholder="Search Yearly Sales">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.YearlySales.inputValue}"
+                                                                                  label="#{bindings.TblFarmerRegCropsView7.hints.YearlySales.label}"
+                                                                                  required="#{bindings.TblFarmerRegCropsView7.hints.YearlySales.mandatory}"
+                                                                                  columns="#{bindings.TblFarmerRegCropsView7.hints.YearlySales.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblFarmerRegCropsView7.hints.YearlySales.precision}"
+                                                                                  shortDesc="#{bindings.TblFarmerRegCropsView7.hints.YearlySales.tooltip}"
+                                                                                  id="it69" inlineStyle="text-align: center;" >
+                                                                        <f:validator binding="#{row.bindings.YearlySales.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblFarmerRegCropsView7.hints.YearlySales.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column filterable="true" sortable="true"
+                                                                            headerText="Main Buyer"
+                                                                           id="c33" width="153">
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.MainBuyer}"
+                                                                                     id="it73" placeholder="Search Buyer">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.MainBuyer.inputValue}"
+                                                                                  label="#{bindings.TblFarmerRegCropsView7.hints.MainBuyer.label}"
+                                                                                  required="#{bindings.TblFarmerRegCropsView7.hints.MainBuyer.mandatory}"
+                                                                                  columns="#{bindings.TblFarmerRegCropsView7.hints.MainBuyer.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblFarmerRegCropsView7.hints.MainBuyer.precision}"
+                                                                                  shortDesc="#{bindings.TblFarmerRegCropsView7.hints.MainBuyer.tooltip}"
+                                                                                  id="it68">
+                                                                        <f:validator binding="#{row.bindings.MainBuyer.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                
                                                             </af:table>
-                                                             <af:spacer width="200" height="20" id="s10"/>
+                                                             <af:spacer width="210" height="20" id="s10"/>
                                                     <h:panelGroup id="pg4">
-                                                     <af:spacer width="200" height="20" id="s11"/>
+                                                     <af:spacer width="210" height="20" id="s11"/>
                                                         <af:button actionListener="#{bindings.CreateInsert3.execute}"
                                                                text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
@@ -1050,6 +1109,7 @@
                                                                disabled="#{!bindings.Commit.enabled}" icon="#{resource['images:save.png']}" id="b26"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
+                                                        <af:showDetailItem text="Certification" id="sdi5"/>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
