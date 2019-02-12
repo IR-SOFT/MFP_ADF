@@ -71,7 +71,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblSupplierRateMasterView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b9 ::b10 ::b11">
+                                                                      partialTriggers="::b9 ::b10 ::b11 ::b8"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Supplier" id="c13" width="200">
@@ -133,7 +134,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Status.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active" id="c4" width="100">
+                                                                           headerText="Status" id="c4" width="100">
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Status}"
                                                                                       id="it7" placeholder="Search Status">
@@ -172,6 +173,10 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}" id="b8"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -195,7 +200,8 @@
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" icon="#{resource['images:delete.png']}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
-                                                                   disabled="#{!bindings.Delete.enabled}" id="b11"/>
+                                                                   disabled="#{!bindings.Delete.enabled}" id="b11"
+                                                                   immediate="true" action="Supplier_Rate_Setup.jsf"/>
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
@@ -225,7 +231,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblSupplierRateDetailView4Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b13 ::b14 ::b15">
+                                                                      partialTriggers="::b13 ::b14 ::b15 ::b17"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.name}"
                                                                            filterable="true" sortable="true"
                                                                            align="center"
@@ -325,6 +332,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b17"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -348,7 +360,8 @@
                                                         <af:button actionListener="#{bindings.Delete1.execute}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    text="Delete" disabled="#{!bindings.Delete1.enabled}"
-                                                                   icon="#{resource['images:delete.png']}" id="b15"/>
+                                                                   icon="#{resource['images:delete.png']}" id="b15"
+                                                                   immediate="true" action="Supplier_Rate_Setup.jsf"/>
                                                         <af:spacer width="5" height="10" id="s14"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save"

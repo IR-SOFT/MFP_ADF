@@ -71,7 +71,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblLibrMasterView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b10 ::b11 ::b12" width="430">
+                                                                      partialTriggers="::b10 ::b11 ::b12 ::b8" width="430"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblLibrMasterView1.hints.LibrMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Library Master ID" id="c1"
@@ -111,6 +112,10 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}" id="b8"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -135,7 +140,8 @@
                                                                    text="Delete"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}"
-                                                                   disabled="#{!bindings.Delete.enabled}" id="b12"/>
+                                                                   disabled="#{!bindings.Delete.enabled}" id="b12"
+                                                                   immediate="true" action="Library.jsf"/>
                                                         <af:spacer width="5" height="10" id="s16"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
@@ -169,7 +175,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblLibrDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b13 ::b14 ::b15" width="594">
+                                                                      partialTriggers="::b13 ::b14 ::b15 ::b9" width="594"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblLibrDetailView3.hints.LibrMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Master ID" id="c4" width="80"
@@ -248,6 +255,11 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b9"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -270,7 +282,8 @@
                                                         <af:button actionListener="#{bindings.Delete1.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete1.enabled}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
-                                                                   icon="#{resource['images:delete.png']}" id="b15"/>
+                                                                   icon="#{resource['images:delete.png']}" id="b15"
+                                                                   immediate="true" action="Library.jsf"/>
                                                         <af:spacer width="5" height="10" id="s13"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"

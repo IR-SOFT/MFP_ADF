@@ -7,10 +7,10 @@
     <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProgView1Iterator"/>
     <searchRegion Binds="TblProgView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProgView1Query"/>
-    <iterator Binds="TblProjView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProjView1Iterator"/>
+    <iterator Binds="TblProjView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblProjView1Iterator"/>
     <searchRegion Binds="TblProjView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjView1Query"/>
-    <iterator Binds="TblProjOffView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblProjOffView3Iterator"/>
+    <iterator Binds="TblProjOffView3" RangeSize="7" DataControl="AppModuleDataControl" id="TblProjOffView3Iterator"/>
     <searchRegion Binds="TblProjOffView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjOffView3Query"/>
   </executables>

@@ -4,7 +4,7 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblSupplierView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblSupplierView1Iterator"/>
+    <iterator Binds="TblSupplierView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblSupplierView1Iterator"/>
     <searchRegion Binds="TblSupplierView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSupplierView1Query"/>
   </executables>
@@ -81,5 +81,6 @@
             Action="createInsertRow"/>
     <action IterBinding="TblSupplierView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblSupplierView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
   </bindings>
 </pageDefinition>
