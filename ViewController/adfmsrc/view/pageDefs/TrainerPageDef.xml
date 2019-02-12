@@ -4,14 +4,14 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="Tbl_TrainerView1" RangeSize="25" DataControl="AppModuleDataControl" id="Tbl_TrainerView1Iterator"/>
+    <iterator Binds="Tbl_TrainerView1" RangeSize="7" DataControl="AppModuleDataControl" id="Tbl_TrainerView1Iterator"/>
     <searchRegion Binds="Tbl_TrainerView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainerView1Query"/>
-    <iterator Binds="Tbl_TrainerAcaView3" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="Tbl_TrainerAcaView3" RangeSize="7" DataControl="AppModuleDataControl"
               id="Tbl_TrainerAcaView3Iterator"/>
     <searchRegion Binds="Tbl_TrainerAcaView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainerAcaView3Query"/>
-    <iterator Binds="Tbl_TrainerPercView3" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="Tbl_TrainerPercView3" RangeSize="7" DataControl="AppModuleDataControl"
               id="Tbl_TrainerPercView3Iterator"/>
     <searchRegion Binds="Tbl_TrainerPercView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainerPercView3Query"/>
@@ -142,5 +142,6 @@
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="Tbl_TrainerView1Iterator" StaticList="false" Uses="LOV_Gender" id="Gender" DTSupportsMRU="true"
           SelectItemValueMode="ListObject"/>
+    <action IterBinding="Tbl_TrainerView1Iterator" id="Execute2" RequiresUpdateModel="true" Action="iteratorExecute"/>
   </bindings>
 </pageDefinition>

@@ -75,7 +75,8 @@
                                                                       filterModel="#{bindings.TblModuleView1Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblModuleView1Query.processQuery}"
-                                                                      varStatus="vs" id="t1">
+                                                                      varStatus="vs" id="t1"   partialTriggers="::b13"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.Course_Name.name}"
                                                                            filterable="true"
                                                                            headerText="Training"
@@ -123,6 +124,11 @@
                                                                                    id="ot4"/>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b13"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -148,7 +154,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblTopicsView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7" width="731">
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b14" width="731"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                <af:column sortProperty="#{bindings.TblTopicsView3.hints.ModuleId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module ID"
@@ -237,6 +244,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b14"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -263,7 +275,8 @@
                                                                disabled="#{!bindings.Delete.enabled}" id="b7"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                icon="#{resource['images:delete.png']}"
-                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               immediate="true" action="Topic_Setup.jsf" />
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"

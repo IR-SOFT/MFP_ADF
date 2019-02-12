@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <!--<f:metadata>
+    <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Training_Sched')}"/>
-    </f:metadata>-->
+    </f:metadata>
     <af:document title="Training_Sched.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -185,6 +185,11 @@
                                                                     <f:validator binding="#{bindings.Remarks.validator}"/>
                                                                 </af:inputText>
                                                             </af:panelFormLayout>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b12"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -262,7 +267,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_TrainingSchDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b13 ::b14 ::b15" width="447">
+                                                                      partialTriggers="::b13 ::b14 ::b15 ::b22" width="447"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster"
@@ -348,6 +354,11 @@
                                                                 </af:column>
                                                                 
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b22"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -372,7 +383,8 @@
                                                     icon="#{resource['images:delete.png']}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                text="Delete" disabled="#{!bindings.Delete1.enabled}"
-                                                               id="b15"/>
+                                                               id="b15"
+                                                               immediate="true" action="Training_Sched.jsf" />
                                                         <af:spacer width="5" height="10" id="s15"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"

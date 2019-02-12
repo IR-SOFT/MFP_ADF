@@ -76,8 +76,9 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_TrainerView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b7 ::b8 ::b9 ::b10 ::b12 ::b13 ::b24"
-                                                                      width="671">
+                                                                      partialTriggers="::b7 ::b8 ::b9 ::b10 ::b12 ::b13 ::b24 ::b25 ::b26"
+                                                                      width="671"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
@@ -160,6 +161,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute2.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute2.enabled}"
+                                                                       id="b25"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -349,7 +355,8 @@
                                                                                            rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                                            icon="#{resource['images:delete.png']}"
                                                                                            disabled="#{!bindings.Delete.enabled}"
-                                                                                           id="b13"/>
+                                                                                           id="b13"
+                                                                                           immediate="true" action="Trainer.jsf" />
                                                                                 <af:spacer width="5" height="10"
                                                                                            id="s23"/>
                                                                                 <af:button actionListener="#{bindings.Commit.execute}"
@@ -363,6 +370,7 @@
                                                                     </af:panelGroupLayout>
                                                                 </f:facet>
                                                             </af:panelFormLayout>
+                                                           
                                                         </af:showDetailItem>
                                                         <af:showDetailItem text="Trainer Academy" id="sdi2">
                                                             <af:table value="#{bindings.Tbl_TrainerAcaView3.collectionModel}"
@@ -378,7 +386,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_TrainerAcaView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b15 ::b16 ::b17" width="989">
+                                                                      partialTriggers="::b15 ::b16 ::b17 ::b26" width="989"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
@@ -553,6 +562,11 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b26"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                             <af:spacer width="40" height="20" id="s9"/>
                                                             <h:panelGroup id="pg2">
                                                                 <af:spacer width="346" height="20" id="s10"/>
@@ -575,7 +589,8 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                            icon="#{resource['images:delete.png']}"
                                                                            disabled="#{!bindings.Delete1.enabled}"
-                                                                           id="b17"/>
+                                                                           id="b17"
+                                                                           immediate="true" action="Trainer.jsf" />
                                                                 <af:spacer width="5" height="10" id="s18"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                            text="Save"
@@ -599,7 +614,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_TrainerPercView3Query.processQuery}"
                                                                       varStatus="vs" id="t3"
-                                                                      partialTriggers="::b19 ::b20 ::b21" width="988">
+                                                                      partialTriggers="::b19 ::b20 ::b21 ::b27" width="988"
+                                                                      scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
@@ -731,6 +747,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b27"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                             <af:spacer width="30" height="20" id="s11"/>
                                                             <h:panelGroup id="pg3">
                                                                 <af:spacer width="346" height="20" id="s12"/>
@@ -753,7 +774,8 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                            icon="#{resource['images:delete.png']}"
                                                                            disabled="#{!bindings.Delete2.enabled}"
-                                                                           id="b21"/>
+                                                                           id="b21"
+                                                                           immediate="true" action="Trainer.jsf" />
                                                                 <af:spacer width="5" height="10" id="s15"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                            text="Save"
