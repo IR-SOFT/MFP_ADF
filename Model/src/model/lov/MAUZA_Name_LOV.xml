@@ -10,8 +10,7 @@
   CustomQuery="true"
   RowClass="model.lov.MAUZA_Name_LOVRowImpl"
   ComponentClass="model.lov.MAUZA_Name_LOVImpl"
-  PageIterMode="Full"
-  AutoRefresh="true">
+  PageIterMode="Full">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll"/>
     <Attr Name="_isExpertMode" Value="true"/>
