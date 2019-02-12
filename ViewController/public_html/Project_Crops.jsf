@@ -59,6 +59,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:950px;">
+                                                                    
                                                         <af:showDetailItem id="tab2" text="Crops Setup">
                                                             <af:table value="#{bindings.TblCropView1.collectionModel}"
                                                                       var="row"
@@ -73,7 +74,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCropView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b2 ::b4 ::b6" width="935">
+                                                                      partialTriggers="::b2 ::b4 ::b6 ::b12" width="935"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblCropView1.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop ID" id="c1" align="center"
@@ -186,6 +188,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b12"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -212,7 +219,8 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    disabled="#{!bindings.Delete.enabled}" id="b10"
                                                                    icon="#{resource['images:delete.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   immediate="true" action="Project_Crops.jsf"/>
                                                         <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save"

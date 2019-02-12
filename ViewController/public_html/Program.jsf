@@ -71,7 +71,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProgView11Query.processQuery}"
                                                                       varStatus="vs" id="t1" inlineStyle="height:242px;"
-                                                                      partialTriggers="::b7 ::b8 ::b9" width="644">
+                                                                      partialTriggers="::b7 ::b8 ::b9 ::b16" width="644"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblProgView12.hints.ProgId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Program ID" align="center"
@@ -133,6 +134,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b16"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -160,7 +166,8 @@
                                                                    id="b15"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"
-                                                                   icon="#{resource['images:delete.png']}"/>
+                                                                   icon="#{resource['images:delete.png']}"
+                                                                   immediate="true" action="Program.jsf"/>
                                                         <af:spacer width="5" height="10" id="s9"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
@@ -196,7 +203,8 @@
                                                                       queryListener="#{bindings.TblProgOffView3Query.processQuery}"
                                                                       varStatus="vs" id="t2" width="1012"
                                                                       inlineStyle="height:241px;"
-                                                                      partialTriggers="::b12 ::b13 ::b14">
+                                                                      partialTriggers="::b12 ::b13 ::b14 ::b17"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Program ID" align="center"
@@ -405,6 +413,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b17"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -433,7 +446,8 @@
                                                                    id="b13"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"
-                                                                   icon="#{resource['images:delete.png']}"/>
+                                                                   icon="#{resource['images:delete.png']}"
+                                                                   immediate="true" action="Program.jsf"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save"

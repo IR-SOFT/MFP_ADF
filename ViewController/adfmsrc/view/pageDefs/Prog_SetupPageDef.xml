@@ -4,10 +4,10 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProgView1Iterator"/>
+    <iterator Binds="TblProgView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblProgView1Iterator"/>
     <searchRegion Binds="TblProgView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProgView11Query"/>
-    <iterator Binds="TblProgOffView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblProgOffView3Iterator"/>
+    <iterator Binds="TblProgOffView3" RangeSize="7" DataControl="AppModuleDataControl" id="TblProgOffView3Iterator"/>
     <searchRegion Binds="TblProgOffView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProgOffView3Query"/>
   </executables>

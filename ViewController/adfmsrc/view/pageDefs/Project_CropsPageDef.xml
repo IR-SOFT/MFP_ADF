@@ -4,7 +4,7 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblCropView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblCropView1Iterator"/>
+    <iterator Binds="TblCropView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblCropView1Iterator"/>
     <searchRegion Binds="TblCropView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblCropView1Query"/>
   </executables>
