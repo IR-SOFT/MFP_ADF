@@ -255,8 +255,14 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Crop"
+                                                                <af:column filterable="true" sortable="true"
+                                                                            headerText="Crop"
                                                                            id="c6">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.CropId}"
+                                                                                     id="it14" placeholder="Search Crop">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
                                                                                         label="#{row.bindings.CropId.label}"
                                                                                         required="#{bindings.TblClusterDetailView3.hints.CropId.mandatory}"

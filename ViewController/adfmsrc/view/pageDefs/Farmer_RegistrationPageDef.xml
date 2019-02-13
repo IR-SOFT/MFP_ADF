@@ -4,27 +4,27 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblFarmerRegView5" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblFarmerRegView5" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblFarmerRegView5Iterator"/>
     <searchRegion Binds="TblFarmerRegView5Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegView5Query"/>
-    <iterator Binds="TblFarmerRegLandView7" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblFarmerRegLandView7" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblFarmerRegLandView7Iterator"/>
     <searchRegion Binds="TblFarmerRegLandView7Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegLandView7Query"/>
-    <iterator Binds="TblFarmerRegMemView7" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblFarmerRegMemView7" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblFarmerRegMemView7Iterator"/>
     <searchRegion Binds="TblFarmerRegMemView7Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegMemView7Query"/>
-    <iterator Binds="TblFarmerRegCropsView7" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblFarmerRegCropsView7" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblFarmerRegCropsView7Iterator"/>
     <searchRegion Binds="TblFarmerRegCropsView7Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegCropsView7Query"/>
-    <iterator Binds="TblFarmerRegCertView3" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblFarmerRegCertView3" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblFarmerRegCertView3Iterator"/>
     <searchRegion Binds="TblFarmerRegCertView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegCertView3Query"/>
-    <iterator Binds="TblFarmerRegOwnershipView3" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblFarmerRegOwnershipView3" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblFarmerRegOwnershipView3Iterator"/>
     <searchRegion Binds="TblFarmerRegOwnershipView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegOwnershipView3Query"/>
