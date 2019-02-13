@@ -24,6 +24,7 @@
           <Item Value="Name"/>
           <Item Value="FatherName"/>
           <Item Value="Ast"/>
+          <Item Value="Cnic"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

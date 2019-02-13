@@ -122,7 +122,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active"
+                                                                           headerText="Status"
                                                                            id="c4">
                                                                            
                                                                             <f:facet name="filter">

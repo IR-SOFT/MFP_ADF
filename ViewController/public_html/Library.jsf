@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <!--<f:metadata>
+    <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Library')}"/>
-    </f:metadata>-->
+    </f:metadata>
     <af:document title="Library.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -236,23 +236,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblLibrDetailView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Active" id="c6" width="60">
-                                                                            <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     id="it11" placeholder="Search Status">
-                                                                       </af:inputText>
-                                                                   </f:facet>
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblLibrDetailView3.hints.Ast.label}"
-                                                                                  required="#{bindings.TblLibrDetailView3.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblLibrDetailView3.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblLibrDetailView3.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblLibrDetailView3.hints.Ast.tooltip}"
-                                                                                  id="it6">
+                                                                <af:column headerText="Active"
+                                                                           id="c6" width="60">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblLibrDetailView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblLibrDetailView3.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:button actionListener="#{bindings.Execute1.execute}"

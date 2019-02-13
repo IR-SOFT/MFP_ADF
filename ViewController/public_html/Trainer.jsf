@@ -61,7 +61,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:692px;">
+                                                                    inlineStyle="width:772px;">
                                                         <af:showDetailItem id="tab1" text="Trainer Setup">
                                                             <af:table value="#{bindings.Tbl_TrainerView1.collectionModel}"
                                                                       var="row"
@@ -77,7 +77,7 @@
                                                                       queryListener="#{bindings.Tbl_TrainerView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b7 ::b8 ::b9 ::b10 ::b12 ::b13 ::b24 ::b25 ::b26"
-                                                                      width="671"
+                                                                      width="761"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
@@ -140,6 +140,18 @@
                                                                         <f:validator binding="#{row.bindings.FatherName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="CNIC"
+                                                                           id="c19" width="80">
+                                                                    <af:inputText value="#{row.bindings.Cnic.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerView1.hints.Cnic.label}"
+                                                                                  required="#{bindings.Tbl_TrainerView1.hints.Cnic.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerView1.hints.Cnic.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerView1.hints.Cnic.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerView1.hints.Cnic.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.Cnic.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c4" width="60">
@@ -177,7 +189,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1011px;">
-                                                        <af:showDetailItem id="tab2" text="Detail">
+                                                        <af:showDetailItem id="tab2" text="Trainer Detail">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
                                                                 <af:selectOneChoice value="#{bindings.Gender.inputValue}"
                                                                                     label="#{bindings.Gender.label}"
@@ -234,15 +246,6 @@
                                                                               shortDesc="#{bindings.PassNo.hints.tooltip}"
                                                                               id="it7" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.PassNo.validator}"/>
-                                                                </af:inputText>
-                                                                <af:inputText value="#{bindings.Cnic.inputValue}"
-                                                                              label="CNIC"
-                                                                              required="#{bindings.Cnic.hints.mandatory}"
-                                                                              columns="#{bindings.Cnic.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.Cnic.hints.precision}"
-                                                                              shortDesc="#{bindings.Cnic.hints.tooltip}"
-                                                                              id="it8" contentStyle="width:200px">
-                                                                    <f:validator binding="#{bindings.Cnic.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.DrLicNo.inputValue}"
                                                                               label="Driving License"
@@ -372,7 +375,7 @@
                                                             </af:panelFormLayout>
                                                            
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Trainer Academy" id="sdi2">
+                                                        <af:showDetailItem text="Trainer Academic Record" id="sdi2">
                                                             <af:table value="#{bindings.Tbl_TrainerAcaView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.Tbl_TrainerAcaView3.rangeSize}"
