@@ -20,6 +20,14 @@
               id="TblFarmerRegCropsView7Iterator"/>
     <searchRegion Binds="TblFarmerRegCropsView7Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegCropsView7Query"/>
+    <iterator Binds="TblFarmerRegCertView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblFarmerRegCertView3Iterator"/>
+    <searchRegion Binds="TblFarmerRegCertView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegCertView3Query"/>
+    <iterator Binds="TblFarmerRegOwnershipView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblFarmerRegOwnershipView3Iterator"/>
+    <searchRegion Binds="TblFarmerRegOwnershipView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegOwnershipView3Query"/>
   </executables>
   <bindings>
     <tree IterBinding="TblFarmerRegView5Iterator" id="TblFarmerRegView5">
@@ -178,5 +186,38 @@
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblFarmerRegView5Iterator" StaticList="false" Uses="LOV_Gender" id="Gender"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <tree IterBinding="TblFarmerRegCertView3Iterator" id="TblFarmerRegCertView3">
+      <nodeDefinition DefName="model.vo.TblFarmerRegCertView" Name="TblFarmerRegCertView30">
+        <AttrNames>
+          <Item Value="FarmerRegCertId"/>
+          <Item Value="FarmerRegId"/>
+          <Item Value="CertificationId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblFarmerRegOwnershipView3Iterator" id="TblFarmerRegOwnershipView3">
+      <nodeDefinition DefName="model.vo.TblFarmerRegOwnershipView" Name="TblFarmerRegOwnershipView30">
+        <AttrNames>
+          <Item Value="FarmerRegOwnershipId"/>
+          <Item Value="FarmerRegId"/>
+          <Item Value="OwnerName"/>
+          <Item Value="Cnic"/>
+          <Item Value="LandAcre"/>
+          <Item Value="Relationship"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblFarmerRegCertView3Iterator" id="CreateInsert4" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFarmerRegCertView3Iterator" id="Execute4" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblFarmerRegCertView3Iterator" id="Delete4" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action IterBinding="TblFarmerRegOwnershipView3Iterator" id="CreateInsert5" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFarmerRegOwnershipView3Iterator" id="Execute5" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblFarmerRegOwnershipView3Iterator" id="Delete5" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
