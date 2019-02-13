@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblFarmerRegCert"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_FARMER_REG_CERT"
+  AliasName="TblFarmerRegCert"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="FarmerRegCertId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="FARMER_REG_CERT_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_FARMER_REG_CERT"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FarmerRegId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="FARMER_REG_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_FARMER_REG_CERT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CertificationId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CERTIFICATION_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_FARMER_REG_CERT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="PkTblFarmerRegCertPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_FARMER_REG_CERT_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerRegCert.FarmerRegCertId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Fk2TblFarmerRegCertFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_CERTIFICATION_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK2_TBL_FARMER_REG_CERT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerRegCert.CertificationId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblFarmerRegCertFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_FARMER_REG_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_FARMER_REG_CERT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerRegCert.FarmerRegId"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -89,10 +89,10 @@
     Name="TblCropView3"
     ViewObjectName="model.vo.TblCropView"/>
   <ViewUsage
-    Name="TblCropTypeView1"
-    ViewObjectName="model.vo.TblCropTypeView"/>
-  <ViewUsage
     Name="TblCropView4"
+    ViewObjectName="model.vo.TblCropView"/>
+  <ViewUsage
+    Name="TblCropView5"
     ViewObjectName="model.vo.TblCropView"/>
   <ViewLinkUsage
     Name="FKTblProjCompFKLink"
@@ -171,11 +171,5 @@
     ViewLinkObjectName="model.vo.FKTblTrainingSchMasterFKLink5"
     SrcViewUsageName="model.vo.AppModule.TblClusterView3"
     DstViewUsageName="model.vo.AppModule.Tbl_TrainingSchMasterView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FKTblCropTypeFKLink"
-    ViewLinkObjectName="model.vo.FKTblCropTypeFKLink"
-    SrcViewUsageName="model.vo.AppModule.TblCropView3"
-    DstViewUsageName="model.vo.AppModule.TblCropTypeView1"
     Reversed="false"/>
 </AppModule>

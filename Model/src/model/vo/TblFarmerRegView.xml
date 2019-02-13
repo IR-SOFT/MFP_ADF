@@ -282,4 +282,14 @@
     ViewLink="model.vo.FKTblClusterDetailFKLink2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblFarmerRegCertView"
+    ViewLink="model.vo.FKTblFarmerRegCertFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblFarmerRegOwnershipView"
+    ViewLink="model.vo.FKTblFarmerRegOwnershipFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

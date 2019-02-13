@@ -96,13 +96,6 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
-  <AccessorAttribute
-    Name="TblCropType"
-    Association="model.eo.FKTblCropTypeFKAssoc"
-    AssociationEnd="model.eo.FKTblCropTypeFKAssoc.TblCropType"
-    AssociationOtherEnd="model.eo.FKTblCropTypeFKAssoc.TblCrop"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="TblFarmerRegCropsView"
     ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
@@ -115,13 +108,6 @@
     ViewLink="model.vo.FKTblClusterTargetCropsFKLink"
     ViewLinkEnd="model.vo.FKTblClusterTargetCropsFKLink.TblClusterTargetCropsView"
     ViewLinkOtherEnd="model.vo.FKTblClusterTargetCropsFKLink.TblCropView"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblCropTypeView"
-    ViewLink="model.vo.FKTblCropTypeFKLink"
-    ViewLinkEnd="model.vo.FKTblCropTypeFKLink.TblCropTypeView"
-    ViewLinkOtherEnd="model.vo.FKTblCropTypeFKLink.TblCropView"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
