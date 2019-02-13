@@ -15,6 +15,7 @@
           <Item Value="SupplierId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="Cnic"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -82,5 +83,19 @@
     <action IterBinding="TblSupplierView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action IterBinding="TblSupplierView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="NoOfEmp">
+      <AttrNames>
+        <Item Value="NoOfEmp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="NoOfYearExp">
+      <AttrNames>
+        <Item Value="NoOfYearExp"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_Type" id="Type" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_DistrictLibrDetail"
+          id="DistrictLibrDetail" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

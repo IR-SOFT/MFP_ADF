@@ -51,6 +51,19 @@
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="CropId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CROP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER_DETAIL">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblClusterMaster"
     Association="model.eo.FkTblClusterDetailFkAssoc"

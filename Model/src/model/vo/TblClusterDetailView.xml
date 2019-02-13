@@ -19,6 +19,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="Farmer_Reg_id_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Crops_Name_LOV1_1"
+    ViewObjectName="model.lov.Crops_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Crops_Name_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_FarmerRegId"
     ListVOName="AppModule_Farmer_Reg_id_LOV1_1"
@@ -33,6 +39,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="FarmerRegId"/>
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CropId"
+    ListVOName="AppModule_Crops_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CropId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CropId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
     </AttrArray>
     <DisplayCriteria/>
@@ -110,6 +133,21 @@
     EntityAttrName="Mobile"
     EntityUsage="TblFarmerReg"
     AliasName="MOBILE"/>
+  <ViewAttribute
+    Name="CropId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CropId"
+    EntityUsage="TblClusterDetail"
+    AliasName="CROP_ID"
+    LOVName="LOV_CropId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="ClusterDetailId"/>
   </AttrArray>

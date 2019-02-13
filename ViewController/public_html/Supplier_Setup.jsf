@@ -88,13 +88,14 @@
                                                                                   columns="#{bindings.TblSupplierView1.hints.SupplierId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblSupplierView1.hints.SupplierId.precision}"
                                                                                   shortDesc="#{bindings.TblSupplierView1.hints.SupplierId.tooltip}"
-                                                                                  id="it1" readOnly="true" >
+                                                                                  id="it1" readOnly="true" 
+                                                                                  contentStyle='text-align:center' >
                                                                         <f:validator binding="#{row.bindings.SupplierId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Supplier" id="c2" width="500">
+                                                                           headerText="Supplier" id="c2" width="250">
                                                                      <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
                                                                                       id="it3" placeholder="Search Supplier">
@@ -108,6 +109,24 @@
                                                                                   shortDesc="#{bindings.TblSupplierView1.hints.Name.tooltip}"
                                                                                   id="it2">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column  filterable="true" sortable="true"
+                                                                            headerText="CNIC"
+                                                                            id="c4" align="center" width="250">
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Cnic}"
+                                                                                      id="it17" placeholder="Search CNIC">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
+                                                                    <af:inputText value="#{row.bindings.Cnic.inputValue}"
+                                                                                  label="#{bindings.TblSupplierView1.hints.Cnic.label}"
+                                                                                  required="#{bindings.TblSupplierView1.hints.Cnic.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierView1.hints.Cnic.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierView1.hints.Cnic.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierView1.hints.Cnic.tooltip}"
+                                                                                  id="it16" contentStyle='text-align:center'>
+                                                                        <f:validator binding="#{row.bindings.Cnic.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierView1.hints.Ast.name}"
@@ -175,15 +194,6 @@
                                                                               id="it6" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.Designation.validator}"/>
                                                                 </af:inputText>
-                                                                <af:inputText value="#{bindings.Cnic.inputValue}"
-                                                                              label="CNIC"
-                                                                              required="#{bindings.Cnic.hints.mandatory}"
-                                                                              columns="#{bindings.Cnic.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.Cnic.hints.precision}"
-                                                                              shortDesc="#{bindings.Cnic.hints.tooltip}"
-                                                                              id="it7" contentStyle="width:200px;">
-                                                                    <f:validator binding="#{bindings.Cnic.validator}"/>
-                                                                </af:inputText>
                                                                 <af:inputText value="#{bindings.Ntn.inputValue}"
                                                                               label="NTN"
                                                                               required="#{bindings.Ntn.hints.mandatory}"
@@ -219,6 +229,48 @@
                                                                               shortDesc="#{bindings.Email.hints.tooltip}"
                                                                               id="it11" contentStyle="width:200px;">
                                                                     <f:validator binding="#{bindings.Email.validator}"/>
+                                                                </af:inputText>
+                                                                <af:selectOneChoice value="#{bindings.Type.inputValue}"
+                                                                                    label="Vendor Type"
+                                                                                    required="#{bindings.Type.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.Type.hints.tooltip}"
+                                                                                    id="soc2"
+                                                                                    contentStyle="width:200px;">
+                                                                    <f:selectItems value="#{bindings.Type.items}"
+                                                                                   id="si2"/>
+                                                                    <f:validator binding="#{bindings.Type.validator}"/>
+                                                                </af:selectOneChoice>
+                                                                <af:selectOneChoice value="#{bindings.DistrictLibrDetail.inputValue}"
+                                                                                    label="District"
+                                                                                    required="#{bindings.DistrictLibrDetail.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.DistrictLibrDetail.hints.tooltip}"
+                                                                                    id="soc3"
+                                                                                    contentStyle="width:200px;">
+                                                                    <f:selectItems value="#{bindings.DistrictLibrDetail.items}"
+                                                                                   id="si3"/>
+                                                                    <f:validator binding="#{bindings.DistrictLibrDetail.validator}"/>
+                                                                </af:selectOneChoice>
+                                                                <af:inputText value="#{bindings.NoOfEmp.inputValue}"
+                                                                              required="#{bindings.NoOfEmp.hints.mandatory}"
+                                                                              columns="#{bindings.NoOfEmp.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.NoOfEmp.hints.precision}"
+                                                                              shortDesc="#{bindings.NoOfEmp.hints.tooltip}"
+                                                                              id="it7" label="No.of Emloyees"
+                                                                              contentStyle="width:200px;">
+                                                                    <f:validator binding="#{bindings.NoOfEmp.validator}"/>
+                                                                    <af:convertNumber groupingUsed="false"
+                                                                                      pattern="#{bindings.NoOfEmp.format}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.NoOfYearExp.inputValue}"
+                                                                              required="#{bindings.NoOfYearExp.hints.mandatory}"
+                                                                              columns="#{bindings.NoOfYearExp.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.NoOfYearExp.hints.precision}"
+                                                                              shortDesc="#{bindings.NoOfYearExp.hints.tooltip}"
+                                                                              id="it18" label="Year of Experience"
+                                                                              contentStyle="width:200px;">
+                                                                    <f:validator binding="#{bindings.NoOfYearExp.validator}"/>
+                                                                    <af:convertNumber groupingUsed="false"
+                                                                                      pattern="#{bindings.NoOfYearExp.format}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Url.inputValue}"
                                                                               label="URL"

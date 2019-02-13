@@ -190,6 +190,47 @@
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="DistrictLibrDetail"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="DISTRICT_LIBR_DETAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_SUPPLIER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NoOfEmp"
+    ColumnName="NO_OF_EMP"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_SUPPLIER"/>
+  <Attribute
+    Name="NoOfYearExp"
+    ColumnName="NO_OF_YEAR_EXP"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TBL_SUPPLIER"/>
+  <Attribute
+    Name="Type"
+    Precision="1"
+    ColumnName="TYPE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_SUPPLIER"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblLibrDetail"
     Association="model.eo.FkTblSupplierFkAssoc"

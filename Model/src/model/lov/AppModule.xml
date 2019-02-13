@@ -91,4 +91,7 @@
   <ViewUsage
     Name="Gender_LOV2"
     ViewObjectName="model.lov.Gender_LOV"/>
+  <ViewUsage
+    Name="Vendor_Type_LOV1"
+    ViewObjectName="model.lov.Vendor_Type_LOV"/>
 </AppModule>

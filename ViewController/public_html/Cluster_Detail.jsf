@@ -239,7 +239,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Farmer" id="c4" width="510">
+                                                                           headerText="Farmer" id="c4" width="400">
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.FarmerRegId}"
                                                                                      id="it11" placeholder="Search Farmer">
@@ -253,6 +253,18 @@
                                                                         <f:selectItems value="#{row.bindings.FarmerRegId.items}"
                                                                                        id="si1"/>
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="Crop"
+                                                                           id="c6">
+                                                                    <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
+                                                                                        label="#{row.bindings.CropId.label}"
+                                                                                        required="#{bindings.TblClusterDetailView3.hints.CropId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterDetailView3.hints.CropId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.CropId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.CropId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.name}"

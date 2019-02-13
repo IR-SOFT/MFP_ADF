@@ -51,6 +51,7 @@
           <Item Value="FarmerRegId"/>
           <Item Value="Farmer_Cnic"/>
           <Item Value="Farmer_Mobile"/>
+          <Item Value="CropId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
