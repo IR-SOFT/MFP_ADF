@@ -1402,13 +1402,13 @@
   <ViewLinkUsage
     Name="FKTblFarmerRegCertFKLink"
     ViewLinkObjectName="model.vo.FKTblFarmerRegCertFKLink"
-    SrcViewUsageName="model.eo.AppModule.TblFarmerRegView1"
+    SrcViewUsageName="model.eo.AppModule.TblFarmerRegView5"
     DstViewUsageName="model.eo.AppModule.TblFarmerRegCertView3"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FKTblFarmerRegOwnershipFKLink"
     ViewLinkObjectName="model.vo.FKTblFarmerRegOwnershipFKLink"
-    SrcViewUsageName="model.eo.AppModule.TblFarmerRegView2"
+    SrcViewUsageName="model.eo.AppModule.TblFarmerRegView5"
     DstViewUsageName="model.eo.AppModule.TblFarmerRegOwnershipView3"
     Reversed="false"/>
 </AppModule>
