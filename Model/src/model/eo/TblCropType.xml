@@ -51,13 +51,6 @@
       <Attr Name="_DisplaySize" Value="150"/>
     </DesignTime>
   </Attribute>
-  <AccessorAttribute
-    Name="TblCrop"
-    Association="model.eo.FKTblCropTypeFKAssoc"
-    AssociationEnd="model.eo.FKTblCropTypeFKAssoc.TblCrop"
-    AssociationOtherEnd="model.eo.FKTblCropTypeFKAssoc.TblCropType"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
   <ViewLinkAccessor
     Name="TblCropView"
     ViewLink="model.vo.FKTblCropTypeFKLink"

@@ -5,8 +5,7 @@
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="FKTblCropTypeFKLink"
   Version="12.2.1.9.14"
-  InheritPersonalization="merge"
-  EntityAssociation="model.eo.FKTblCropTypeFKAssoc">
+  InheritPersonalization="merge">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
