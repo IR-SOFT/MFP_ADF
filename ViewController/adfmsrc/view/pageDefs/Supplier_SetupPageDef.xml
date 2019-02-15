@@ -97,5 +97,7 @@
           SelectItemValueMode="ListObject"/>
     <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_DistrictLibrDetail"
           id="DistrictLibrDetail" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_LibrDetailId" id="LibrDetailId1"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

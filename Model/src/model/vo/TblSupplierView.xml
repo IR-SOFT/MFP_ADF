@@ -31,6 +31,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="District_Name_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_City_Name_LOV1_1"
+    ViewObjectName="model.lov.City_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="City_Name_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="AppModule_Active_Status1_1"
@@ -72,6 +78,23 @@
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="DistrictLibrDetail"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LibrDetailId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LibrDetailId"
+    ListVOName="AppModule_City_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LibrDetailId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
@@ -184,7 +207,15 @@
     PrecisionRule="true"
     EntityAttrName="LibrDetailId"
     EntityUsage="TblSupplier"
-    AliasName="LIBR_DETAIL_ID"/>
+    AliasName="LIBR_DETAIL_ID"
+    LOVName="LOV_LibrDetailId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DistrictLibrDetail"
     IsNotNull="true"

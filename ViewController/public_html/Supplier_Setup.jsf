@@ -267,7 +267,7 @@
                                                                               maximumLength="#{bindings.NoOfYearExp.hints.precision}"
                                                                               shortDesc="#{bindings.NoOfYearExp.hints.tooltip}"
                                                                               id="it18" label="Year of Experience"
-                                                                              contentStyle="width:200px;">
+                                                                              contentStyle="width:250px;">
                                                                     <f:validator binding="#{bindings.NoOfYearExp.validator}"/>
                                                                     <af:convertNumber groupingUsed="false"
                                                                                       pattern="#{bindings.NoOfYearExp.format}"/>
@@ -290,22 +290,23 @@
                                                                               id="it13" contentStyle="width:250px;">
                                                                     <f:validator binding="#{bindings.Address.validator}"/>
                                                                 </af:inputText>
-                                                                <af:inputText value="#{bindings.LibrDetailId.inputValue}"
-                                                                              label="City"
-                                                                              required="#{bindings.LibrDetailId.hints.mandatory}"
-                                                                              columns="#{bindings.LibrDetailId.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.LibrDetailId.hints.precision}"
-                                                                              shortDesc="#{bindings.LibrDetailId.hints.tooltip}"
-                                                                              id="it14" contentStyle="width:250px;">
-                                                                    <f:validator binding="#{bindings.LibrDetailId.validator}"/>
-                                                                </af:inputText>
+                                                                <af:selectOneChoice value="#{bindings.LibrDetailId1.inputValue}"
+                                                                                    label="City"
+                                                                                    required="#{bindings.LibrDetailId1.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.LibrDetailId1.hints.tooltip}"
+                                                                                    id="soc4"
+                                                                                    contentStyle="width:250px;">
+                                                                    <f:selectItems value="#{bindings.LibrDetailId1.items}"
+                                                                                   id="si4"/>
+                                                                    <f:validator binding="#{bindings.LibrDetailId1.validator}"/>
+                                                                </af:selectOneChoice>
                                                                 <f:facet name="footer">
                                                                     <af:spacer width="50" height="20" id="s9"/>
                                                                     <af:panelGroupLayout id="pgl3"
                                                                                          inlineStyle="width:982px;">
                                                                         <af:panelGroupLayout layout="horizontal"
                                                                                              id="pgl4">
-                                                                            <af:spacer width="50" height="20" id="s8"/>
+                                                                            <af:spacer width="100" height="20" id="s8"/>
                                                                             <af:button actionListener="#{bindings.First.execute}"
                                                                                        text="First"
                                                                                        icon="#{resource['images:first.png']}"
@@ -329,9 +330,8 @@
                                                                                        icon="#{resource['images:last.png']}"
                                                                                        disabled="#{!bindings.Last.enabled}"
                                                                                        partialSubmit="true" id="b10"/>
-                                                                        </af:panelGroupLayout>
-                                                                        <af:spacer width="30" height="20" id="s16"/>
-                                                                        <h:panelGroup id="pg1">
+                                                                                       <h:panelGroup id="pg1">
+                                                                        <af:spacer width="200" height="20" id="s16"/>
                                                                             <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                                        text="Add"
                                                                                        rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
@@ -358,6 +358,8 @@
                                                                                        disabled="#{!bindings.Commit.enabled}"
                                                                                        id="b15"/>
                                                                         </h:panelGroup>
+                                                                        </af:panelGroupLayout>
+                                                                        
                                                                     </af:panelGroupLayout>
                                                                 </f:facet>
                                                             </af:panelFormLayout>

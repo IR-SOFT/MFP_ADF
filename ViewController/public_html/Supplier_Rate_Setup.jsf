@@ -56,7 +56,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1030px;">
+                                                                    inlineStyle="width:838px;">
                                                         <af:showDetailItem id="tab1" text="Supplier Rate Master Setup">
                                                             <af:table value="#{bindings.TblSupplierRateMasterView1.collectionModel}"
                                                                       var="row"
@@ -72,7 +72,8 @@
                                                                       queryListener="#{bindings.TblSupplierRateMasterView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b9 ::b10 ::b11 ::b8"
-                                                                      scrollPolicy="page" autoHeightRows="0">
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="818">
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Supplier" id="c13" width="200">
@@ -183,7 +184,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:spacer width="200" height="20" id="s8"/>
+                                                    <af:spacer width="263" height="20" id="s8"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
@@ -216,7 +217,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:1032px;">
+                                                                    inlineStyle="width:587px;">
                                                         <af:showDetailItem id="tab2" text="Supplier Rate Detail Setup">
                                                             <af:table value="#{bindings.TblSupplierRateDetailView4.collectionModel}"
                                                                       var="row"
@@ -232,7 +233,8 @@
                                                                       queryListener="#{bindings.TblSupplierRateDetailView4Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b17"
-                                                                      scrollPolicy="page" autoHeightRows="0">
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="569">
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.name}"
                                                                            filterable="true" sortable="true"
                                                                            align="center"
@@ -253,29 +255,9 @@
                                                                         <f:validator binding="#{row.bindings.SupplierRateDetailId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           align="center"
-                                                                           headerText="Supplier Rate Master ID" id="c7"
-                                                                           width="85">
-                                                                           <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.SupplierRateMasterId}"
-                                                                                      id="it11" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                   </f:facet> 
-                                                                    <af:inputText value="#{row.bindings.SupplierRateMasterId.inputValue}"
-                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.label}"
-                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.mandatory}"
-                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.precision}"
-                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.tooltip}"
-                                                                                  id="it6">
-                                                                        <f:validator binding="#{row.bindings.SupplierRateMasterId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Item" id="c2" width="200">
+                                                                           headerText="Item" id="c2" width="250">
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
                                                                                       id="it12" placeholder="Search Item">
@@ -295,7 +277,7 @@
                                                                            filterable="true" sortable="true"
                                                                            align="center"
                                                                            headerText="#{bindings.TblSupplierRateDetailView4.hints.Rate.label}"
-                                                                           id="c9" width="91">
+                                                                           id="c9" width="100">
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Rate}"
                                                                                       id="it13" placeholder="Search Rate">
@@ -315,7 +297,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active" id="c10" width="109">
+                                                                           headerText="Active" id="c10" width="80">
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
                                                                                       id="it14" placeholder="Search Status">
@@ -343,7 +325,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                                                    <af:spacer width="200" height="20" id="s15"/>
+                                                    <af:spacer width="138" height="20" id="s15"/>
                                                     <h:panelGroup id="pg2">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add"
