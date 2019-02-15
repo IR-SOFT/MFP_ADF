@@ -212,7 +212,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:1012px;">
+                                                                    inlineStyle="width:706px;">
                                                         <af:showDetailItem id="tab2" text="Target Crops">
                                                             <af:table value="#{bindings.TblClusterTargetCropsView3.collectionModel}"
                                                                       var="row"
@@ -228,54 +228,12 @@
                                                                       queryListener="#{bindings.TblClusterTargetCropsView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b4 ::b6 ::b7 ::b10"
-                                                                      scrollPolicy="page" autoHeightRows="0">
-                                                                
-                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Project Office ID" align="center"
-                                                                           id="c12" width="70">
-                                                                           
-                                                                              <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.ProjOffId}"
-                                                                                     id="it13" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                   </f:facet>
-                                                                           
-                                                                    <af:inputText value="#{row.bindings.ProjOffId.inputValue}"
-                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.label}"
-                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.mandatory}"
-                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.tooltip}"
-                                                                                  id="it2" >
-                                                                        <f:validator binding="#{row.bindings.ProjOffId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Project Office"
-                                                                           id="c17" width="280">
-                                                                           
-                                                                              <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Project_Office_Name}"
-                                                                                     id="it14" placeholder="Search Project Office">
-                                                                       </af:inputText>
-                                                                   </f:facet>
-                                                                           
-                                                                    <af:inputText value="#{row.bindings.Project_Office_Name.inputValue}"
-                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.label}"
-                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.mandatory}"
-                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.tooltip}"
-                                                                                  id="it5">
-                                                                        <f:validator binding="#{row.bindings.Project_Office_Name.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="687">
                                                                 <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop"
-                                                                           id="c19" width="150">
+                                                                           id="c19" width="200">
                                                                            
                                                                                 <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.CropId}"
@@ -317,7 +275,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.TarDis.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Target Distribution"
-                                                                           id="c14" width="280">
+                                                                           id="c14" width="300">
                                                                            
                                                                                   <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.TarDis}"

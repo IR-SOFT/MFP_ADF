@@ -107,7 +107,7 @@
                                                                                   columns="#{bindings.TblLibrMasterView1.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblLibrMasterView1.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblLibrMasterView1.hints.Name.tooltip}"
-                                                                                  id="it2">
+                                                                                  id="it2" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -177,26 +177,6 @@
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b9" width="594"
                                                                       scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblLibrDetailView3.hints.LibrMasterId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Master ID" id="c4" width="80"
-                                                                           align="center">
-                                                                           <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.LibrMasterId}"
-                                                                                     id="it8" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                   </f:facet>
-                                                                    <af:inputText value="#{row.bindings.LibrMasterId.inputValue}"
-                                                                                  label="#{bindings.TblLibrDetailView3.hints.LibrMasterId.label}"
-                                                                                  required="#{bindings.TblLibrDetailView3.hints.LibrMasterId.mandatory}"
-                                                                                  columns="#{bindings.TblLibrDetailView3.hints.LibrMasterId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblLibrDetailView3.hints.LibrMasterId.precision}"
-                                                                                  shortDesc="#{bindings.TblLibrDetailView3.hints.LibrMasterId.tooltip}"
-                                                                                  id="it4"
-                                                                                  contentStyle="text-align:center">
-                                                                        <f:validator binding="#{row.bindings.LibrMasterId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblLibrDetailView3.hints.LibrDetailId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Detail ID" id="c3" width="80"
@@ -220,7 +200,7 @@
                                                                 <af:column sortProperty="#{bindings.TblLibrDetailView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblLibrDetailView3.hints.Name.label}"
-                                                                           id="c5" width="325">
+                                                                           id="c5" width="410">
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
                                                                                      id="it10" placeholder="Search Name">
@@ -236,8 +216,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
-                                                                           id="c6" width="60">
+                                                                <af:column sortProperty="#{bindings.TblLibrDetailView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
+                                                                           id="c6" width="68">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it4" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblLibrDetailView3.hints.Ast.mandatory}"

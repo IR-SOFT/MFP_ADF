@@ -19,6 +19,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="SelfishType_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Active_Status1_1"
+    ViewObjectName="model.lov.Active_Status"
+    AMUsageName="AppModule"
+    ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_SelfshipType"
     ListVOName="AppModule_SelfishType_LOV1_1"
@@ -33,6 +39,57 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="SelfishView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_SelfLocalMark"
+    ListVOName="AppModule_Active_Status1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="SelfLocalMark"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="astDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_SelfExportMark"
+    ListVOName="AppModule_Active_Status1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="SelfExportMark"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="astDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ContractMark"
+    ListVOName="AppModule_Active_Status1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ContractMark"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="astDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="astView"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -100,19 +157,43 @@
     PrecisionRule="true"
     EntityAttrName="SelfLocalMark"
     EntityUsage="TblFarmerRegLand"
-    AliasName="SELF_LOCAL_MARK"/>
+    AliasName="SELF_LOCAL_MARK"
+    LOVName="LOV_SelfLocalMark">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="SelfExportMark"
     PrecisionRule="true"
     EntityAttrName="SelfExportMark"
     EntityUsage="TblFarmerRegLand"
-    AliasName="SELF_EXPORT_MARK"/>
+    AliasName="SELF_EXPORT_MARK"
+    LOVName="LOV_SelfExportMark">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ContractMark"
     PrecisionRule="true"
     EntityAttrName="ContractMark"
     EntityUsage="TblFarmerRegLand"
-    AliasName="CONTRACT_MARK"/>
+    AliasName="CONTRACT_MARK"
+    LOVName="LOV_ContractMark">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="KhatooniNo"
     IsNotNull="true"
