@@ -94,4 +94,7 @@
   <ViewUsage
     Name="Vendor_Type_LOV1"
     ViewObjectName="model.lov.Vendor_Type_LOV"/>
+  <ViewUsage
+    Name="Certification_Name_LOV1"
+    ViewObjectName="model.lov.Certification_Name_LOV"/>
 </AppModule>

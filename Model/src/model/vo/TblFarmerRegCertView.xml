@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Certification_Name_LOV1_1"
+    ViewObjectName="model.lov.Certification_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Certification_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_CertificationId"
+    ListVOName="AppModule_Certification_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CertificationId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CertificationId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblFarmerRegCert"
     Entity="model.eo.TblFarmerRegCert"/>
@@ -36,5 +59,13 @@
     PrecisionRule="true"
     EntityAttrName="CertificationId"
     EntityUsage="TblFarmerRegCert"
-    AliasName="CERTIFICATION_ID"/>
+    AliasName="CERTIFICATION_ID"
+    LOVName="LOV_CertificationId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
 </ViewObject>
