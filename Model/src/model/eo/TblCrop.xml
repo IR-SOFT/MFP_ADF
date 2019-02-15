@@ -56,7 +56,7 @@
   </Attribute>
   <Attribute
     Name="CropType"
-    Precision="1"
+    Precision="3"
     ColumnName="CROP_TYPE"
     SQLType="CHAR"
     Type="java.lang.String"
@@ -70,7 +70,7 @@
   </Attribute>
   <Attribute
     Name="FrMonth"
-    Precision="1"
+    Precision="3"
     ColumnName="FR_MONTH"
     SQLType="CHAR"
     Type="java.lang.String"
@@ -84,7 +84,7 @@
   </Attribute>
   <Attribute
     Name="ToMonth"
-    Precision="1"
+    Precision="3"
     ColumnName="TO_MONTH"
     SQLType="CHAR"
     Type="java.lang.String"
