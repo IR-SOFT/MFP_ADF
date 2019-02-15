@@ -205,28 +205,6 @@
                                                                       inlineStyle="height:241px;"
                                                                       partialTriggers="::b12 ::b13 ::b14 ::b17"
                                                                       scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Program ID" align="center"
-                                                                           id="c5" width="50">
-                                                                         <f:facet name="filter">
-                                                                       <af:inputText 
-                                                                       value="#{vs.filterCriteria.ProgId}"
-                                                                        id="it13" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                   </f:facet>
-                                                                    <af:inputText value="#{row.bindings.ProgId.inputValue}"
-                                                                                  label="#{bindings.TblProgOffView3.hints.ProgId.label}"
-                                                                                  required="#{bindings.TblProgOffView3.hints.ProgId.mandatory}"
-                                                                                  columns="#{bindings.TblProgOffView3.hints.ProgId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.ProgId.precision}"
-                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.ProgId.tooltip}"
-                                                                                  id="it5"
-                                                                                  inlineStyle="text-align:center; vertical-align: middle;"
-                                                                                  contentStyle="text-align:center">
-                                                                        <f:validator binding="#{row.bindings.ProgId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgOffId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Office ID" align="center" id="c4"
@@ -271,7 +249,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.ContactPer.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Contact Person" align="left"
-                                                                           id="c7" width="100">
+                                                                           id="c7" width="120">
                                                                      <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.ContactPer}"
@@ -310,7 +288,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.Address.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Address" align="left" id="c8"
-                                                                           width="180">
+                                                                           width="210">
                                                                      <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.Address}"
