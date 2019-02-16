@@ -75,13 +75,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="TblProjCompOutput"
-    Association="model.eo.FkTblProjCompOutputFkAssoc"
-    AssociationEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjCompOutput"
-    AssociationOtherEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjComp"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="TblProjCompInput1"
     Association="model.eo.FKTblProjCompInputFKAssoc2"
     AssociationEnd="model.eo.FKTblProjCompInputFKAssoc2.TblProjCompInput1"

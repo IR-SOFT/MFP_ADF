@@ -145,11 +145,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="TblProjCompOutputView"
-    ViewLink="model.vo.FkTblProjCompOutputFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="TblProjView"
     ViewLink="model.vo.FKTblProjCompFKLink"
     Type="oracle.jbo.server.ViewRowImpl"

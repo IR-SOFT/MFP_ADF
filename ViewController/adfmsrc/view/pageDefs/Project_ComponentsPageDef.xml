@@ -7,15 +7,7 @@
     <iterator Binds="TblProjCompView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblProjCompView1Iterator"/>
     <searchRegion Binds="TblProjCompView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompView1Query"/>
-    <iterator Binds="TblProjCompInputView3" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblProjCompInputView3Iterator"/>
-    <searchRegion Binds="TblProjCompInputView3Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompInputView3Query"/>
-    <iterator Binds="TblProjCompOutputView3" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblProjCompOutputView3Iterator"/>
-    <searchRegion Binds="TblProjCompOutputView3Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompOutputView3Query"/>
-    <iterator Binds="Tbl_BeneficiaryView1" RangeSize="25" DataControl="AppModuleDataControl"
+     <iterator Binds="Tbl_BeneficiaryView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="Tbl_BeneficiaryView1Iterator"/>
     <searchRegion Binds="Tbl_BeneficiaryView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_BeneficiaryView1Query"/>
@@ -32,38 +24,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="TblProjCompInputView3Iterator" id="TblProjCompInputView3">
-      <nodeDefinition DefName="model.vo.TblProjCompInputView" Name="TblProjCompInputView30">
-        <AttrNames>
-          <Item Value="ProjCompInputId"/>
-          <Item Value="ProjCompId"/>
-          <Item Value="Name"/>
-          <Item Value="Ast"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="TblProjCompOutputView3Iterator" id="TblProjCompOutputView3">
-      <nodeDefinition DefName="model.vo.TblProjCompOutputView" Name="TblProjCompOutputView30">
-        <AttrNames>
-          <Item Value="ProjCompOutputId"/>
-          <Item Value="ProjCompId"/>
-          <Item Value="Name"/>
-          <Item Value="Ast"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <action IterBinding="TblProjCompInputView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="TblProjCompInputView3Iterator" id="Execute" RequiresUpdateModel="true"
-            Action="iteratorExecute"/>
-    <action IterBinding="TblProjCompInputView3Iterator" id="Delete" RequiresUpdateModel="false"
-            Action="removeCurrentRow"/>
-    <action IterBinding="TblProjCompOutputView3Iterator" id="CreateInsert1" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="TblProjCompOutputView3Iterator" id="Execute1" RequiresUpdateModel="true"
-            Action="iteratorExecute"/>
-    <action IterBinding="TblProjCompOutputView3Iterator" id="Delete1" RequiresUpdateModel="false"
-            Action="removeCurrentRow"/>
     <action IterBinding="TblProjCompView1Iterator" id="CreateInsert2" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action IterBinding="TblProjCompView1Iterator" id="Execute2" RequiresUpdateModel="true" Action="iteratorExecute"/>

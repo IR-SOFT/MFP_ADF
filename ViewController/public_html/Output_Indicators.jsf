@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Output_Indicators')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Output_Indicators.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -44,71 +44,8 @@
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:665px;">
                                                         <af:showDetailItem id="tab1" text="OutputComponent">
-                                                            <af:table value="#{bindings.TblMonitoringProjCompOutputView1.collectionModel}"
-                                                                      var="row"
-                                                                      rows="#{bindings.TblMonitoringProjCompOutputView1.rangeSize}"
-                                                                      emptyText="#{bindings.TblMonitoringProjCompOutputView1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                                      rowBandingInterval="0"
-                                                                      selectedRowKeys="#{bindings.TblMonitoringProjCompOutputView1.collectionModel.selectedRow}"
-                                                                      selectionListener="#{bindings.TblMonitoringProjCompOutputView1.collectionModel.makeCurrent}"
-                                                                      rowSelection="single"
-                                                                      fetchSize="#{bindings.TblMonitoringProjCompOutputView1.rangeSize}"
-                                                                      filterModel="#{bindings.TblMonitoringProjCompOutputView1Query.queryDescriptor}"
-                                                                      filterVisible="true"
-                                                                      queryListener="#{bindings.TblMonitoringProjCompOutputView1Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="651"
-                                                                      partialTriggers="::b9"
-                                                                      scrollPolicy="page" autoHeightRows="0" >
-                                                                <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.name}"
-                                                                           filterable="true"
-                                                                           headerText="Project Component" id="c9"
-                                                                           width="250">
-                                                                           
-                                                                                <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Proj_Comp_Name}"
-                                                                                     id="it11" placeholder="Search Project Component">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:outputText value="#{row.Proj_Comp_Name}"
-                                                                                   shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.tooltip}"
-                                                                                   id="ot5"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.name}"
-                                                                           filterable="true"
-                                                                           headerText="Project Output Component" id="c3"
-                                                                           width="300">
-                                                                           
-                                                                                   <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                     id="it4" placeholder="Search Project Output Component">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:outputText value="#{row.Name}"
-                                                                                   shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.tooltip}"
-                                                                                   id="ot3"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.name}"
-                                                                           filterable="true" headerText="Active" id="c4"
-                                                                           width="60">
-                                                                           
-                                                                               <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     id="it5" placeholder="Search Status">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:outputText value="#{row.Ast}"
-                                                                                   shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.tooltip}"
-                                                                                   id="ot4"/>
-                                                                </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute1.execute}"
-                                                                       text="Refresh"
-                                                                       disabled="#{!bindings.Execute1.enabled}"
-                                                                       id="b9"
-                                                                       icon="#{resource['images:refresh.png']}"/>
+                                                            
+                                                            
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -120,115 +57,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:670px;">
-                                                        <af:showDetailItem id="tab2" text="Output Indicators">
-                                                            <af:table value="#{bindings.TblMonitoringOutputIndView3.collectionModel}"
-                                                                      var="row"
-                                                                      rows="#{bindings.TblMonitoringOutputIndView3.rangeSize}"
-                                                                      emptyText="#{bindings.TblMonitoringOutputIndView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                                      rowBandingInterval="0"
-                                                                      selectedRowKeys="#{bindings.TblMonitoringOutputIndView3.collectionModel.selectedRow}"
-                                                                      selectionListener="#{bindings.TblMonitoringOutputIndView3.collectionModel.makeCurrent}"
-                                                                      rowSelection="single"
-                                                                      fetchSize="#{bindings.TblMonitoringOutputIndView3.rangeSize}"
-                                                                      filterModel="#{bindings.TblMonitoringOutputIndView3Query.queryDescriptor}"
-                                                                      filterVisible="true"
-                                                                      queryListener="#{bindings.TblMonitoringOutputIndView3Query.processQuery}"
-                                                                      varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7 ::b2" width="653"
-                                                                      scrollPolicy="page" autoHeightRows="0" >
-                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           align="center"
-                                                                           headerText="Project Output Component ID"
-                                                                           id="c6" width="100">
-                                                                           
-                                                                              <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.ProjCompOutputId}"
-                                                                                     id="it6" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:inputText value="#{row.bindings.ProjCompOutputId.inputValue}"
-                                                                                  label="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.label}"
-                                                                                  required="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.mandatory}"
-                                                                                  columns="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.precision}"
-                                                                                  shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.tooltip}"
-                                                                                  id="it2"
-                                                                                  contentStyle='text-align:center'>
-                                                                        <f:validator binding="#{row.bindings.ProjCompOutputId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           align="center"
-                                                                           headerText="Output Indicator ID" id="c5"
-                                                                           width="80">
-                                                                           
-                                                                             <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.OutputIndId}"
-                                                                                     id="it7" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:inputText value="#{row.bindings.OutputIndId.inputValue}"
-                                                                                  label="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.label}"
-                                                                                  required="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.mandatory}"
-                                                                                  columns="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.precision}"
-                                                                                  shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.tooltip}"
-                                                                                  id="it1" readOnly="true"
-                                                                                  contentStyle='text-align:center'>
-                                                                        <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Output Indicator" id="c7"
-                                                                           width="360">
-                                                                           
-                                                                            <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                     id="it8" placeholder="Search Output Indicator">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
-                                                                                  label="#{bindings.TblMonitoringOutputIndView3.hints.Name.label}"
-                                                                                  required="#{bindings.TblMonitoringOutputIndView3.hints.Name.mandatory}"
-                                                                                  columns="#{bindings.TblMonitoringOutputIndView3.hints.Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblMonitoringOutputIndView3.hints.Name.precision}"
-                                                                                  shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.Name.tooltip}"
-                                                                                  id="it3">
-                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Active" id="c8" width="60">
-                                                                           
-                                                                              <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     id="it9" placeholder="Search Status">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
-                                                                                        label="#{row.bindings.Ast.label}"
-                                                                                        required="#{bindings.TblMonitoringOutputIndView3.hints.Ast.mandatory}"
-                                                                                        shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.Ast.tooltip}"
-                                                                                        id="soc1">
-                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
-                                                                                       id="si1"/>
-                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:selectOneChoice>
-                                                                </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute.execute}"
-                                                                       text="Refresh"
-                                                                       disabled="#{!bindings.Execute.enabled}" id="b2"
-                                                                       icon="#{resource['images:refresh.png']}"/>
-                                                        </af:showDetailItem>
+                                                        <af:showDetailItem id="tab2" text="Output Indicators"/>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>

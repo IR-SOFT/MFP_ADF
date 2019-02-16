@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblMonitoringOutputIndView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -39,25 +39,6 @@
   <EntityUsage
     Name="TblMonitoringOutputInd"
     Entity="model.eo.TblMonitoringOutputInd"/>
-  <EntityUsage
-    Name="TblMonitoringProjCompOutput"
-    Entity="model.eo.TblMonitoringProjCompOutput"
-    Association="model.eo.FkTblOutputIndFkAssoc"
-    AssociationEnd="model.eo.FkTblOutputIndFkAssoc.TblMonitoringProjCompOutput"
-    SourceUsage="model.vo.TblMonitoringOutputIndView.TblMonitoringOutputInd"
-    ReadOnly="true"
-    Reference="true"
-    DeleteParticipant="false"
-    JoinType="INNER JOIN">
-    <DesignTime>
-      <AttrArray Name="_dstAttributes">
-        <Item Value="model.eo.TblMonitoringProjCompOutput.ProjCompOutputId"/>
-      </AttrArray>
-      <AttrArray Name="_srcAttributes">
-        <Item Value="model.eo.TblMonitoringOutputInd.ProjCompOutputId"/>
-      </AttrArray>
-    </DesignTime>
-  </EntityUsage>
   <ViewAttribute
     Name="OutputIndId"
     IsNotNull="true"
@@ -65,13 +46,6 @@
     EntityAttrName="OutputIndId"
     EntityUsage="TblMonitoringOutputInd"
     AliasName="OUTPUT_IND_ID"/>
-  <ViewAttribute
-    Name="ProjCompOutputId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompOutputId"
-    EntityUsage="TblMonitoringOutputInd"
-    AliasName="PROJ_COMP_OUTPUT_ID"/>
   <ViewAttribute
     Name="Name"
     IsUnique="true"
@@ -95,21 +69,6 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewAttribute
-    Name="Project_Comp_Output_Name"
-    IsUnique="true"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Name"
-    EntityUsage="TblMonitoringProjCompOutput"
-    AliasName="NAME1"/>
-  <ViewAttribute
-    Name="ProjCompOutputId1"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompOutputId"
-    EntityUsage="TblMonitoringProjCompOutput"
-    AliasName="PROJ_COMP_OUTPUT_ID1"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="OutputIndId"/>
   </AttrArray>

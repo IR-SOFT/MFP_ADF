@@ -26,19 +26,6 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="ProjCompOutputId"
-    IsNotNull="true"
-    Precision="3"
-    ColumnName="PROJ_COMP_OUTPUT_ID"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_OUTPUT_IND">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
     Name="Name"
     IsUnique="true"
     IsNotNull="true"
@@ -67,13 +54,6 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
-  <AccessorAttribute
-    Name="TblMonitoringProjCompOutput"
-    Association="model.eo.FkTblOutputIndFkAssoc"
-    AssociationEnd="model.eo.FkTblOutputIndFkAssoc.TblMonitoringProjCompOutput"
-    AssociationOtherEnd="model.eo.FkTblOutputIndFkAssoc.TblMonitoringOutputInd"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
   <AccessorAttribute
     Name="TblMonitoringMonParam"
     Association="model.eo.FkTblMonParamFkAssoc"
@@ -108,9 +88,6 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_OUTPUT_IND_FK"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.eo.TblMonitoringOutputInd.ProjCompOutputId"/>
-    </AttrArray>
   </Key>
   <Permission
     target="model.eo.TblMonitoringOutputInd"

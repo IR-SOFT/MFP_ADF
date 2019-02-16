@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblMonitoringProjCompOutputView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -113,9 +113,4 @@
   <AttrArray Name="KeyAttributes">
     <Item Value="ProjCompOutputId"/>
   </AttrArray>
-  <ViewLinkAccessor
-    Name="TblMonitoringOutputIndView"
-    ViewLink="model.vo.FkTblOutputIndFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblMonitoringProjCompOutputView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -76,7 +76,7 @@ FROM TBL_PROJ_COMP_OUTPUT TblProjCompOutput]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -84,9 +84,4 @@ FROM TBL_PROJ_COMP_OUTPUT TblProjCompOutput]]></SQLQuery>
   <AttrArray Name="KeyAttributes">
     <Item Value="ProjCompOutputId"/>
   </AttrArray>
-  <ViewLinkAccessor
-    Name="TblMonitoringOutputIndView"
-    ViewLink="model.queryBasedVO.FkTblOutputIndFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

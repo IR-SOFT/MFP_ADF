@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblMonitoringOutputIndView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -12,10 +12,9 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT TblOutputInd.OUTPUT_IND_ID,
-       TblOutputInd.PROJ_COMP_OUTPUT_ID,
-       TblOutputInd.NAME,
-       TblOutputInd.AST
+  <SQLQuery><![CDATA[SELECT TblOutputInd.OUTPUT_IND_ID, 
+       TblOutputInd.NAME, 
+       TblOutputInd.AST 
 FROM TBL_OUTPUT_IND TblOutputInd]]></SQLQuery>
   <ViewAttribute
     Name="OutputIndId"
@@ -28,22 +27,6 @@ FROM TBL_OUTPUT_IND TblOutputInd]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="OUTPUT_IND_ID"
     Expression="OUTPUT_IND_ID"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="ProjCompOutputId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    IsNotNull="true"
-    PrecisionRule="true"
-    Precision="3"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="PROJ_COMP_OUTPUT_ID"
-    Expression="PROJ_COMP_OUTPUT_ID"
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
@@ -76,7 +59,7 @@ FROM TBL_OUTPUT_IND TblOutputInd]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

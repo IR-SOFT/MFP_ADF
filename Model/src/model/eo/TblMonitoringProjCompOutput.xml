@@ -68,13 +68,6 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
-    Name="TblMonitoringOutputInd"
-    Association="model.eo.FkTblOutputIndFkAssoc"
-    AssociationEnd="model.eo.FkTblOutputIndFkAssoc.TblMonitoringOutputInd"
-    AssociationOtherEnd="model.eo.FkTblOutputIndFkAssoc.TblMonitoringProjCompOutput"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="TblProjComp"
     Association="model.eo.FKTblMonitoringProjCompOutputAssoc"
     AssociationEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblProjComp"

@@ -76,7 +76,7 @@ FROM TBL_PROJ_COMP TblProjComp]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -87,11 +87,6 @@ FROM TBL_PROJ_COMP TblProjComp]]></SQLQuery>
   <ViewLinkAccessor
     Name="TblProjCompInputView"
     ViewLink="model.queryBasedVO.FkTblProjCompInputFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblProjCompOutputView"
-    ViewLink="model.queryBasedVO.FkTblProjCompOutputFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>
