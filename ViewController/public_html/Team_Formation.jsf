@@ -38,7 +38,7 @@
                                         <af:button id="b4" inlineStyle="width:190px;" text="Trainer"
                                                    destination="Trainer.jsf" icon="#{resource['images:trainer.png']}"/>
                                         <af:spacer width="190" height="10" id="s7"/>
-                                        <af:button id="b10" inlineStyle="width:190px;" text="Training Setup"
+                                        <af:button id="b10" inlineStyle="width:190px;" text="Team Formation"
                                                    destination="Team_Formation.jsf"
                                                    icon="#{resource['images:training.png']}"/>
                                         <af:spacer width="190" height="10" id="s8"/>
