@@ -13,10 +13,8 @@
       <nodeDefinition DefName="model.vo.Tbl_TeamView" Name="Tbl_TeamView10">
         <AttrNames>
           <Item Value="TeamId"/>
-          <Item Value="TrainerId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
-          <Item Value="Trainer_Name"/>
           <Item Value="ProjCompId"/>
         </AttrNames>
       </nodeDefinition>

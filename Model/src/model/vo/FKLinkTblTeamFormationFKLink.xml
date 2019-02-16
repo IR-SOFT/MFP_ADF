@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FKLinkTblTeamFormationFKLink"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="FKLinkTblTeamFormationFKLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="Tbl_TeamView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.vo.Tbl_TeamView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Tbl_TeamView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.Tbl_TeamView.TeamId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblTeamFormationView"
+    Cardinality="-1"
+    Owner="model.vo.TblTeamFormationView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblTeamFormationView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblTeamFormationView.TeamId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.vo.common.FKLinkTblTeamFormationFKLinkMsgBundle"/>
+  </ResourceBundle>
+</ViewLink>

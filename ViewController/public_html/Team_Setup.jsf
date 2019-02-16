@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Team_Setup')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Team_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -98,27 +98,6 @@
                                                                         <f:selectItems value="#{row.bindings.ProjCompId.items}"
                                                                                        id="si2"/>
                                                                         <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
-                                                                    </af:selectOneChoice>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.TrainerId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Trainer"
-                                                                           id="c2" width="280">
-                                                                           
-                                                                              <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.TrainerId}"
-                                                                                     id="it2" placeholder="Search Trainer">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
-                                                                    <af:selectOneChoice value="#{row.bindings.TrainerId.inputValue}"
-                                                                                        label="#{row.bindings.TrainerId.label}"
-                                                                                        required="#{bindings.Tbl_TeamView1.hints.TrainerId.mandatory}"
-                                                                                        shortDesc="#{bindings.Tbl_TeamView1.hints.TrainerId.tooltip}"
-                                                                                        id="soc3">
-                                                                        <f:selectItems value="#{row.bindings.TrainerId.items}"
-                                                                                       id="si3"/>
-                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.TeamId.name}"

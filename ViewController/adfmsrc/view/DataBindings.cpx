@@ -12,7 +12,6 @@
     <page path="/mainPage.jsf" usageId="view_mainPagePageDef"/>
     <page path="/Project_Components.jsf" usageId="view_Project_ComponentsPageDef"/>
     <page path="/Clusters_Setup.jsf" usageId="view_Clusters_SetupPageDef"/>
-    <page path="/untitled1.jsf" usageId="view_untitled1PageDef"/>
     <page path="/Course_Setup.jsf" usageId="view_course_setupPageDef"/>
     <page path="/Module_Setup.jsf" usageId="view_Module_SetupPageDef"/>
     <page path="/Topic_Setup.jsf" usageId="view_Topic_SetupPageDef"/>
@@ -43,7 +42,6 @@
     <page id="view_mainPagePageDef" path="view.pageDefs.mainPagePageDef"/>
     <page id="view_Project_ComponentsPageDef" path="view.pageDefs.Project_ComponentsPageDef"/>
     <page id="view_Clusters_SetupPageDef" path="view.pageDefs.Clusters_SetupPageDef"/>
-    <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
     <page id="view_course_setupPageDef" path="view.pageDefs.course_setupPageDef"/>
     <page id="view_Module_SetupPageDef" path="view.pageDefs.Module_SetupPageDef"/>
     <page id="view_Topic_SetupPageDef" path="view.pageDefs.Topic_SetupPageDef"/>

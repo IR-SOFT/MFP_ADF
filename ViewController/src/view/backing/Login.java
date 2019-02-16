@@ -525,7 +525,7 @@ public class Login {
     public static Connection getConnection() throws SQLException {
         String username = "mfp";
         String password = "mfp";
-        String thinConn = "jdbc:oracle:thin:@192.168.1.192:1521:orcl";
+        String thinConn = "jdbc:oracle:thin:@localhost:1521:orcl";
         DriverManager.registerDriver(new OracleDriver());
         Connection conn = DriverManager.getConnection(thinConn, username, password);
         conn.setAutoCommit(false);

@@ -244,14 +244,8 @@
     AssociationOtherEnd="model.eo.FkTblTrainerAcaFkAssoc.Tbl_Trainer"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Tbl_Team"
-    Association="model.eo.FkTblTeamFkAssoc"
-    AssociationEnd="model.eo.FkTblTeamFkAssoc.Tbl_Team"
-    AssociationOtherEnd="model.eo.FkTblTeamFkAssoc.Tbl_Trainer"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
+  
+<AccessorAttribute
     Name="Tbl_TrainerPerc"
     Association="model.eo.FkTblTrainerPercFkAssoc"
     AssociationEnd="model.eo.FkTblTrainerPercFkAssoc.Tbl_TrainerPerc"

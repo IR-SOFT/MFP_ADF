@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_TeamView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -13,7 +13,6 @@
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
   <SQLQuery><![CDATA[SELECT TblTeam.TEAM_ID,
-       TblTeam.TRAINER_ID,
        TblTeam.NAME,
        TblTeam.AST
 FROM TBL_TEAM TblTeam]]></SQLQuery>
@@ -28,22 +27,6 @@ FROM TBL_TEAM TblTeam]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="TEAM_ID"
     Expression="TEAM_ID"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="TrainerId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    IsNotNull="true"
-    PrecisionRule="true"
-    Precision="3"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="TRAINER_ID"
-    Expression="TRAINER_ID"
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
@@ -76,7 +59,7 @@ FROM TBL_TEAM TblTeam]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

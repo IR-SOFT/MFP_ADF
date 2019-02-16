@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_TrainerView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -89,7 +89,7 @@ FROM TBL_TRAINER TblTrainer]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -105,7 +105,7 @@ FROM TBL_TRAINER TblTrainer]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="MAR_STATUS"
     Expression="MAR_STATUS"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -288,11 +288,6 @@ FROM TBL_TRAINER TblTrainer]]></SQLQuery>
   <AttrArray Name="KeyAttributes">
     <Item Value="TrainerId"/>
   </AttrArray>
-  <ViewLinkAccessor
-    Name="Tbl_TeamView"
-    ViewLink="model.queryBasedVO.FkTblTeamFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="Tbl_TrainerAcaView"
     ViewLink="model.queryBasedVO.FkTblTrainerAcaFkLink"

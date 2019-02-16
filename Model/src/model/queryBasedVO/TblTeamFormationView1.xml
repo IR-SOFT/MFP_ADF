@@ -3,8 +3,8 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Tbl_TrainingView"
-  Version="12.2.1.11.3"
+  Name="TblTeamFormationView1"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
@@ -12,12 +12,13 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT TblTraining.TRAINING_ID,
-       TblTraining.NAME,
-       TblTraining.AST
-FROM TBL_TRAINING TblTraining]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT TblTeamFormation.TEAM_FORMATION_ID,
+       TblTeamFormation.TRAINER_ID,
+       TblTeamFormation.TEAM_ID,
+       TblTeamFormation.AST
+FROM TBL_TEAM_FORMATION TblTeamFormation]]></SQLQuery>
   <ViewAttribute
-    Name="TrainingId"
+    Name="TeamFormationId"
     IsUpdateable="false"
     IsPersistent="false"
     IsNotNull="true"
@@ -25,27 +26,43 @@ FROM TBL_TRAINING TblTraining]]></SQLQuery>
     Precision="3"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    AliasName="TRAINING_ID"
-    Expression="TRAINING_ID"
+    AliasName="TEAM_FORMATION_ID"
+    Expression="TEAM_FORMATION_ID"
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </ViewAttribute>
   <ViewAttribute
-    Name="Name"
+    Name="TrainerId"
     IsUpdateable="false"
     IsPersistent="false"
     IsNotNull="true"
     PrecisionRule="true"
-    Precision="150"
+    Precision="3"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    AliasName="NAME"
-    Expression="NAME"
+    AliasName="TRAINER_ID"
+    Expression="TRAINER_ID"
     SQLType="VARCHAR">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="150"/>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="TeamId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="3"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="TEAM_ID"
+    Expression="TEAM_ID"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </ViewAttribute>
   <ViewAttribute
@@ -65,6 +82,6 @@ FROM TBL_TRAINING TblTraining]]></SQLQuery>
     </DesignTime>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">
-    <Item Value="TrainingId"/>
+    <Item Value="TeamFormationId"/>
   </AttrArray>
 </ViewObject>

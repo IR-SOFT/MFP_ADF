@@ -242,11 +242,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="Tbl_TeamView"
-    ViewLink="model.vo.FkTblTeamFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="Tbl_TrainerPercView"
     ViewLink="model.vo.FkTblTrainerPercFkLink"
     Type="oracle.jbo.RowIterator"
