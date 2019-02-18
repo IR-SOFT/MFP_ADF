@@ -122,9 +122,6 @@
     Name="TblTopicsView2"
     ViewObjectName="model.queryBasedVO.TblTopicsView"/>
   <ViewUsage
-    Name="TblCourseView3"
-    ViewObjectName="model.vo.TblCourseView"/>
-  <ViewUsage
     Name="TblModuleView3"
     ViewObjectName="model.vo.TblModuleView"/>
   <ViewUsage
@@ -788,12 +785,6 @@
     DstViewUsageName="model.eo.AppModule.TblClusterView1_2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkTblCourseFkLink1"
-    ViewLinkObjectName="model.vo.FkTblCourseFkLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompInput2View1"
-    DstViewUsageName="model.eo.AppModule.TblCourseView3"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkTblModuleFkLink1"
     ViewLinkObjectName="model.vo.FkTblModuleFkLink"
     SrcViewUsageName="model.eo.AppModule.TblCourseView1"
@@ -804,12 +795,6 @@
     ViewLinkObjectName="model.vo.FkTblTopicsFkLink"
     SrcViewUsageName="model.eo.AppModule.TblModuleView1"
     DstViewUsageName="model.eo.AppModule.TblTopicsView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblCourseFkLink2"
-    ViewLinkObjectName="model.queryBasedVO.FkTblCourseFkLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompInputView2_1"
-    DstViewUsageName="model.eo.AppModule.TblCourseView4"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkTblModuleFkLink2"

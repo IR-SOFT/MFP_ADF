@@ -68,13 +68,6 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
-    Name="TblCourse"
-    Association="model.eo.FkTblCourseFkAssoc"
-    AssociationEnd="model.eo.FkTblCourseFkAssoc.TblCourse"
-    AssociationOtherEnd="model.eo.FkTblCourseFkAssoc.TblProjCompInput2"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="TblProjComp"
     Association="model.eo.FKTblProjCompInput2Assoc"
     AssociationEnd="model.eo.FKTblProjCompInput2Assoc.TblProjComp"

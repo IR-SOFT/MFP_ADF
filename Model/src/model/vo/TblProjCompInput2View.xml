@@ -144,9 +144,4 @@
   <AttrArray Name="KeyAttributes">
     <Item Value="ProjCompInputId"/>
   </AttrArray>
-  <ViewLinkAccessor
-    Name="TblCourseView"
-    ViewLink="model.vo.FkTblCourseFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

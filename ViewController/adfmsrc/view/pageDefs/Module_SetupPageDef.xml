@@ -16,10 +16,8 @@
       <nodeDefinition DefName="model.vo.TblCourseView" Name="TblCourseView10">
         <AttrNames>
           <Item Value="CourseId"/>
-          <Item Value="ProjCompInputId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
-          <Item Value="Project_Comp_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

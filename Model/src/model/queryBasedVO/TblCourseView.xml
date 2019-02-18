@@ -12,10 +12,9 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT TblCourse.COURSE_ID,
-       TblCourse.PROJ_COMP_INPUT_ID,
-       TblCourse.NAME,
-       TblCourse.AST
+  <SQLQuery><![CDATA[SELECT TblCourse.COURSE_ID, 
+       TblCourse.NAME, 
+       TblCourse.AST 
 FROM TBL_COURSE TblCourse]]></SQLQuery>
   <ViewAttribute
     Name="CourseId"
@@ -28,22 +27,6 @@ FROM TBL_COURSE TblCourse]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="COURSE_ID"
     Expression="COURSE_ID"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="ProjCompInputId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    IsNotNull="true"
-    PrecisionRule="true"
-    Precision="3"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="PROJ_COMP_INPUT_ID"
-    Expression="PROJ_COMP_INPUT_ID"
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
@@ -76,7 +59,7 @@ FROM TBL_COURSE TblCourse]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

@@ -26,19 +26,6 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="ProjCompInputId"
-    IsNotNull="true"
-    Precision="3"
-    ColumnName="PROJ_COMP_INPUT_ID"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_COURSE">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
     Name="Name"
     IsUnique="true"
     IsNotNull="true"
@@ -68,25 +55,11 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
-    Name="TblProjCompInput2"
-    Association="model.eo.FkTblCourseFkAssoc"
-    AssociationEnd="model.eo.FkTblCourseFkAssoc.TblProjCompInput2"
-    AssociationOtherEnd="model.eo.FkTblCourseFkAssoc.TblCourse"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="TblModule"
     Association="model.eo.FkTblModuleFkAssoc"
     AssociationEnd="model.eo.FkTblModuleFkAssoc.TblModule"
     AssociationOtherEnd="model.eo.FkTblModuleFkAssoc.TblCourse"
     Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblProjCompInputView"
-    ViewLink="model.vo.FKTblCourseFKLink2"
-    ViewLinkEnd="model.vo.FKTblCourseFKLink2.TblProjCompInputView"
-    ViewLinkOtherEnd="model.vo.FKTblCourseFKLink2.TblCourseView"
-    Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="Tbl_TrainingSchMasterView"

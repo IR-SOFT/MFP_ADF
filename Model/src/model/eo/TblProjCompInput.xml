@@ -81,13 +81,6 @@
     ViewLinkOtherEnd="model.vo.FKTblClusterFKLink2.TblProjCompInputView"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblCourseView"
-    ViewLink="model.vo.FKTblCourseFKLink2"
-    ViewLinkEnd="model.vo.FKTblCourseFKLink2.TblCourseView"
-    ViewLinkOtherEnd="model.vo.FKTblCourseFKLink2.TblProjCompInputView"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <Key
     Name="PkTblProjCompInputPk"
     PrimaryKey="true">

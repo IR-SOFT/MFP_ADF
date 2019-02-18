@@ -76,7 +76,7 @@ FROM TBL_PROJ_COMP_INPUT TblProjCompInput]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -84,9 +84,4 @@ FROM TBL_PROJ_COMP_INPUT TblProjCompInput]]></SQLQuery>
   <AttrArray Name="KeyAttributes">
     <Item Value="ProjCompInputId"/>
   </AttrArray>
-  <ViewLinkAccessor
-    Name="TblCourseView"
-    ViewLink="model.queryBasedVO.FkTblCourseFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>
