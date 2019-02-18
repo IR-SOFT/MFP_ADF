@@ -62,41 +62,20 @@
     Name="TblLatlong1"
     ViewObjectName="model.queryBasedVO.TblLatlong"/>
   <ViewUsage
-    Name="TblProjCompInputView1"
-    ViewObjectName="model.vo.TblProjCompInputView"/>
-  <ViewUsage
     Name="TblProjCompView1"
     ViewObjectName="model.vo.TblProjCompView"/>
   <ViewUsage
     Name="TblProjCompView2"
     ViewObjectName="model.queryBasedVO.TblProjCompView"/>
   <ViewUsage
-    Name="TblProjCompInputView2"
-    ViewObjectName="model.queryBasedVO.TblProjCompInputView"/>
-  <ViewUsage
-    Name="TblProjCompInputView3"
-    ViewObjectName="model.vo.TblProjCompInputView"/>
-  <ViewUsage
-    Name="TblProjCompInputView4"
-    ViewObjectName="model.queryBasedVO.TblProjCompInputView"/>
-  <ViewUsage
     Name="TblClusterView1"
     ViewObjectName="model.vo.TblClusterView"/>
-  <ViewUsage
-    Name="TblProjCompInput1View1"
-    ViewObjectName="model.vo.TblProjCompInput1View"/>
   <ViewUsage
     Name="TblClusterView1_1"
     ViewObjectName="model.queryBasedVO.TblClusterView1"/>
   <ViewUsage
-    Name="TblProjCompInputView1_1"
-    ViewObjectName="model.queryBasedVO.TblProjCompInputView1"/>
-  <ViewUsage
     Name="TblClusterView2"
     ViewObjectName="model.vo.TblClusterView"/>
-  <ViewUsage
-    Name="TblClusterView1_2"
-    ViewObjectName="model.queryBasedVO.TblClusterView1"/>
   <ViewUsage
     Name="TblCourseView1"
     ViewObjectName="model.vo.TblCourseView"/>
@@ -104,14 +83,8 @@
     Name="TblModuleView1"
     ViewObjectName="model.vo.TblModuleView"/>
   <ViewUsage
-    Name="TblProjCompInput2View1"
-    ViewObjectName="model.vo.TblProjCompInput2View"/>
-  <ViewUsage
     Name="TblTopicsView1"
     ViewObjectName="model.vo.TblTopicsView"/>
-  <ViewUsage
-    Name="TblProjCompInputView2_1"
-    ViewObjectName="model.queryBasedVO.TblProjCompInputView2"/>
   <ViewUsage
     Name="TblCourseView2"
     ViewObjectName="model.queryBasedVO.TblCourseView"/>
@@ -759,30 +732,6 @@
     ViewLinkObjectName="model.queryBasedVO.FkTblProjOffTblProjFkLink"
     SrcViewUsageName="model.eo.AppModule.TblProjView2"
     DstViewUsageName="model.eo.AppModule.TblProjOffView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblProjCompInputFkLink1"
-    ViewLinkObjectName="model.vo.FkTblProjCompInputFkLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompView1"
-    DstViewUsageName="model.eo.AppModule.TblProjCompInputView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblProjCompInputFkLink2"
-    ViewLinkObjectName="model.queryBasedVO.FkTblProjCompInputFkLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompView2"
-    DstViewUsageName="model.eo.AppModule.TblProjCompInputView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblClusterFkLink1"
-    ViewLinkObjectName="model.vo.FkTblClusterFkLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompInput1View1"
-    DstViewUsageName="model.eo.AppModule.TblClusterView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkTblClusterFkLink2"
-    ViewLinkObjectName="model.queryBasedVO.FkTblClusterFkLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompInputView1_1"
-    DstViewUsageName="model.eo.AppModule.TblClusterView1_2"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkTblModuleFkLink1"

@@ -26,19 +26,6 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="ProjCompInputId"
-    IsNotNull="true"
-    Precision="3"
-    ColumnName="PROJ_COMP_INPUT_ID"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_CLUSTER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
     Name="Name"
     IsUnique="true"
     IsNotNull="true"
@@ -175,17 +162,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.Tbl_Cluster.CropId"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="FkTblClusterFk">
-    <DesignTime>
-      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_COMP_INPUT_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_TBL_CLUSTER_FK"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.eo.Tbl_Cluster.ProjCompInputId"/>
     </AttrArray>
   </Key>
   <Permission

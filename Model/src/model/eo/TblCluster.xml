@@ -26,19 +26,6 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="ProjCompInputId"
-    IsNotNull="true"
-    Precision="3"
-    ColumnName="PROJ_COMP_INPUT_ID"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_CLUSTER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
     Name="Name"
     IsUnique="true"
     IsNotNull="true"
@@ -146,25 +133,11 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
-    Name="TblProjCompInput1"
-    Association="model.eo.FkTblClusterFkAssoc"
-    AssociationEnd="model.eo.FkTblClusterFkAssoc.TblProjCompInput1"
-    AssociationOtherEnd="model.eo.FkTblClusterFkAssoc.TblCluster"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="TblClusterMaster"
     Association="model.eo.FKTblClusterMasterAssoc"
     AssociationEnd="model.eo.FKTblClusterMasterAssoc.TblClusterMaster"
     AssociationOtherEnd="model.eo.FKTblClusterMasterAssoc.TblCluster"
     Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblProjCompInputView"
-    ViewLink="model.vo.FKTblClusterFKLink2"
-    ViewLinkEnd="model.vo.FKTblClusterFKLink2.TblProjCompInputView"
-    ViewLinkOtherEnd="model.vo.FKTblClusterFKLink2.TblClusterView"
-    Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="Tbl_TrainingSchDetailView"
@@ -207,9 +180,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_CLUSTER_FK"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.eo.TblCluster.ProjCompInputId"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Permission
     target="model.eo.TblCluster"

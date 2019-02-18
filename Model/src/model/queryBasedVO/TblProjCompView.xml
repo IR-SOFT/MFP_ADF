@@ -84,9 +84,4 @@ FROM TBL_PROJ_COMP TblProjComp]]></SQLQuery>
   <AttrArray Name="KeyAttributes">
     <Item Value="ProjCompId"/>
   </AttrArray>
-  <ViewLinkAccessor
-    Name="TblProjCompInputView"
-    ViewLink="model.queryBasedVO.FkTblProjCompInputFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

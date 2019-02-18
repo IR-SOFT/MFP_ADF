@@ -185,13 +185,6 @@
     EntityUsage="TblCluster"
     AliasName="CLUSTER_ID"/>
   <ViewAttribute
-    Name="ProjCompInputId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompInputId"
-    EntityUsage="TblCluster"
-    AliasName="PROJ_COMP_INPUT_ID"/>
-  <ViewAttribute
     Name="Name"
     IsUnique="true"
     IsNotNull="true"
@@ -304,12 +297,6 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewLinkAccessor
-    Name="TblProjCompInputView"
-    ViewLink="model.vo.FKTblClusterFKLink2"
-    Type="oracle.jbo.server.ViewRowImpl"
-    Reversed="true"
-    IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="Tbl_TrainingSchDetailView"
     ViewLink="model.vo.FKTblTrainingSchDetailFKLink2"

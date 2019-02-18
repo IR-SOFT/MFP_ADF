@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Course_Setup')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Course_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -62,67 +62,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:735px;">
-                                                        <af:showDetailItem id="tab1" text="Input Component">
-                                                            <af:table value="#{bindings.TblProjCompInput2View11.collectionModel}"
-                                                                      var="row"
-                                                                      rows="#{bindings.TblProjCompInput2View11.rangeSize}"
-                                                                      emptyText="#{bindings.TblProjCompInput2View11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                                      rowBandingInterval="0"
-                                                                      selectedRowKeys="#{bindings.TblProjCompInput2View11.collectionModel.selectedRow}"
-                                                                      selectionListener="#{bindings.TblProjCompInput2View11.collectionModel.makeCurrent}"
-                                                                      rowSelection="single"
-                                                                      fetchSize="#{bindings.TblProjCompInput2View11.rangeSize}"
-                                                                      filterModel="#{bindings.TblProjCompInput2View11Query.queryDescriptor}"
-                                                                      filterVisible="true"
-                                                                      queryListener="#{bindings.TblProjCompInput2View11Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="719"
-                                                                      partialTriggers="::b13"
-                                                                      scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Project_Comp_Name.name}"
-                                                                           filterable="true"
-                                                                           headerText="Project Component" id="c9"
-                                                                           width="270">
-                                                                    <f:facet name="filter">
-                                                                        <af:inputText value="#{vs.filterCriteria.Project_Comp_Name}"
-                                                                                      id="it17"
-                                                                                      placeholder="Search Project Component"></af:inputText>
-                                                                    </f:facet>
-                                                                    <af:outputText value="#{row.Project_Comp_Name}"
-                                                                                   shortDesc="#{bindings.TblProjCompInput2View11.hints.Project_Comp_Name.tooltip}"
-                                                                                   id="ot5"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Name.name}"
-                                                                           filterable="true"
-                                                                           headerText="Input Component" id="c3"
-                                                                           width="350">
-                                                                    <f:facet name="filter">
-                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                      id="it2"
-                                                                                      placeholder="Search Input Component"></af:inputText>
-                                                                    </f:facet>
-                                                                    <af:outputText value="#{row.Name}"
-                                                                                   shortDesc="#{bindings.TblProjCompInput2View11.hints.Name.tooltip}"
-                                                                                   id="ot3"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Ast.name}"
-                                                                           filterable="true" headerText="Active" id="c4"
-                                                                           width="60">
-                                                                    <f:facet name="filter">
-                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                      id="it9"
-                                                                                      placeholder="Search Status"></af:inputText>
-                                                                    </f:facet>
-                                                                    <af:outputText value="#{row.Ast}"
-                                                                                   shortDesc="#{bindings.TblProjCompInput2View11.hints.Ast.tooltip}"
-                                                                                   id="ot4"/>
-                                                                </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute1.execute}"
-                                                                       text="Refresh"
-                                                                       disabled="#{!bindings.Execute1.enabled}"
-                                                                       id="b13"
-                                                                       icon="#{resource['images:refresh.png']}"/>
-                                                        </af:showDetailItem>
+                                                        <af:showDetailItem id="tab1" text="Input Component"/>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
@@ -133,112 +73,14 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:735px;">
-                                                        <af:showDetailItem id="tab2" text="Training Setup">
-                                                            <af:table value="#{bindings.TblCourseView3.collectionModel}"
-                                                                      var="row"
-                                                                      rows="#{bindings.TblCourseView3.rangeSize}"
-                                                                      emptyText="#{bindings.TblCourseView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                                      rowBandingInterval="0"
-                                                                      selectedRowKeys="#{bindings.TblCourseView3.collectionModel.selectedRow}"
-                                                                      selectionListener="#{bindings.TblCourseView3.collectionModel.makeCurrent}"
-                                                                      rowSelection="single"
-                                                                      fetchSize="#{bindings.TblCourseView3.rangeSize}"
-                                                                      filterModel="#{bindings.TblCourseView3Query.queryDescriptor}"
-                                                                      filterVisible="true"
-                                                                      queryListener="#{bindings.TblCourseView3Query.processQuery}"
-                                                                      varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7 ::b14" width="718"
-                                                                      scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.ProjCompInputId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Component Input ID"
-                                                                           align="center" id="c6" width="80">
-                                                                    <f:facet name="filter">
-                                                                        <af:inputText value="#{vs.filterCriteria.ProjCompInputId}"
-                                                                                      id="it3" placeholder="Search ID"></af:inputText>
-                                                                    </f:facet>
-                                                                    <af:inputText value="#{row.bindings.ProjCompInputId.inputValue}"
-                                                                                  label="#{bindings.TblCourseView3.hints.ProjCompInputId.label}"
-                                                                                  required="#{bindings.TblCourseView3.hints.ProjCompInputId.mandatory}"
-                                                                                  columns="#{bindings.TblCourseView3.hints.ProjCompInputId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblCourseView3.hints.ProjCompInputId.precision}"
-                                                                                  shortDesc="#{bindings.TblCourseView3.hints.ProjCompInputId.tooltip}"
-                                                                                  id="it6"
-                                                                                  inlineStyle="text-align:center; vertical-align: middle;"
-                                                                                  contentStyle="text-align:center">
-                                                                        <f:validator binding="#{row.bindings.ProjCompInputId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.CourseId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Training ID" align="center"
-                                                                           id="c5" width="60">
-                                                                    <f:facet name="filter">
-                                                                        <af:inputText value="#{vs.filterCriteria.CourseId}"
-                                                                                      id="it8" placeholder="Search ID"></af:inputText>
-                                                                    </f:facet>
-                                                                    <af:inputText value="#{row.bindings.CourseId.inputValue}"
-                                                                                  label="#{bindings.TblCourseView3.hints.CourseId.label}"
-                                                                                  required="#{bindings.TblCourseView3.hints.CourseId.mandatory}"
-                                                                                  columns="#{bindings.TblCourseView3.hints.CourseId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblCourseView3.hints.CourseId.precision}"
-                                                                                  shortDesc="#{bindings.TblCourseView3.hints.CourseId.tooltip}"
-                                                                                  id="it5" readOnly="true"
-                                                                                  inlineStyle="text-align:center; vertical-align: middle;"
-                                                                                  contentStyle="text-align:center">
-                                                                        <f:validator binding="#{row.bindings.CourseId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Training" id="c7" width="465">
-                                                                    <f:facet name="filter">
-                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                      id="it4"
-                                                                                      placeholder="Search Training"></af:inputText>
-                                                                    </f:facet>
-                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
-                                                                                  label="#{bindings.TblCourseView3.hints.Name.label}"
-                                                                                  required="#{bindings.TblCourseView3.hints.Name.mandatory}"
-                                                                                  columns="#{bindings.TblCourseView3.hints.Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblCourseView3.hints.Name.precision}"
-                                                                                  shortDesc="#{bindings.TblCourseView3.hints.Name.tooltip}"
-                                                                                  id="it7">
-                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Active" id="c8" width="60">
-                                                                    <f:facet name="filter">
-                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                      id="it1"
-                                                                                      placeholder="Search Status"></af:inputText>
-                                                                    </f:facet>
-                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
-                                                                                        label="#{row.bindings.Ast.label}"
-                                                                                        required="#{bindings.TblCourseView3.hints.Ast.mandatory}"
-                                                                                        shortDesc="#{bindings.TblCourseView3.hints.Ast.tooltip}"
-                                                                                        id="soc1">
-                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
-                                                                                       id="si1"/>
-                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:selectOneChoice>
-                                                                </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute.execute}"
-                                                                       text="Refresh"
-                                                                       disabled="#{!bindings.Execute.enabled}"
-                                                                       id="b14"
-                                                                       icon="#{resource['images:refresh.png']}"/>
-                                                        </af:showDetailItem>
+                                                        <af:showDetailItem id="tab2" text="Training Setup"/>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="220" height="20" id="s9"/>
-                                                    <h:panelGroup id="pg1">
+                                                    <!--<h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
@@ -267,7 +109,7 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:save.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                    </h:panelGroup>
+                                                    </h:panelGroup>-->
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">

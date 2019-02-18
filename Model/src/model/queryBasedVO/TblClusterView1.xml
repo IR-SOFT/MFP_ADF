@@ -12,14 +12,13 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT TblCluster.CLUSTER_ID,
-       TblCluster.PROJ_COMP_INPUT_ID,
-       TblCluster.NAME,
-       TblCluster.DISTRICT,
-       TblCluster.TEHSIL,
-       TblCluster.MAUZA,
-       TblCluster.VILLAGE,
-       TblCluster.AST
+  <SQLQuery><![CDATA[SELECT TblCluster.CLUSTER_ID, 
+       TblCluster.NAME, 
+       TblCluster.DISTRICT, 
+       TblCluster.TEHSIL, 
+       TblCluster.MAUZA, 
+       TblCluster.VILLAGE, 
+       TblCluster.AST 
 FROM TBL_CLUSTER TblCluster]]></SQLQuery>
   <ViewAttribute
     Name="ClusterId"
@@ -32,22 +31,6 @@ FROM TBL_CLUSTER TblCluster]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="CLUSTER_ID"
     Expression="CLUSTER_ID"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="ProjCompInputId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    IsNotNull="true"
-    PrecisionRule="true"
-    Precision="3"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="PROJ_COMP_INPUT_ID"
-    Expression="PROJ_COMP_INPUT_ID"
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
@@ -144,7 +127,7 @@ FROM TBL_CLUSTER TblCluster]]></SQLQuery>
     ColumnType="CHAR"
     AliasName="AST"
     Expression="AST"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

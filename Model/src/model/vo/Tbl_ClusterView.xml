@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_ClusterView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -23,13 +23,6 @@
     EntityAttrName="ClusterId"
     EntityUsage="Tbl_Cluster"
     AliasName="CLUSTER_ID"/>
-  <ViewAttribute
-    Name="ProjCompInputId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompInputId"
-    EntityUsage="Tbl_Cluster"
-    AliasName="PROJ_COMP_INPUT_ID"/>
   <ViewAttribute
     Name="Name"
     IsUnique="true"

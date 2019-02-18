@@ -140,11 +140,6 @@
     EntityUsage="TblProj"
     AliasName="PROJ_ID1"/>
   <ViewLinkAccessor
-    Name="TblProjCompInputView"
-    ViewLink="model.vo.FkTblProjCompInputFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="TblProjView"
     ViewLink="model.vo.FKTblProjCompFKLink"
     Type="oracle.jbo.server.ViewRowImpl"

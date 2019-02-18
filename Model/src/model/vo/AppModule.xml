@@ -14,14 +14,8 @@
     Name="TblProjCompView1"
     ViewObjectName="model.vo.TblProjCompView"/>
   <ViewUsage
-    Name="TblProjCompInputView1"
-    ViewObjectName="model.vo.TblProjCompInputView"/>
-  <ViewUsage
     Name="TblClusterView1"
     ViewObjectName="model.vo.TblClusterView"/>
-  <ViewUsage
-    Name="TblProjCompInputView2"
-    ViewObjectName="model.vo.TblProjCompInputView"/>
   <ViewUsage
     Name="TblCourseView1"
     ViewObjectName="model.vo.TblCourseView"/>
@@ -99,18 +93,6 @@
     ViewLinkObjectName="model.vo.FKTblProjCompFKLink"
     SrcViewUsageName="model.vo.AppModule.TblProjView1"
     DstViewUsageName="model.vo.AppModule.TblProjCompView1"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FKTblClusterFKLink2"
-    ViewLinkObjectName="model.vo.FKTblClusterFKLink2"
-    SrcViewUsageName="model.vo.AppModule.TblProjCompInputView1"
-    DstViewUsageName="model.vo.AppModule.TblClusterView1"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FKTblCourseFKLink2"
-    ViewLinkObjectName="model.vo.FKTblCourseFKLink2"
-    SrcViewUsageName="model.vo.AppModule.TblProjCompInputView2"
-    DstViewUsageName="model.vo.AppModule.TblCourseView1"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FKTblFarmerRegCropsFKLink2"

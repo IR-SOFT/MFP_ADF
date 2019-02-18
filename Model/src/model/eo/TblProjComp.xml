@@ -68,27 +68,6 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
-    Name="TblProjCompInput"
-    Association="model.eo.FkTblProjCompInputFkAssoc"
-    AssociationEnd="model.eo.FkTblProjCompInputFkAssoc.TblProjCompInput"
-    AssociationOtherEnd="model.eo.FkTblProjCompInputFkAssoc.TblProjComp"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="TblProjCompInput1"
-    Association="model.eo.FKTblProjCompInputFKAssoc2"
-    AssociationEnd="model.eo.FKTblProjCompInputFKAssoc2.TblProjCompInput1"
-    AssociationOtherEnd="model.eo.FKTblProjCompInputFKAssoc2.TblProjComp"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="TblProjCompInput2"
-    Association="model.eo.FKTblProjCompInput2Assoc"
-    AssociationEnd="model.eo.FKTblProjCompInput2Assoc.TblProjCompInput2"
-    AssociationOtherEnd="model.eo.FKTblProjCompInput2Assoc.TblProjComp"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="TblMonitoringProjCompOutput"
     Association="model.eo.FKTblMonitoringProjCompOutputAssoc"
     AssociationEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblMonitoringProjCompOutput"
