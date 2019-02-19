@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Dashboard.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="5px" width="34%" id="gc1"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc2"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="34%" id="gc4"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc5">
+                        <af:image source="#{resource['images:dashboard_text.png']}" id="i1"
+                                  inlineStyle="width:405px; height:139px;"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc6"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr3">
+                    <af:gridCell marginStart="5px" width="34%" id="gc7"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc8"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc9"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr4">
+                    <af:gridCell marginStart="5px" width="34%" id="gc10" halign="center" valign="middle">
+                        <af:image source="#{resource['images:dash1.png']}" id="i2"
+                                  inlineStyle="width:300px;height:150px;"/>
+                        <af:outputLabel value="HOME" id="ol1"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="33%" id="gc11"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc12"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr5">
+                    <af:gridCell marginStart="5px" width="34%" id="gc13"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc14"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc15"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr6">
+                    <af:gridCell marginStart="5px" width="34%" id="gc16"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc17"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc18"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr7">
+                    <af:gridCell marginStart="5px" width="34%" id="gc19"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc20"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc21"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr8">
+                    <af:gridCell marginStart="5px" width="34%" id="gc22"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc23"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc24"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr9">
+                    <af:gridCell marginStart="5px" width="34%" id="gc25"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc26"/>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc27"/>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
