@@ -62,7 +62,82 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:735px;">
-                                                        <af:showDetailItem id="tab1" text="Input Component"/>
+                                                        <af:showDetailItem id="tab1" text="Input Component">
+                                                            <af:table value="#{bindings.TblProjCompView5.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProjCompView5.rangeSize}"
+                                                                      emptyText="#{bindings.TblProjCompView5.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProjCompView5.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProjCompView5.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProjCompView5.rangeSize}"
+                                                                      filterModel="#{bindings.TblProjCompView5Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProjCompView5Query.processQuery}"
+                                                                      varStatus="vs" id="t1" partialTriggers="::b14">
+                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView5.hints.ProjCompId.label}"
+                                                                           id="c1">
+                                                                    <af:outputText value="#{row.ProjCompId}"
+                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.ProjCompId.tooltip}"
+                                                                                   id="ot1"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.ProjId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView5.hints.ProjId.label}"
+                                                                           id="c2">
+                                                                    <af:outputText value="#{row.ProjId}"
+                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.ProjId.tooltip}"
+                                                                                   id="ot2"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView5.hints.Name.label}"
+                                                                           id="c3">
+                                                                    <af:outputText value="#{row.Name}"
+                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.Name.tooltip}"
+                                                                                   id="ot3"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView5.hints.Ast.label}"
+                                                                           id="c4">
+                                                                    <af:outputText value="#{row.Ast}"
+                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.Ast.tooltip}"
+                                                                                   id="ot4"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.Project_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView5.hints.Project_Name.label}"
+                                                                           id="c5">
+                                                                    <af:outputText value="#{row.Project_Name}"
+                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.Project_Name.tooltip}"
+                                                                                   id="ot5"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.ProjId1.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView5.hints.ProjId1.label}"
+                                                                           id="c6">
+                                                                    <af:outputText value="#{row.ProjId1}"
+                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.ProjId1.tooltip}"
+                                                                                   id="ot6"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.Io.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView5.hints.Io.label}"
+                                                                           id="c7">
+                                                                    <af:outputText value="#{row.Io}"
+                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.Io.tooltip}"
+                                                                                   id="ot7"/>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b14"/>
+                                                        </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
@@ -73,43 +148,117 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:735px;">
-                                                        <af:showDetailItem id="tab2" text="Training Setup"/>
+                                                        <af:showDetailItem id="tab2" text="Training Setup">
+                                                            <af:table value="#{bindings.TblCourseView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblCourseView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblCourseView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblCourseView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblCourseView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblCourseView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblCourseView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblCourseView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b7 ::b8 ::b9 ::b13">
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.CourseId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCourseView3.hints.CourseId.label}"
+                                                                           id="c8">
+                                                                    <af:inputText value="#{row.bindings.CourseId.inputValue}"
+                                                                                  label="#{bindings.TblCourseView3.hints.CourseId.label}"
+                                                                                  required="#{bindings.TblCourseView3.hints.CourseId.mandatory}"
+                                                                                  columns="#{bindings.TblCourseView3.hints.CourseId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblCourseView3.hints.CourseId.precision}"
+                                                                                  shortDesc="#{bindings.TblCourseView3.hints.CourseId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.CourseId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCourseView3.hints.Name.label}"
+                                                                           id="c9">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblCourseView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblCourseView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblCourseView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblCourseView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblCourseView3.hints.Name.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCourseView3.hints.Ast.label}"
+                                                                           id="c10">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblCourseView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCourseView3.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCourseView3.hints.ProjCompId.label}"
+                                                                           id="c11">
+                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                        label="#{row.bindings.ProjCompId.label}"
+                                                                                        required="#{bindings.TblCourseView3.hints.ProjCompId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCourseView3.hints.ProjCompId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b13"/>
+                                                        </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="220" height="20" id="s9"/>
-                                                    <!--<h:panelGroup id="pg1">
+                                                    <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
+                                                                   icon="#{resource['images:add.png']}"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
-                                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b9"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
-                                                                   icon="#{resource['images:add.png']}"/>
-                                                        <af:spacer width="5" height="10" id="s10"/>
+                                                                   disabled="#{!bindings.CreateInsert.enabled}"
+                                                                   id="b7"/>
+                                                                   <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
-                                                                   text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                                   id="b12"
-                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
-                                                                   icon="#{resource['images:edit.png']}"/>
-                                                        <af:spacer width="5" height="10" id="s11"/>
+                                                                    text="Edit"
+                                                                    rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
+                                                                    icon="#{resource['images:edit.png']}"
+                                                                   disabled="#{!bindings.Execute.enabled}" id="b8"/>
+                                                                   <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
-                                                                   id="b7"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
-                                                                   immediate="true" action="Course_Setup.jsf"/>
-                                                        <af:spacer width="5" height="10" id="s12"/>
+                                                                   id="b9"
+                                                                   immediate="true" action="Course_Setup.jsf" />
+                                                                    <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
-                                                                   id="b8"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:save.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                    </h:panelGroup>-->
+                                                                   id="b12"/>
+                                                    </h:panelGroup>
+                                                  
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">

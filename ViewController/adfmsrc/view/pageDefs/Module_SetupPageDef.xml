@@ -18,6 +18,7 @@
           <Item Value="CourseId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="ProjCompId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

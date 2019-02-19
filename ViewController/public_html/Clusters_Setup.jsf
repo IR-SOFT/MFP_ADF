@@ -47,7 +47,81 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1012px;">
-                                                        <af:showDetailItem id="tab1" text="Input Component"/>
+                                                        <af:showDetailItem id="tab1" text="Input Component">
+                                                            <af:table value="#{bindings.TblProjCompView4.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProjCompView4.rangeSize}"
+                                                                      emptyText="#{bindings.TblProjCompView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProjCompView4.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProjCompView4.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProjCompView4.rangeSize}"
+                                                                      filterModel="#{bindings.TblProjCompView4Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProjCompView4Query.processQuery}"
+                                                                      varStatus="vs" id="t1" partialTriggers="::b4">
+                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView4.hints.ProjCompId.label}"
+                                                                           id="c1">
+                                                                    <af:outputText value="#{row.ProjCompId}"
+                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.ProjCompId.tooltip}"
+                                                                                   id="ot1"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.ProjId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView4.hints.ProjId.label}"
+                                                                           id="c2">
+                                                                    <af:outputText value="#{row.ProjId}"
+                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.ProjId.tooltip}"
+                                                                                   id="ot2"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView4.hints.Name.label}"
+                                                                           id="c3">
+                                                                    <af:outputText value="#{row.Name}"
+                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Name.tooltip}"
+                                                                                   id="ot3"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView4.hints.Ast.label}"
+                                                                           id="c4">
+                                                                    <af:outputText value="#{row.Ast}"
+                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Ast.tooltip}"
+                                                                                   id="ot4"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Project_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView4.hints.Project_Name.label}"
+                                                                           id="c5">
+                                                                    <af:outputText value="#{row.Project_Name}"
+                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Project_Name.tooltip}"
+                                                                                   id="ot5"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.ProjId1.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView4.hints.ProjId1.label}"
+                                                                           id="c6">
+                                                                    <af:outputText value="#{row.ProjId1}"
+                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.ProjId1.tooltip}"
+                                                                                   id="ot6"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Io.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView4.hints.Io.label}"
+                                                                           id="c7">
+                                                                    <af:outputText value="#{row.Io}"
+                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Io.tooltip}"
+                                                                                   id="ot7"/>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}" id="b4"/>
+                                                        </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
@@ -58,41 +132,203 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1015px;">
-                                                        <af:showDetailItem id="tab2" text="Clusters Setup"/>
+                                                        <af:showDetailItem id="tab2" text="Clusters Setup">
+                                                            <af:table value="#{bindings.TblClusterView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblClusterView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblClusterView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblClusterView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblClusterView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblClusterView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblClusterView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblClusterView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b6 ::b7 ::b8 ::b9">
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.ClusterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.ClusterId.label}"
+                                                                           id="c8">
+                                                                    <af:inputText value="#{row.bindings.ClusterId.inputValue}"
+                                                                                  label="#{bindings.TblClusterView3.hints.ClusterId.label}"
+                                                                                  required="#{bindings.TblClusterView3.hints.ClusterId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView3.hints.ClusterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView3.hints.ClusterId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView3.hints.ClusterId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.Name.label}"
+                                                                           id="c9">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblClusterView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblClusterView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView3.hints.Name.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.Ast.label}"
+                                                                           id="c10">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.CropId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.CropId.label}"
+                                                                           id="c11">
+                                                                    <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
+                                                                                        label="#{row.bindings.CropId.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.CropId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.CropId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.CropId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.CropId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.CityLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.CityLibrDetail.label}"
+                                                                           id="c12">
+                                                                    <af:selectOneChoice value="#{row.bindings.CityLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.CityLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.CityLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.CityLibrDetail.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.CityLibrDetail.items}"
+                                                                                       id="si3"/>
+                                                                        <f:validator binding="#{row.bindings.CityLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.DistrictLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.DistrictLibrDetail.label}"
+                                                                           id="c13">
+                                                                    <af:selectOneChoice value="#{row.bindings.DistrictLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.DistrictLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.DistrictLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.DistrictLibrDetail.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.DistrictLibrDetail.items}"
+                                                                                       id="si4"/>
+                                                                        <f:validator binding="#{row.bindings.DistrictLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.TehsilLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.TehsilLibrDetail.label}"
+                                                                           id="c14">
+                                                                    <af:selectOneChoice value="#{row.bindings.TehsilLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.TehsilLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.TehsilLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.TehsilLibrDetail.tooltip}"
+                                                                                        id="soc5">
+                                                                        <f:selectItems value="#{row.bindings.TehsilLibrDetail.items}"
+                                                                                       id="si5"/>
+                                                                        <f:validator binding="#{row.bindings.TehsilLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.MauzaLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.MauzaLibrDetail.label}"
+                                                                           id="c15">
+                                                                    <af:selectOneChoice value="#{row.bindings.MauzaLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.MauzaLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.MauzaLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.MauzaLibrDetail.tooltip}"
+                                                                                        id="soc6">
+                                                                        <f:selectItems value="#{row.bindings.MauzaLibrDetail.items}"
+                                                                                       id="si6"/>
+                                                                        <f:validator binding="#{row.bindings.MauzaLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.VillageLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.VillageLibrDetail.label}"
+                                                                           id="c16">
+                                                                    <af:selectOneChoice value="#{row.bindings.VillageLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.VillageLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.VillageLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.VillageLibrDetail.tooltip}"
+                                                                                        id="soc7">
+                                                                        <f:selectItems value="#{row.bindings.VillageLibrDetail.items}"
+                                                                                       id="si7"/>
+                                                                        <f:validator binding="#{row.bindings.VillageLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterView3.hints.ProjCompId.label}"
+                                                                           id="c17">
+                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                        label="#{row.bindings.ProjCompId.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.ProjCompId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.ProjCompId.tooltip}"
+                                                                                        id="soc8">
+                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
+                                                                                       id="si8"/>
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b6"/>
+                                                        </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="360" height="10" id="s7"/>
-                                                    <!--<h:panelGroup id="pg1">
-                                                        <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                    <h:panelGroup id="pg1">
+                                                    <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
-                                                                   disabled="#{!bindings.CreateInsert1.enabled}" id="b4"
-                                                                   icon="#{resource['images:add.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                                    icon="#{resource['images:add.png']}"
+                                                                   disabled="#{!bindings.CreateInsert.enabled}"
+                                                                   id="b7"/>
+                                                                    <af:spacer width="5" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Execute1.execute}"
-                                                                   text="Edit" disabled="#{!bindings.Execute1.enabled}"
+                                                                   text="Edit"
                                                                    rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
-                                                                   id="b6" icon="#{resource['images:edit.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s6"/>
-                                                        <af:button actionListener="#{bindings.Delete1.execute}"
-                                                                   text="Delete" disabled="#{!bindings.Delete1.enabled}"
+                                                                   icon="#{resource['images:edit.png']}"
+                                                                   disabled="#{!bindings.Execute1.enabled}" id="b8"/>
+                                                                   <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}"
+                                                                   text="Delete"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
-                                                                   id="b7" icon="#{resource['images:delete.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                   icon="#{resource['images:delete.png']}"
+                                                                   disabled="#{!bindings.Delete.enabled}"
+                                                                   id="b9"
                                                                    immediate="true" action="Clusters_Setup.jsf"/>
-                                                        <af:spacer width="5" height="10" id="s8"/>
+                                                                     <af:spacer width="5" height="10" id="s8"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
-                                                                   text="Save" disabled="#{!bindings.Commit.enabled}"
-                                                                   id="b8"
-                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
+                                                                    text="Save"
+                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:save.png']}"
-                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                    </h:panelGroup>-->
+                                                                    disabled="#{!bindings.Commit.enabled}"
+                                                                   id="b10"/>
+                                                    </h:panelGroup>
+                                                   
                                                 </af:gridCell>
                                             </af:gridRow>
                                         </af:panelGridLayout>

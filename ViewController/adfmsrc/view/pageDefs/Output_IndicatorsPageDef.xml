@@ -4,10 +4,48 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblMonitoringProjCompOutputView1" RangeSize="7" DataControl="AppModuleDataControl"
-              id="TblMonitoringProjCompOutputView1Iterator"/>
-    <searchRegion Binds="TblMonitoringProjCompOutputView1Iterator" Criteria=""
+    
+    
+    <iterator Binds="TblProjCompView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblProjCompView3Iterator"/>
+    <searchRegion Binds="TblProjCompView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompView3Query"/>
+    <iterator Binds="TblMonitoringOutputIndView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblMonitoringOutputIndView3Iterator"/>
+    <searchRegion Binds="TblMonitoringOutputIndView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  id="TblMonitoringProjCompOutputView1Query"/>
+                  id="TblMonitoringOutputIndView3Query"/>
   </executables>
+  <bindings>
+    <tree IterBinding="TblProjCompView3Iterator" id="TblProjCompView3">
+      <nodeDefinition DefName="model.vo.TblProjCompView" Name="TblProjCompView30">
+        <AttrNames>
+          <Item Value="ProjCompId"/>
+          <Item Value="ProjId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+          <Item Value="Project_Name"/>
+          <Item Value="ProjId1"/>
+          <Item Value="Io"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblProjCompView3Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblMonitoringOutputIndView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblMonitoringOutputIndView3Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblMonitoringOutputIndView3Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="TblMonitoringOutputIndView3Iterator" id="TblMonitoringOutputIndView3">
+      <nodeDefinition DefName="model.vo.TblMonitoringOutputIndView" Name="TblMonitoringOutputIndView30">
+        <AttrNames>
+          <Item Value="OutputIndId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+          <Item Value="ProjCompId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>
