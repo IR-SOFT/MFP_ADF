@@ -21,6 +21,7 @@
           <Item Value="OutputIndId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="ProjCompId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

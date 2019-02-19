@@ -25,6 +25,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="Project_Name_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Proj_Comp_IO_LOV1_1"
+    ViewObjectName="model.lov.Proj_Comp_IO_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Proj_Comp_IO_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="AppModule_Active_Status1_1"
@@ -56,6 +62,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Io"
+    ListVOName="AppModule_Proj_Comp_IO_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Io"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Proj_Comp_IO_DB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Proj_Comp_IO_View"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -139,6 +162,21 @@
     EntityAttrName="ProjId"
     EntityUsage="TblProj"
     AliasName="PROJ_ID1"/>
+  <ViewAttribute
+    Name="Io"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Io"
+    EntityUsage="TblProjComp"
+    AliasName="IO"
+    LOVName="LOV_Io">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblProjView"
     ViewLink="model.vo.FKTblProjCompFKLink"
@@ -148,6 +186,21 @@
   <ViewLinkAccessor
     Name="Tbl_TrainingSchMasterView"
     ViewLink="model.vo.FKTblTrainingSchMasterFKLink2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblMonitoringOutputIndView"
+    ViewLink="model.vo.FKTblMonitoringOutputIndFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblClusterView"
+    ViewLink="model.vo.FKTblClusterFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblCourseView"
+    ViewLink="model.vo.FKTblCourseFKLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

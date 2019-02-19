@@ -43,7 +43,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:800px;">
+                                                                    inlineStyle="width:1004px;">
                                                         <af:showDetailItem id="tab1" text="Project Components">
                                                             <af:table value="#{bindings.TblProjCompView1.collectionModel}"
                                                                       var="row"
@@ -58,7 +58,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProjCompView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b13 ::b14 ::b15 ::b2" width="795"
+                                                                      partialTriggers="::b13 ::b14 ::b15 ::b2"
+                                                                      width="983"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
@@ -123,6 +124,18 @@
                                                                                   id="it3">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="I/O"
+                                                                           id="c5">
+                                                                    <af:selectOneChoice value="#{row.bindings.Io.inputValue}"
+                                                                                        label="#{row.bindings.Io.label}"
+                                                                                        required="#{bindings.TblProjCompView1.hints.Io.mandatory}"
+                                                                                        shortDesc="#{bindings.TblProjCompView1.hints.Io.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.Io.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.Io.validator}"/>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true" 

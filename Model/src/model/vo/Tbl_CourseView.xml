@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_CourseView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -24,13 +24,6 @@
     EntityUsage="Tbl_Course"
     AliasName="COURSE_ID"/>
   <ViewAttribute
-    Name="ProjCompInputId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompInputId"
-    EntityUsage="Tbl_Course"
-    AliasName="PROJ_COMP_INPUT_ID"/>
-  <ViewAttribute
     Name="Name"
     IsUnique="true"
     IsNotNull="true"
@@ -45,6 +38,13 @@
     EntityAttrName="Ast"
     EntityUsage="Tbl_Course"
     AliasName="AST"/>
+  <ViewAttribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjCompId"
+    EntityUsage="Tbl_Course"
+    AliasName="PROJ_COMP_ID"/>
   <ViewLinkAccessor
     Name="Tbl_TrainingSchMasterView"
     ViewLink="model.vo.Fk2TblTrainingSchMasterFkLink"

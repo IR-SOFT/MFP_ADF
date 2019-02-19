@@ -125,9 +125,6 @@
     Name="TblMonitoringOutputIndView1"
     ViewObjectName="model.vo.TblMonitoringOutputIndView"/>
   <ViewUsage
-    Name="TblMonitoringProjCompOutputView1"
-    ViewObjectName="model.vo.TblMonitoringProjCompOutputView"/>
-  <ViewUsage
     Name="TblMonitoringOutputIndView2"
     ViewObjectName="model.queryBasedVO.TblMonitoringOutputIndView"/>
   <ViewUsage
@@ -139,9 +136,6 @@
   <ViewUsage
     Name="TblClusterProjOffView2"
     ViewObjectName="model.queryBasedVO.TblClusterProjOffView"/>
-  <ViewUsage
-    Name="TblMonitoringProjCompOutputView2"
-    ViewObjectName="model.queryBasedVO.TblMonitoringProjCompOutputView"/>
   <ViewUsage
     Name="TblClusterTargetCropsView2"
     ViewObjectName="model.queryBasedVO.TblClusterTargetCropsView"/>
@@ -697,6 +691,24 @@
   <ViewUsage
     Name="TblTeamFormationView2"
     ViewObjectName="model.vo.TblTeamFormationView"/>
+  <ViewUsage
+    Name="TblProjCompView3"
+    ViewObjectName="model.vo.TblProjCompView"/>
+  <ViewUsage
+    Name="TblMonitoringOutputIndView3"
+    ViewObjectName="model.vo.TblMonitoringOutputIndView"/>
+  <ViewUsage
+    Name="TblProjCompView4"
+    ViewObjectName="model.vo.TblProjCompView"/>
+  <ViewUsage
+    Name="TblClusterView3"
+    ViewObjectName="model.vo.TblClusterView"/>
+  <ViewUsage
+    Name="TblProjCompView5"
+    ViewObjectName="model.vo.TblProjCompView"/>
+  <ViewUsage
+    Name="TblCourseView3"
+    ViewObjectName="model.vo.TblCourseView"/>
   <ViewLinkUsage
     Name="FkTblProgOffTblProgFkLink1"
     ViewLinkObjectName="model.vo.FkTblProgOffTblProgFkLink"
@@ -1296,5 +1308,23 @@
     ViewLinkObjectName="model.vo.FKLinkTblTeamFormationFKLink"
     SrcViewUsageName="model.eo.AppModule.Tbl_TeamView3"
     DstViewUsageName="model.eo.AppModule.TblTeamFormationView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblMonitoringOutputIndFKLink"
+    ViewLinkObjectName="model.vo.FKTblMonitoringOutputIndFKLink"
+    SrcViewUsageName="model.eo.AppModule.TblProjCompView3"
+    DstViewUsageName="model.eo.AppModule.TblMonitoringOutputIndView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblClusterFKLink"
+    ViewLinkObjectName="model.vo.FKTblClusterFKLink"
+    SrcViewUsageName="model.eo.AppModule.TblProjCompView4"
+    DstViewUsageName="model.eo.AppModule.TblClusterView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblCourseFKLink"
+    ViewLinkObjectName="model.vo.FKTblCourseFKLink"
+    SrcViewUsageName="model.eo.AppModule.TblProjCompView5"
+    DstViewUsageName="model.eo.AppModule.TblCourseView3"
     Reversed="false"/>
 </AppModule>

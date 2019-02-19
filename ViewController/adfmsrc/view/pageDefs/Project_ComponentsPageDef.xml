@@ -21,6 +21,7 @@
           <Item Value="Name"/>
           <Item Value="Ast"/>
           <Item Value="Project_Name"/>
+          <Item Value="Io"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

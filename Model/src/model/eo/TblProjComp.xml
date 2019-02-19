@@ -67,13 +67,21 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
-  <AccessorAttribute
-    Name="TblMonitoringProjCompOutput"
-    Association="model.eo.FKTblMonitoringProjCompOutputAssoc"
-    AssociationEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblMonitoringProjCompOutput"
-    AssociationOtherEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblProjComp"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
+  <Attribute
+    Name="Io"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="IO"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_PROJ_COMP"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblProj"
     Association="model.eo.FKTblProjCompAssoc"

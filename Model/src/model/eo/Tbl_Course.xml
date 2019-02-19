@@ -26,19 +26,6 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="ProjCompInputId"
-    IsNotNull="true"
-    Precision="3"
-    ColumnName="PROJ_COMP_INPUT_ID"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_COURSE">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
     Name="Name"
     IsUnique="true"
     IsNotNull="true"
@@ -65,6 +52,19 @@
     RetrievedOnInsert="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_COMP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_COURSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
   <AccessorAttribute
@@ -108,9 +108,6 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_COURSE_FK"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.eo.Tbl_Course.ProjCompInputId"/>
-    </AttrArray>
   </Key>
   <Permission
     target="model.eo.Tbl_Course"

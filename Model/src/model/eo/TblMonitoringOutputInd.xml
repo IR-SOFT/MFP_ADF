@@ -54,6 +54,19 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_COMP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_OUTPUT_IND">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblMonitoringMonParam"
     Association="model.eo.FkTblMonParamFkAssoc"
@@ -88,6 +101,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_OUTPUT_IND_FK"/>
     </DesignTime>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Permission
     target="model.eo.TblMonitoringOutputInd"

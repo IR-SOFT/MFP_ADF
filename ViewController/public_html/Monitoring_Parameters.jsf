@@ -43,7 +43,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:665px;">
+                                                                    inlineStyle="width:1010px;">
                                                         <af:showDetailItem id="tab1" text="Output Indicators">
                                                             <af:table value="#{bindings.TblMonitoringOutputIndView1.collectionModel}"
                                                                       var="row"
@@ -58,20 +58,29 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonitoringOutputIndView1Query.processQuery}"
                                                                       varStatus="vs" id="t1" width="648"
-                                                                      partialTriggers="::b9"
-                                                                      scrollPolicy="page" autoHeightRows="0" >
+                                                                      partialTriggers="::b9" scrollPolicy="page"
+                                                                      autoHeightRows="0">
+                                                                <af:column headerText="Project Component Output"
+                                                                           id="c1" width="212">
+                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                        label="#{row.bindings.ProjCompId.label}"
+                                                                                        required="#{bindings.TblMonitoringOutputIndView1.hints.ProjCompId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.ProjCompId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Name.name}"
                                                                            filterable="true"
                                                                            headerText="Output Indicator" id="c3"
-                                                                           width="300">
-                                                                           
-                                                                            <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                     
-                                                                                     id="it5" placeholder="Search Output Indicator">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                            
+                                                                           width="188">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it5"
+                                                                                      placeholder="Search Output Indicator"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
@@ -79,13 +88,11 @@
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Ast.name}"
                                                                            filterable="true" headerText="Active" id="c4"
                                                                            width="60">
-                                                                           
-                                                                              <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     id="it6" placeholder="Search Status">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it6"
+                                                                                      placeholder="Search Status"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -93,8 +100,7 @@
                                                             </af:table>
                                                             <af:button actionListener="#{bindings.Execute1.execute}"
                                                                        text="Refresh"
-                                                                       disabled="#{!bindings.Execute1.enabled}"
-                                                                       id="b9"
+                                                                       disabled="#{!bindings.Execute1.enabled}" id="b9"
                                                                        icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
@@ -122,26 +128,23 @@
                                                                       queryListener="#{bindings.TblMonitoringMonParamView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b4 ::b6 ::b7 ::b2" width="918"
-                                                                      scrollPolicy="page" autoHeightRows="0" >
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.name}"
                                                                            filterable="true" sortable="true"
                                                                            align="center"
                                                                            headerText="Output Indicator ID" id="c6"
                                                                            width="80">
-                                                                           
-                                                                             <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.OutputIndId}"
-                                                                                     id="it7" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.OutputIndId}"
+                                                                                      id="it7" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.OutputIndId.inputValue}"
                                                                                   label="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.label}"
                                                                                   required="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.mandatory}"
                                                                                   columns="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.tooltip}"
-                                                                                  id="it2" >
+                                                                                  id="it2">
                                                                         <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -150,13 +153,10 @@
                                                                            align="center"
                                                                            headerText="Monitoring Parameter ID" id="c5"
                                                                            width="90">
-                                                                           
-                                                                               <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.MonParamId}"
-                                                                                    id="it8" placeholder="Search ID">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.MonParamId}"
+                                                                                      id="it8" placeholder="Search ID"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.MonParamId.inputValue}"
                                                                                   label="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.label}"
                                                                                   required="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.mandatory}"
@@ -171,13 +171,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Monitoring Parameter" id="c7"
                                                                            width="350">
-                                                                           
-                                                                                 <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                     id="it9" placeholder="Search Monitoring Parameter">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it9"
+                                                                                      placeholder="Search Monitoring Parameter"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblMonitoringMonParamView3.hints.Name.label}"
                                                                                   required="#{bindings.TblMonitoringMonParamView3.hints.Name.mandatory}"
@@ -191,13 +189,11 @@
                                                                 <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Perc.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Perquisites" id="c8" width="275">
-                                                                           
-                                                                                <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Perc}"
-                                                                                      id="it10" placeholder="Search Perquisites">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Perc}"
+                                                                                      id="it10"
+                                                                                      placeholder="Search Perquisites"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.Perc.inputValue}"
                                                                                   label="#{bindings.TblMonitoringMonParamView3.hints.Perc.label}"
                                                                                   required="#{bindings.TblMonitoringMonParamView3.hints.Perc.mandatory}"
@@ -213,13 +209,11 @@
                                                                 <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c9" width="60">
-                                                                           
-                                                                                 <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     id="it11" placeholder="Search Status">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it11"
+                                                                                      placeholder="Search Status"></af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblMonitoringMonParamView3.hints.Ast.mandatory}"
@@ -230,7 +224,6 @@
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                
                                                             </af:table>
                                                             <af:button actionListener="#{bindings.Execute.execute}"
                                                                        text="Refresh"
@@ -263,7 +256,7 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}" id="b7"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"
-                                                                   immediate="true" action="Monitoring_Parameters.jsf" />
+                                                                   immediate="true" action="Monitoring_Parameters.jsf"/>
                                                         <af:spacer width="5" height="10" id="s7"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    icon="#{resource['images:save.png']}" text="Save"

@@ -97,4 +97,13 @@
   <ViewUsage
     Name="Certification_Name_LOV1"
     ViewObjectName="model.lov.Certification_Name_LOV"/>
+  <ViewUsage
+    Name="Proj_Comp_Name_Output_LOV1"
+    ViewObjectName="model.lov.Proj_Comp_Name_Output_LOV"/>
+  <ViewUsage
+    Name="Proj_Comp_Name_Input_LOV1"
+    ViewObjectName="model.lov.Proj_Comp_Name_Input_LOV"/>
+  <ViewUsage
+    Name="Proj_Comp_IO_LOV1"
+    ViewObjectName="model.lov.Proj_Comp_IO_LOV"/>
 </AppModule>
