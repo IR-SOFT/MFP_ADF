@@ -43,7 +43,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1010px;">
+                                                                    inlineStyle="width:744px;">
                                                         <af:showDetailItem id="tab1" text="Output Indicators">
                                                             <af:table value="#{bindings.TblMonitoringOutputIndView1.collectionModel}"
                                                                       var="row"
@@ -57,11 +57,19 @@
                                                                       filterModel="#{bindings.TblMonitoringOutputIndView1Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonitoringOutputIndView1Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="648"
+                                                                      varStatus="vs" id="t1" width="726"
                                                                       partialTriggers="::b9" scrollPolicy="page"
                                                                       autoHeightRows="0">
-                                                                <af:column headerText="Project Component Output"
-                                                                           id="c1" width="212">
+                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.ProjCompId.name}"
+                                                                           filterable="true"
+                                                                            headerText="Project Component Output"
+                                                                           id="c1" width="300">
+                                                                            <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.ProjCompId}"
+                                                                                      id="it5"
+                                                                                      placeholder="Search Component">
+                                                                                      </af:inputText>
+                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
                                                                                         label="#{row.bindings.ProjCompId.label}"
                                                                                         required="#{bindings.TblMonitoringOutputIndView1.hints.ProjCompId.mandatory}"
@@ -75,10 +83,10 @@
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Name.name}"
                                                                            filterable="true"
                                                                            headerText="Output Indicator" id="c3"
-                                                                           width="188">
+                                                                           width="300">
                                                                     <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                      id="it5"
+                                                                                      id="it12"
                                                                                       placeholder="Search Output Indicator"></af:inputText>
                                                                     </f:facet>
                                                                     <af:outputText value="#{row.Name}"
@@ -87,7 +95,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Ast.name}"
                                                                            filterable="true" headerText="Active" id="c4"
-                                                                           width="60">
+                                                                           width="80">
                                                                     <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.Ast}"
                                                                                       id="it6"

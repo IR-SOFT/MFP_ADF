@@ -109,7 +109,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Ast.name}"
                                                                            filterable="true" headerText="Active" id="c4"
-                                                                           width="70">
+                                                                           width="79">
                                                                            
                                                                                 <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"

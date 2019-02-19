@@ -6,10 +6,10 @@
     <variableIterator id="variables"/>
     
     
-    <iterator Binds="TblProjCompView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblProjCompView3Iterator"/>
+    <iterator Binds="TblProjCompView3" RangeSize="7" DataControl="AppModuleDataControl" id="TblProjCompView3Iterator"/>
     <searchRegion Binds="TblProjCompView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompView3Query"/>
-    <iterator Binds="TblMonitoringOutputIndView3" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="TblMonitoringOutputIndView3" RangeSize="7" DataControl="AppModuleDataControl"
               id="TblMonitoringOutputIndView3Iterator"/>
     <searchRegion Binds="TblMonitoringOutputIndView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"

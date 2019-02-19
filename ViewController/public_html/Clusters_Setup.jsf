@@ -60,7 +60,8 @@
                                                                       filterModel="#{bindings.TblProjCompView4Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProjCompView4Query.processQuery}"
-                                                                      varStatus="vs" id="t1" partialTriggers="::b4">
+                                                                      varStatus="vs" id="t1" partialTriggers="::b4"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblProjCompView4.hints.ProjCompId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjCompView4.hints.ProjCompId.label}"
@@ -146,7 +147,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblClusterView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b6 ::b7 ::b8 ::b9">
+                                                                      partialTriggers="::b6 ::b7 ::b8 ::b9"
+                                                                      scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblClusterView3.hints.ClusterId.label}"

@@ -59,7 +59,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegView5Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b4 ::b6 ::b7 ::b8 ::b11 ::b12 ::b13"
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b8 ::b11 ::b12 ::b13 ::b33"
                                                                       width="641"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.FarmerRegId.name}"
@@ -147,6 +147,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b33"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -378,7 +383,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegLandView7Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b15 ::b16 ::b17"
+                                                                      partialTriggers="::b15 ::b16 ::b17 ::b34"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.name}"
                                                                            filterable="true" sortable="true"
@@ -670,6 +675,11 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b34"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                             <af:spacer width="200" height="20" id="s7"/>
                                                     <h:panelGroup id="pg2">
                                                     <af:spacer width="348" height="20" id="s12"/>
@@ -713,7 +723,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegMemView7Query.processQuery}"
                                                                       varStatus="vs" id="t3"
-                                                                      partialTriggers="::b19 ::b20 ::b21" width="990"
+                                                                      partialTriggers="::b19 ::b20 ::b21 ::b35" width="990"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.name}"
                                                                            filterable="true" sortable="true" align="center"
@@ -889,6 +899,11 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute2.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute2.enabled}"
+                                                                       id="b35"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                             <af:spacer width="200" height="20" id="s9"/>
                                                             <h:panelGroup id="pg3">
                                                         <af:spacer width="350" height="20" id="s8"/>
@@ -931,7 +946,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegCropsView7Query.processQuery}"
                                                                       varStatus="vs" id="t4"
-                                                                      partialTriggers="::b23 ::b24 ::b25" width="716"
+                                                                      partialTriggers="::b23 ::b24 ::b25 ::b36" width="716"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.name}"
                                                                            filterable="true" sortable="true" align="center"
@@ -1031,7 +1046,12 @@
                                                                 </af:column>
                                                                 
                                                             </af:table>
-                                                             <af:spacer width="210" height="20" id="s10"/>
+                                                            <af:button actionListener="#{bindings.Execute3.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute3.enabled}"
+                                                                       id="b36"
+                                                                       icon="#{resource['images:refresh.png']}"/>
+                                                            <af:spacer width="210" height="20" id="s10"/>
                                                     <h:panelGroup id="pg4">
                                                      <af:spacer width="210" height="20" id="s11"/>
                                                         <af:button actionListener="#{bindings.CreateInsert3.execute}"
@@ -1072,7 +1092,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegCertView3Query.processQuery}"
                                                                       varStatus="vs" id="t5"
-                                                                      partialTriggers="::b12 ::b27 ::b28" width="329"
+                                                                      partialTriggers="::b12 ::b27 ::b28 ::b37" width="329"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCertView3.hints.FarmerRegCertId.name}"
                                                                            filterable="true" sortable="true"
@@ -1114,6 +1134,11 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute4.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute4.enabled}"
+                                                                       id="b37"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                             <af:spacer width="210" height="20" id="s29"/>
                                                     <h:panelGroup id="pg5">
                                                         <af:spacer width="18" height="20" id="s28"/>
@@ -1156,7 +1181,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegOwnershipView3Query.processQuery}"
                                                                       varStatus="vs" id="t6"
-                                                                      partialTriggers="::b10 ::b30 ::b31" width="859"
+                                                                      partialTriggers="::b10 ::b30 ::b31 ::b38" width="859"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegOwnershipView3.hints.FarmerRegOwnershipId.name}"
                                                                            filterable="true" sortable="true"
@@ -1256,6 +1281,11 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute5.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute5.enabled}"
+                                                                       id="b38"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                             <af:spacer width="210" height="20" id="s30"/>
                                                     <h:panelGroup id="pg6">
                                                                 <af:spacer width="285" height="10" id="s37"/>
