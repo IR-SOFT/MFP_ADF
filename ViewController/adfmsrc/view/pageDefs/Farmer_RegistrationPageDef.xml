@@ -37,6 +37,7 @@
           <Item Value="Name"/>
           <Item Value="FatherName"/>
           <Item Value="Ast"/>
+          <Item Value="ClusterId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -180,8 +181,6 @@
             Action="iteratorExecute"/>
     <action IterBinding="TblFarmerRegCropsView7Iterator" id="Delete3" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
-    <list IterBinding="TblFarmerRegView5Iterator" StaticList="false" Uses="LOV_ClusterId" id="ClusterId1"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblFarmerRegView5Iterator" StaticList="false" Uses="LOV_MarStatus" id="MarStatus1"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblFarmerRegView5Iterator" StaticList="false" Uses="LOV_Gender" id="Gender"

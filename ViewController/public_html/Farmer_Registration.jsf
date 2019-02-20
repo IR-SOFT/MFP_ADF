@@ -39,7 +39,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:664px;">
+                                                                    inlineStyle="width:814px;">
                                                         <af:showDetailItem id="tab1" text="Farmer Registration">
                                                             <af:table value="#{bindings.TblFarmerRegView5.collectionModel}"
                                                                       var="row"
@@ -55,8 +55,31 @@
                                                                       queryListener="#{bindings.TblFarmerRegView5Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b4 ::b6 ::b7 ::b8 ::b11 ::b12 ::b13 ::b33"
-                                                                      width="641"
+                                                                      width="797"
                                                                       scrollPolicy="page" autoHeightRows="0">
+                                                                      
+                                                                <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.ClusterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Cluster"
+                                                                           id="c20" width="150">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ClusterId}"
+                                                                                     id="it18" placeholder="Search Cluster">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                   
+                                                                    <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
+                                                                                        label="#{row.bindings.ClusterId.label}"
+                                                                                        required="#{bindings.TblFarmerRegView5.hints.ClusterId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblFarmerRegView5.hints.ClusterId.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.ClusterId.items}"
+                                                                                       id="si3"/>
+                                                                        <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer Reg ID" align="center"
@@ -160,17 +183,6 @@
                                                                     inlineStyle="width:1011px;">
                                                         <af:showDetailItem id="tab2" text="Other Detail">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
-                                                           
-                                                                <af:selectOneChoice value="#{bindings.ClusterId1.inputValue}"
-                                                                                    label="Cluster"
-                                                                                    required="#{bindings.ClusterId1.hints.mandatory}"
-                                                                                    shortDesc="#{bindings.ClusterId1.hints.tooltip}"
-                                                                                    id="soc3"
-                                                                                    contentStyle="width:200px">
-                                                                    <f:selectItems value="#{bindings.ClusterId1.items}"
-                                                                                   id="si3"/>
-                                                                    <f:validator binding="#{bindings.ClusterId1.validator}"/>
-                                                                </af:selectOneChoice>
                                                                 <af:selectOneChoice value="#{bindings.Gender.inputValue}"
                                                                                     label="#{bindings.Gender.label}"
                                                                                     required="#{bindings.Gender.hints.mandatory}"
