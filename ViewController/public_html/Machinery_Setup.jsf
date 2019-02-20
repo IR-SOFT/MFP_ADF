@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Machinery_Setup')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Machinery_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -34,7 +34,7 @@
                                                    destination="Target_Crops.jsf"
                                                    icon="#{resource['images:target_crops.png']}"/>
                                         <af:spacer width="190" height="10" id="s2"/>
-                                        <af:button text="Items" id="b2" inlineStyle="width:190px;"
+                                        <af:button text="Farm Machinery" id="b2" inlineStyle="width:190px;"
                                                    destination="Machinery_Setup.jsf"
                                                    icon="#{resource['images:machinery.png']}"/>
                                         <af:spacer width="190" height="10" id="s4"/>
@@ -55,13 +55,14 @@
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    rendered="#{backingBeanScope.backing_login.get_page_view_rights() == 'Y'}"
                                                    inlineStyle="height:811px; width:1050px;">
-                                    <af:showDetailItem id="pane2" text="Items">
+                                    <af:showDetailItem id="pane2" text="Farm Machinery &amp; Implementations">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1033px;">
-                                                        <af:showDetailItem id="tab1" text="All Items">
+                                                        <af:showDetailItem id="tab1"
+                                                                           text="Farm Machinery &amp; Implementations">
                                                             <af:table value="#{bindings.TblItemL4View4.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL4View4.rangeSize}"
@@ -150,7 +151,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL4Id.name}"
                                                                            filterable="true" align="center"
-                                                                           headerText="Item ID" id="c1" width="65">
+                                                                           headerText="FMI ID" id="c1" width="65">
                                                                          <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
                                                                                       id="it26" placeholder="Search ID">
@@ -161,7 +162,8 @@
                                                                                    id="ot1"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Name.name}"
-                                                                           filterable="true" headerText="Item"
+                                                                           filterable="true"
+                                                                           headerText="Farm Machinery &amp; Implementations"
                                                                            align="left" id="c5" width="250">
                                                                       <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
@@ -645,7 +647,7 @@
                                                                            id="b15"/>
                                                             </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Items" id="sdi4">
+                                                        <af:showDetailItem text="Farm Machinery &amp; Implementations" id="sdi4">
                                                             <af:table value="#{bindings.TblItemL4View41.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL4View41.rangeSize}"
@@ -774,7 +776,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL4Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           align="center" headerText="Item ID" id="c7"
+                                                                           align="center" headerText="FMI ID" id="c7"
                                                                            width="34">
                                                                     <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
@@ -793,7 +795,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Item" id="c11" width="166">
+                                                                           headerText="Farm Machinery &amp; Implementations" id="c11"
+                                                                           width="215">
                                                                      <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
                                                                                       id="it52" placeholder="Search Item">
@@ -811,7 +814,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active" id="c12" width="100">
+                                                                           headerText="Active" id="c12" width="60">
                                                                         <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
                                                                                       id="it53" placeholder="Search Status">

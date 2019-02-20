@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Target_Crops')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Cluster_Proj_Crops.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -15,7 +15,7 @@
                     <af:panelGridLayout id="pgl1">
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
-                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;"
+                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px; height:448px;"
                                                    rendered="#{backingBeanScope.backing_login.get_user_role_master_name() != null}">
                         <af:showDetailItem id="sdi1" text="Clusters / Farmers">
                             <af:spacer width="190" height="10" id="s1"/>
@@ -33,7 +33,7 @@
                                                    destination="Target_Crops.jsf"
                                                    icon="#{resource['images:target_crops.png']}"/>
                                         <af:spacer width="190" height="10" id="s2"/>
-                                        <af:button text="Items" id="b2" inlineStyle="width:190px;"
+                                        <af:button text="Farm Machinery" id="b2" inlineStyle="width:190px;"
                                                    destination="Machinery_Setup.jsf"
                                                    icon="#{resource['images:machinery.png']}"/>
                                         <af:spacer width="190" height="10" id="s4"/>

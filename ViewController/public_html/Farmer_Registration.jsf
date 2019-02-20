@@ -495,12 +495,12 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
+                                                                           headerText="Type Of Ownership"
                                                                            id="c31">
                                                                            
                                                                              <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.SelfshipType}"
-                                                                                     id="it48" placeholder="Search Selfship">
+                                                                                     id="it48" placeholder="Search Type Of Ownership">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            

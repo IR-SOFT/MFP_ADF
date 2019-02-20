@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Supplier_Setup')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Supplier_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -34,7 +34,7 @@
                                                    destination="Target_Crops.jsf"
                                                    icon="#{resource['images:target_crops.png']}"/>
                                         <af:spacer width="190" height="10" id="s2"/>
-                                        <af:button text="Items" id="b2" inlineStyle="width:190px;"
+                                        <af:button text="Farm Machinery" id="b2" inlineStyle="width:190px;"
                                                    destination="Machinery_Setup.jsf"
                                                    icon="#{resource['images:machinery.png']}"/>
                                         <af:spacer width="190" height="10" id="s4"/>
