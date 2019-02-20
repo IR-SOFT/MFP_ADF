@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
     <af:document title="Dashboard.jsf" id="d1">
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
@@ -24,12 +25,62 @@
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc9"/>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr4">
-                    <af:gridCell marginStart="5px" width="34%" id="gc10" halign="center" valign="middle">
-                        <af:image source="#{resource['images:dash1.png']}" id="i2"
-                                  inlineStyle="width:300px;height:150px;"/>
-                        <af:outputLabel value="HOME" id="ol1"/>
+                    <af:gridCell marginStart="5px" width="34%" id="gc10">
+                    <af:panelGroupLayout id="pgl4">
+                        <h:panelGroup id="pg1">
+                            <af:panelGridLayout id="pgl2">
+                                <af:gridRow marginTop="5px" height="auto" id="gr10">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc28"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc29"/>
+                                </af:gridRow>
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr11">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc30"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc31"/>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </h:panelGroup>
+                        <h:panelGroup id="pg2">
+                            <af:panelGridLayout id="pgl3">
+                                <af:gridRow marginTop="5px" height="auto" id="gr12">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc32"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc33"/>
+                                </af:gridRow>
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr13">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc34"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc35"/>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </h:panelGroup>
+                        </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="33%" id="gc11"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc11">
+                        <af:panelGroupLayout id="pgl5">
+                        <h:panelGroup id="pg3">
+                            <af:panelGridLayout id="pgl6">
+                                <af:gridRow marginTop="5px" height="auto" id="gr14">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc36"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc37"/>
+                                </af:gridRow>
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr15">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc38"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc39"/>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </h:panelGroup>
+                        <h:panelGroup id="pg4">
+                            <af:panelGridLayout id="pgl7">
+                                <af:gridRow marginTop="5px" height="auto" id="gr16">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc40"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc41"/>
+                                </af:gridRow>
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr18">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc42"/>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc43"/>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </h:panelGroup>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc12"/>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr5">
