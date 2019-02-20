@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="CropTypeId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="CROP_TYPE_ID"
     SQLType="VARCHAR"

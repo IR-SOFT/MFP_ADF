@@ -31,6 +31,10 @@
                                         <af:button text="Crops" id="b5" inlineStyle="width:190px;"
                                                    destination="Project_Crops.jsf"
                                                    icon="#{resource['images:crops.png']}"/>
+                                                   <af:spacer width="190" height="10" id="s8"/>
+                                        <af:button id="b8" inlineStyle="width:190px;" text="Target Crops"
+                                                   destination="Target_Crops.jsf"
+                                                   icon="#{resource['images:target_crops.png']}"/>
                                         <af:spacer width="190" height="10" id="s2"/>
                                         <af:button text="Items" id="b2" inlineStyle="width:190px;"
                                                    destination="Machinery_Setup.jsf"
