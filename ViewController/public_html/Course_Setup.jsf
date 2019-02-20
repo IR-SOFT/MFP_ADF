@@ -61,7 +61,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:735px;">
+                                                                    inlineStyle="width:999px;">
                                                         <af:showDetailItem id="tab1" text="Input Component">
                                                             <af:table value="#{bindings.TblProjCompView5.collectionModel}"
                                                                       var="row"

@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <!--<f:metadata>
+    <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Training_Setup')}"/>
-    </f:metadata>-->
+    </f:metadata>
     <af:document title="Training_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -61,7 +61,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1012px;">
+                                                                    inlineStyle="width:826px;">
                                                         <af:showDetailItem id="tab1" text="Team Formation">
                                                             <af:table value="#{bindings.TblTeamFormationView1.collectionModel}"
                                                                       var="row"
@@ -76,62 +76,89 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblTeamFormationView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b7 ::b8 ::b9 ::b13">
+                                                                      partialTriggers="::b7 ::b8 ::b9 ::b13"
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="810">
                                                                 <af:column sortProperty="#{bindings.TblTeamFormationView1.hints.TeamFormationId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblTeamFormationView1.hints.TeamFormationId.label}"
-                                                                           id="c1">
+                                                                           headerText="Team Formation ID"
+                                                                           id="c1" align="center" width="80">
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.TeamFormationId}"
+                                                                        id="it22" placeholder="Search ID ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.TeamFormationId.inputValue}"
                                                                                   label="#{bindings.TblTeamFormationView1.hints.TeamFormationId.label}"
                                                                                   required="#{bindings.TblTeamFormationView1.hints.TeamFormationId.mandatory}"
                                                                                   columns="#{bindings.TblTeamFormationView1.hints.TeamFormationId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTeamFormationView1.hints.TeamFormationId.precision}"
                                                                                   shortDesc="#{bindings.TblTeamFormationView1.hints.TeamFormationId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.TeamFormationId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblTeamFormationView1.hints.TrainerId.name}"
+                                                                <af:column  sortProperty="#{bindings.TblTeamFormationView1.hints.TeamId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblTeamFormationView1.hints.TrainerId.label}"
-                                                                           id="c2">
-                                                                    <af:inputText value="#{row.bindings.TrainerId.inputValue}"
-                                                                                  label="#{bindings.TblTeamFormationView1.hints.TrainerId.label}"
-                                                                                  required="#{bindings.TblTeamFormationView1.hints.TrainerId.mandatory}"
-                                                                                  columns="#{bindings.TblTeamFormationView1.hints.TrainerId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblTeamFormationView1.hints.TrainerId.precision}"
-                                                                                  shortDesc="#{bindings.TblTeamFormationView1.hints.TrainerId.tooltip}"
-                                                                                  id="it2">
-                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblTeamFormationView1.hints.TeamId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblTeamFormationView1.hints.TeamId.label}"
-                                                                           id="c3">
-                                                                    <af:inputText value="#{row.bindings.TeamId.inputValue}"
-                                                                                  label="#{bindings.TblTeamFormationView1.hints.TeamId.label}"
-                                                                                  required="#{bindings.TblTeamFormationView1.hints.TeamId.mandatory}"
-                                                                                  columns="#{bindings.TblTeamFormationView1.hints.TeamId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblTeamFormationView1.hints.TeamId.precision}"
-                                                                                  shortDesc="#{bindings.TblTeamFormationView1.hints.TeamId.tooltip}"
-                                                                                  id="it3">
+                                                                            headerText="Team"
+                                                                           id="c2" width="300">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.TeamId}"
+                                                                        id="it2" placeholder="Search Team ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:selectOneChoice value="#{row.bindings.TeamId.inputValue}"
+                                                                                        label="#{row.bindings.TeamId.label}"
+                                                                                        required="#{bindings.TblTeamFormationView1.hints.TeamId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblTeamFormationView1.hints.TeamId.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.TeamId.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.TeamId.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblTeamFormationView1.hints.Ast.name}"
+                                                                <af:column  sortProperty="#{bindings.TblTeamFormationView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblTeamFormationView1.hints.Ast.label}"
-                                                                           id="c4">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblTeamFormationView1.hints.Ast.label}"
-                                                                                  required="#{bindings.TblTeamFormationView1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblTeamFormationView1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblTeamFormationView1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblTeamFormationView1.hints.Ast.tooltip}"
-                                                                                  id="it4">
+                                                                            headerText="Trainer"
+                                                                           id="c3" width="300">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.TrainerId}"
+                                                                        id="it3" placeholder="Search Trainer ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:selectOneChoice value="#{row.bindings.TrainerId.inputValue}"
+                                                                                        label="#{row.bindings.TrainerId.label}"
+                                                                                        required="#{bindings.TblTeamFormationView1.hints.TrainerId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblTeamFormationView1.hints.TrainerId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.TrainerId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column  sortProperty="#{bindings.TblTeamFormationView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                            headerText="Active"
+                                                                           id="c4" width="80">
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Ast}"
+                                                                        id="it4" placeholder="Search Active ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblTeamFormationView1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblTeamFormationView1.hints.Ast.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si3"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:button actionListener="#{bindings.Execute1.execute}"
@@ -145,7 +172,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:spacer width="120" height="20" id="s12"/>
+                                                    <af:spacer width="260" height="20" id="s12"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add"
@@ -164,7 +191,8 @@
                                                                    text="Delete"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}"
-                                                                   disabled="#{!bindings.Delete1.enabled}" id="b9"/>
+                                                                   disabled="#{!bindings.Delete1.enabled}" id="b9"
+                                                                   immediate="true" action="Team_Formation.jsf"/>
                                                                    <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    icon="#{resource['images:save.png']}"

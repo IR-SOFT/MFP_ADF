@@ -18,7 +18,9 @@
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_TEAM_FORMATION"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
