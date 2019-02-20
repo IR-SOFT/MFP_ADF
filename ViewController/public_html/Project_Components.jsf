@@ -216,12 +216,6 @@
                                                 <af:gridCell marginStart="5px" width="100%" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:590px;">
-                                                        <af:showDetailItem id="tab2" text="Project Input Component">
-                                                            
-                                                        </af:showDetailItem>
-                                                        <af:showDetailItem text="Project Output Component" id="sdi2">
-                                                           
-                                                        </af:showDetailItem>
                                                         <af:showDetailItem text="Beneficiary" id="sdi3">
                                                             <af:table value="#{bindings.Tbl_BeneficiaryView1.collectionModel}"
                                                                       var="row"
