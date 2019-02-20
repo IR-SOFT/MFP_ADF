@@ -117,7 +117,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:735px;">
+                                                                    inlineStyle="width:828px;">
                                                         <af:showDetailItem id="tab2" text="Training Setup">
                                                             <af:table value="#{bindings.TblCourseView3.collectionModel}"
                                                                       var="row"
@@ -133,53 +133,18 @@
                                                                       queryListener="#{bindings.TblCourseView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b7 ::b8 ::b9 ::b13"
-                                                                      scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.CourseId.name}"
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="813">
+                                                                      <af:column sortProperty="#{bindings.TblCourseView3.hints.ProjCompId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblCourseView3.hints.CourseId.label}"
-                                                                           id="c8">
-                                                                    <af:inputText value="#{row.bindings.CourseId.inputValue}"
-                                                                                  label="#{bindings.TblCourseView3.hints.CourseId.label}"
-                                                                                  required="#{bindings.TblCourseView3.hints.CourseId.mandatory}"
-                                                                                  columns="#{bindings.TblCourseView3.hints.CourseId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblCourseView3.hints.CourseId.precision}"
-                                                                                  shortDesc="#{bindings.TblCourseView3.hints.CourseId.tooltip}"
-                                                                                  id="it1">
-                                                                        <f:validator binding="#{row.bindings.CourseId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblCourseView3.hints.Name.label}"
-                                                                           id="c9">
-                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
-                                                                                  label="#{bindings.TblCourseView3.hints.Name.label}"
-                                                                                  required="#{bindings.TblCourseView3.hints.Name.mandatory}"
-                                                                                  columns="#{bindings.TblCourseView3.hints.Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblCourseView3.hints.Name.precision}"
-                                                                                  shortDesc="#{bindings.TblCourseView3.hints.Name.tooltip}"
-                                                                                  id="it2">
-                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblCourseView3.hints.Ast.label}"
-                                                                           id="c10">
-                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
-                                                                                        label="#{row.bindings.Ast.label}"
-                                                                                        required="#{bindings.TblCourseView3.hints.Ast.mandatory}"
-                                                                                        shortDesc="#{bindings.TblCourseView3.hints.Ast.tooltip}"
-                                                                                        id="soc1">
-                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
-                                                                                       id="si1"/>
-                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:selectOneChoice>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.ProjCompId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblCourseView3.hints.ProjCompId.label}"
-                                                                           id="c11">
+                                                                           headerText="Project Component"
+                                                                           id="c11" width="300">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ProjCompId}"
+                                                                        id="it2" placeholder="Search Component ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
                                                                                         label="#{row.bindings.ProjCompId.label}"
                                                                                         required="#{bindings.TblCourseView3.hints.ProjCompId.mandatory}"
@@ -190,6 +155,68 @@
                                                                         <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.CourseId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Training ID"
+                                                                           id="c8" width="80" align="center">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.CourseId}"
+                                                                        id="it3" placeholder="Search ID ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.CourseId.inputValue}"
+                                                                                  label="#{bindings.TblCourseView3.hints.CourseId.label}"
+                                                                                  required="#{bindings.TblCourseView3.hints.CourseId.mandatory}"
+                                                                                  columns="#{bindings.TblCourseView3.hints.CourseId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblCourseView3.hints.CourseId.precision}"
+                                                                                  shortDesc="#{bindings.TblCourseView3.hints.CourseId.tooltip}"
+                                                                                  id="it1"  readOnly="true"
+                                                                                  contentStyle='text-align:center'>
+                                                                        <f:validator binding="#{row.bindings.CourseId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Training"
+                                                                           id="c9" width="300">
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Name}"
+                                                                        id="it5" placeholder="Search Training ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblCourseView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblCourseView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblCourseView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblCourseView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblCourseView3.hints.Name.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
+                                                                           id="c10" width="80" >
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Ast}"
+                                                                        id="it6" placeholder="Search Status ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblCourseView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCourseView3.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                
                                                             </af:table>
                                                             <af:button actionListener="#{bindings.Execute.execute}"
                                                                        text="Refresh"
@@ -202,7 +229,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="220" height="20" id="s9"/>
+                                                    <af:spacer width="260" height="20" id="s9"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"

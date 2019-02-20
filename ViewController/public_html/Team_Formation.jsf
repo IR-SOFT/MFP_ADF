@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Training_Setup')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Training_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -147,7 +147,7 @@
                                                                              <f:facet name="filter">
                                                                        <af:inputText 
                                                                        value="#{vs.filterCriteria.Ast}"
-                                                                        id="it4" placeholder="Search Active ">
+                                                                        id="it4" placeholder="Search Status ">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
