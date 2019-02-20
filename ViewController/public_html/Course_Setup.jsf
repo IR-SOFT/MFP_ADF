@@ -77,22 +77,6 @@
                                                                       queryListener="#{bindings.TblProjCompView5Query.processQuery}"
                                                                       varStatus="vs" id="t1" partialTriggers="::b14"
                                                                       scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.ProjCompId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Project Component"
-                                                                           id="c1">
-                                                                    <af:outputText value="#{row.ProjCompId}"
-                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.ProjCompId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.ProjId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView5.hints.ProjId.label}"
-                                                                           id="c2">
-                                                                    <af:outputText value="#{row.ProjId}"
-                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.ProjId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjCompView5.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjCompView5.hints.Name.label}"
@@ -116,22 +100,6 @@
                                                                     <af:outputText value="#{row.Project_Name}"
                                                                                    shortDesc="#{bindings.TblProjCompView5.hints.Project_Name.tooltip}"
                                                                                    id="ot5"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.ProjId1.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView5.hints.ProjId1.label}"
-                                                                           id="c6">
-                                                                    <af:outputText value="#{row.ProjId1}"
-                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.ProjId1.tooltip}"
-                                                                                   id="ot6"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView5.hints.Io.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView5.hints.Io.label}"
-                                                                           id="c7">
-                                                                    <af:outputText value="#{row.Io}"
-                                                                                   shortDesc="#{bindings.TblProjCompView5.hints.Io.tooltip}"
-                                                                                   id="ot7"/>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:button actionListener="#{bindings.Execute1.execute}"
