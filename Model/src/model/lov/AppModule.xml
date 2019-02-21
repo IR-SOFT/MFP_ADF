@@ -106,4 +106,13 @@
   <ViewUsage
     Name="Proj_Comp_IO_LOV1"
     ViewObjectName="model.lov.Proj_Comp_IO_LOV"/>
+  <ViewUsage
+    Name="Type_VendorLOV1"
+    ViewObjectName="model.lov.Type_VendorLOV"/>
+  <ViewUsage
+    Name="Type_Tech_Prov_LOV1"
+    ViewObjectName="model.lov.Type_Tech_Prov_LOV"/>
+  <ViewUsage
+    Name="Output_Ind_Name_LOV1"
+    ViewObjectName="model.lov.Output_Ind_Name_LOV"/>
 </AppModule>

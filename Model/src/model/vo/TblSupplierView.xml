@@ -37,6 +37,18 @@
     AMUsageName="AppModule"
     ViewInstanceName="City_Name_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Type_VendorLOV1_1"
+    ViewObjectName="model.lov.Type_VendorLOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Type_VendorLOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Type_Tech_Prov_LOV1_1"
+    ViewObjectName="model.lov.Type_Tech_Prov_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Type_Tech_Prov_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="AppModule_Active_Status1_1"
@@ -102,6 +114,40 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_VendorType"
+    ListVOName="AppModule_Type_VendorLOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="VendorType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Type_Vendor_DB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Type_Vendor_View"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TypeTechProv"
+    ListVOName="AppModule_Type_Tech_Prov_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TypeTechProv"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Type_Tech_Prov_DB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Type_Tech_Prov_View"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -250,6 +296,40 @@
     EntityUsage="TblSupplier"
     AliasName="TYPE"
     LOVName="LOV_Type">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Gst"
+    PrecisionRule="true"
+    EntityAttrName="Gst"
+    EntityUsage="TblSupplier"
+    AliasName="GST"/>
+  <ViewAttribute
+    Name="TypeTechProv"
+    PrecisionRule="true"
+    EntityAttrName="TypeTechProv"
+    EntityUsage="TblSupplier"
+    AliasName="TYPE_TECH_PROV"
+    LOVName="LOV_TypeTechProv">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="VendorType"
+    PrecisionRule="true"
+    EntityAttrName="VendorType"
+    EntityUsage="TblSupplier"
+    AliasName="VENDOR_TYPE"
+    LOVName="LOV_VendorType">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

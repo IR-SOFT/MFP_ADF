@@ -7,7 +7,7 @@
     <iterator Binds="TblProjCompView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblProjCompView1Iterator"/>
     <searchRegion Binds="TblProjCompView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompView1Query"/>
-     <iterator Binds="Tbl_BeneficiaryView1" RangeSize="25" DataControl="AppModuleDataControl"
+     <iterator Binds="Tbl_BeneficiaryView1" RangeSize="7" DataControl="AppModuleDataControl"
               id="Tbl_BeneficiaryView1Iterator"/>
     <searchRegion Binds="Tbl_BeneficiaryView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_BeneficiaryView1Query"/>
