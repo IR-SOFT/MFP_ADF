@@ -142,53 +142,80 @@
                                                                       queryListener="#{bindings.TblClusterView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b6 ::b7 ::b8 ::b9"
-                                                                      scrollPolicy="page" autoHeightRows="0">
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="993">
+                                                                      <af:column sortProperty="#{bindings.TblClusterView3.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Project Component"
+                                                                           id="c17" width="100">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ProjCompId}"
+                                                                        id="it2" placeholder="Search Component ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                        label="#{row.bindings.ProjCompId.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.ProjCompId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.ProjCompId.tooltip}"
+                                                                                        id="soc8">
+                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
+                                                                                       id="si8"/>
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.ClusterId.label}"
-                                                                           id="c8">
+                                                                           headerText="Cluster ID"
+                                                                           id="c8" align="center" width="60">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ClusterId}"
+                                                                        id="it3" placeholder="Search ID ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.ClusterId.inputValue}"
                                                                                   label="#{bindings.TblClusterView3.hints.ClusterId.label}"
                                                                                   required="#{bindings.TblClusterView3.hints.ClusterId.mandatory}"
                                                                                   columns="#{bindings.TblClusterView3.hints.ClusterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterView3.hints.ClusterId.precision}"
                                                                                   shortDesc="#{bindings.TblClusterView3.hints.ClusterId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align:center' >
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.Name.label}"
-                                                                           id="c9">
+                                                                           headerText="Cluster"
+                                                                           id="c9" width="100">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Name}"
+                                                                        id="it5" placeholder="Search Cluster ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblClusterView3.hints.Name.label}"
                                                                                   required="#{bindings.TblClusterView3.hints.Name.mandatory}"
                                                                                   columns="#{bindings.TblClusterView3.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterView3.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblClusterView3.hints.Name.tooltip}"
-                                                                                  id="it2">
+                                                                                  id="it4">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.Ast.label}"
-                                                                           id="c10">
-                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
-                                                                                        label="#{row.bindings.Ast.label}"
-                                                                                        required="#{bindings.TblClusterView3.hints.Ast.mandatory}"
-                                                                                        shortDesc="#{bindings.TblClusterView3.hints.Ast.tooltip}"
-                                                                                        id="soc1">
-                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
-                                                                                       id="si1"/>
-                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:selectOneChoice>
-                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.CropId.label}"
-                                                                           id="c11">
+                                                                           headerText="Crop"
+                                                                           id="c11" width="100">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.CropId}"
+                                                                        id="it6" placeholder="Search Crop ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
                                                                                         label="#{row.bindings.CropId.label}"
                                                                                         required="#{bindings.TblClusterView3.hints.CropId.mandatory}"
@@ -201,8 +228,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.CityLibrDetail.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.CityLibrDetail.label}"
-                                                                           id="c12">
+                                                                           headerText="City"
+                                                                           id="c12" width="90">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.CityLibrDetail}"
+                                                                        id="it7" placeholder="Search City ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.CityLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.CityLibrDetail.label}"
                                                                                         required="#{bindings.TblClusterView3.hints.CityLibrDetail.mandatory}"
@@ -215,8 +248,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.DistrictLibrDetail.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.DistrictLibrDetail.label}"
-                                                                           id="c13">
+                                                                           headerText="District"
+                                                                           id="c13" width="90">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.DistrictLibrDetail}"
+                                                                        id="it8" placeholder="Search District ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.DistrictLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.DistrictLibrDetail.label}"
                                                                                         required="#{bindings.TblClusterView3.hints.DistrictLibrDetail.mandatory}"
@@ -229,8 +268,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.TehsilLibrDetail.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.TehsilLibrDetail.label}"
-                                                                           id="c14">
+                                                                           headerText="Tehsil"
+                                                                           id="c14" width="90">
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.TehsilLibrDetail}"
+                                                                        id="it9" placeholder="Search Tehsil ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.TehsilLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.TehsilLibrDetail.label}"
                                                                                         required="#{bindings.TblClusterView3.hints.TehsilLibrDetail.mandatory}"
@@ -243,8 +288,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.MauzaLibrDetail.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.MauzaLibrDetail.label}"
-                                                                           id="c15">
+                                                                           headerText="Mauza"
+                                                                           id="c15" width="90">
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.MauzaLibrDetail}"
+                                                                        id="it10" placeholder="Search Mauza ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.MauzaLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.MauzaLibrDetail.label}"
                                                                                         required="#{bindings.TblClusterView3.hints.MauzaLibrDetail.mandatory}"
@@ -257,8 +308,14 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.VillageLibrDetail.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.VillageLibrDetail.label}"
-                                                                           id="c16">
+                                                                           headerText="Village"
+                                                                           id="c16" width="90">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.VillageLibrDetail}"
+                                                                        id="it11" placeholder="Search Village ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.VillageLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.VillageLibrDetail.label}"
                                                                                         required="#{bindings.TblClusterView3.hints.VillageLibrDetail.mandatory}"
@@ -269,32 +326,39 @@
                                                                         <f:validator binding="#{row.bindings.VillageLibrDetail.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.ProjCompId.name}"
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterView3.hints.ProjCompId.label}"
-                                                                           id="c17">
-                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
-                                                                                        label="#{row.bindings.ProjCompId.label}"
-                                                                                        required="#{bindings.TblClusterView3.hints.ProjCompId.mandatory}"
-                                                                                        shortDesc="#{bindings.TblClusterView3.hints.ProjCompId.tooltip}"
-                                                                                        id="soc8">
-                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
-                                                                                       id="si8"/>
-                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                           headerText="Active"
+                                                                           id="c10" width="60">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Ast}"
+                                                                        id="it12" placeholder="Search Status ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:button actionListener="#{bindings.Execute1.execute}"
                                                                        text="Refresh"
                                                                        disabled="#{!bindings.Execute1.enabled}"
-                                                                       id="b6"/>
+                                                                       id="b6"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="360" height="10" id="s7"/>
+                                                    <af:spacer width="350" height="10" id="s7"/>
                                                     <h:panelGroup id="pg1">
                                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
