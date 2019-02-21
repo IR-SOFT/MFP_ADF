@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="HomePage.jsf" id="d1">
+        <af:form id="f1" inlineStyle="background-color: White;">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="5px" width="25%" id="gc1"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc2"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc3"/>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc4"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="25%" id="gc5" halign="center" valign="middle">
+                        <af:link text="Setup" id="l1" icon="#{resource['images:main_setup.png']}" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#c6d6ff; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" id="gc6" halign="center" valign="middle">
+                         <af:link text="Training" id="l8" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#d6a5ff; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf" icon="#{resource['images:main_training.png']}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" id="gc7" halign="center" valign="middle">
+                         <af:link text="Certificate" id="l7" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#b5ffb5; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf" icon="#{resource['images:main_certificate.png']}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc8" halign="center" valign="middle">
+                         <af:link text="Infrastructure" id="l6" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#ffb5b5; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf" icon="#{resource['images:main_infrastructure.png']}"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr4">
+                    <af:gridCell marginStart="5px" width="25%" id="gc13" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc14" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc15" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc16" halign="center" valign="middle"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr3">
+                    <af:gridCell marginStart="5px" width="25%" id="gc9" halign="center" valign="middle">
+                         <af:link text="Marketing" id="l5" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#ffe794; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf" icon="#{resource['images:main_marketing.png']}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" id="gc10" halign="center" valign="middle">
+                         <af:link text="Management" id="l4" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#a5a5ff; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf" icon="#{resource['images:main_management.png']}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" id="gc11" halign="center" valign="middle">
+                         <af:link text="Report" id="l3" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#ffc684; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf" icon="#{resource['images:main_reports.png']}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc12" halign="center" valign="middle">
+                         <af:link text="Setup" id="l2" icon="#{resource['images:main_setup.png']}" iconPosition="top"
+                        inlineStyle="font-size:xx-large; color:#00adff; font-weight:bold; background-color:#c6d6ff; padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:10px;"
+                        action="setup.jsf"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr5">
+                    <af:gridCell marginStart="5px" width="25%" id="gc17" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc18" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc19" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc20" halign="center" valign="middle"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr6">
+                    <af:gridCell marginStart="5px" width="25%" id="gc21" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc22" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc23" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc24" halign="center" valign="middle"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr7">
+                    <af:gridCell marginStart="5px" width="25%" id="gc25" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc26" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc27" halign="center" valign="middle"/>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc28" halign="center" valign="middle"/>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr8">
+                    <af:gridCell marginStart="5px" width="25%" id="gc29"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc30"/>
+                    <af:gridCell marginStart="5px" width="25%" id="gc31"/>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc32"/>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
