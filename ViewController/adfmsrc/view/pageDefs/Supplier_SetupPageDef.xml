@@ -99,5 +99,14 @@
           id="DistrictLibrDetail" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_LibrDetailId" id="LibrDetailId1"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Gst">
+      <AttrNames>
+        <Item Value="Gst"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_TypeTechProv" id="TypeTechProv"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_VendorType" id="VendorType"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

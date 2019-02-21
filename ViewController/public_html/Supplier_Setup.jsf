@@ -171,7 +171,7 @@
                                                         <af:showDetailItem id="tab2" text="Supplier Detail Setup">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="4">
                                                                 <af:inputText value="#{bindings.Payee.inputValue}"
-                                                                              label="#{bindings.Payee.hints.label}"
+                                                                              label="Vendor Name"
                                                                          
                                                                               required="#{bindings.Payee.hints.mandatory}"
                                                                               columns="#{bindings.Payee.hints.displayWidth}"
@@ -181,7 +181,7 @@
                                                                     <f:validator binding="#{bindings.Payee.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ConPer.inputValue}"
-                                                                              label="Contact Person"
+                                                                              label="Authorized Focal Person"
                                                                               required="#{bindings.ConPer.hints.mandatory}"
                                                                               columns="#{bindings.ConPer.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ConPer.hints.precision}"
@@ -235,7 +235,7 @@
                                                                     <f:validator binding="#{bindings.Email.validator}"/>
                                                                 </af:inputText>
                                                                 <af:selectOneChoice value="#{bindings.Type.inputValue}"
-                                                                                    label="Vendor Type"
+                                                                                    label="Vendor Legal Status"
                                                                                     required="#{bindings.Type.hints.mandatory}"
                                                                                     shortDesc="#{bindings.Type.hints.tooltip}"
                                                                                     id="soc2"
@@ -265,6 +265,35 @@
                                                                     <af:convertNumber groupingUsed="false"
                                                                                       pattern="#{bindings.NoOfEmp.format}"/>
                                                                 </af:inputText>
+                                                                <af:inputText value="#{bindings.Gst.inputValue}"
+                                                                              label="GST"
+                                                                              required="#{bindings.Gst.hints.mandatory}"
+                                                                              columns="#{bindings.Gst.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Gst.hints.precision}"
+                                                                              shortDesc="#{bindings.Gst.hints.tooltip}"
+                                                                              id="it14" contentStyle="width:200px;">
+                                                                    <f:validator binding="#{bindings.Gst.validator}"/>
+                                                                </af:inputText>
+                                                                <af:selectOneChoice value="#{bindings.TypeTechProv.inputValue}"
+                                                                                    label="Technology Provided"
+                                                                                    required="#{bindings.TypeTechProv.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.TypeTechProv.hints.tooltip}"
+                                                                                    id="soc5"
+                                                                                    contentStyle="width:200px;">
+                                                                    <f:selectItems value="#{bindings.TypeTechProv.items}"
+                                                                                   id="si5"/>
+                                                                    <f:validator binding="#{bindings.TypeTechProv.validator}"/>
+                                                                </af:selectOneChoice>
+                                                                <af:selectOneChoice value="#{bindings.VendorType.inputValue}"
+                                                                                    label="Vendor Type"
+                                                                                    required="#{bindings.VendorType.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.VendorType.hints.tooltip}"
+                                                                                    id="soc6"
+                                                                                    contentStyle="width:250px;">
+                                                                    <f:selectItems value="#{bindings.VendorType.items}"
+                                                                                   id="si6"/>
+                                                                    <f:validator binding="#{bindings.VendorType.validator}"/>
+                                                                </af:selectOneChoice>
                                                                 <af:inputText value="#{bindings.NoOfYearExp.inputValue}"
                                                                               required="#{bindings.NoOfYearExp.hints.mandatory}"
                                                                               columns="#{bindings.NoOfYearExp.hints.displayWidth}"
