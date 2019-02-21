@@ -112,4 +112,7 @@
   <ViewUsage
     Name="Type_Tech_Prov_LOV1"
     ViewObjectName="model.lov.Type_Tech_Prov_LOV"/>
+  <ViewUsage
+    Name="Output_Ind_Name_LOV1"
+    ViewObjectName="model.lov.Output_Ind_Name_LOV"/>
 </AppModule>
