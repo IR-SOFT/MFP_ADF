@@ -67,7 +67,7 @@
                                     <af:image id="i2" binding="#{backingBeanScope.backing_login.i1}"
                                               source="#{resource['images:password_login.png']}"/>
                                     <af:inputText id="it2" binding="#{backingBeanScope.backing_login.it2}"
-                                                  placeholder="Password" columns="30" rows="1"/>
+                                                  placeholder="Password" columns="30" rows="1" secret="true"/>
                                 </af:panelGroupLayout>
                                  <af:spacer width="10" height="100" id="s1"
                                                binding="#{backingBeanScope.backing_login.s6}"/>
