@@ -88,10 +88,7 @@
                                                                                   columns="#{bindings.TblCertificationView1.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblCertificationView1.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblCertificationView1.hints.Name.tooltip}"
-                                                                                  id="it2" placeholder="aaa......."
-                                                                                
-                                                                                  > 
-                                                                                 <af:convertNumber pattern="99999-9999999-9" />
+                                                                                  id="it2" placeholder="aaa......."> 
                                  
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
