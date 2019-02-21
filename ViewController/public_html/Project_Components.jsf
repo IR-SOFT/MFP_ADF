@@ -59,12 +59,12 @@
                                                                       queryListener="#{bindings.TblProjCompView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b13 ::b14 ::b15 ::b2"
-                                                                      width="983"
+                                                                      width="977"
                                                                       scrollPolicy="page" autoHeightRows="0" >
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project"
-                                                                           id="c2" width="300">
+                                                                           id="c2" width="250">
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ProjId}"
@@ -85,7 +85,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjCompId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Component ID"
-                                                                           id="c1" width="70">
+                                                                           id="c1" width="80">
                                                                            
                                                                              <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ProjCompId}"
@@ -107,7 +107,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.Name.name}"
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Project Component"
-                                                                           id="c3" width="300">
+                                                                           id="c3" width="250">
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
@@ -125,8 +125,15 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="I/O"
-                                                                           id="c5">
+                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.Io.name}"
+                                                                           filterable="true" sortable="true" 
+                                                                           headerText="I/O"
+                                                                           id="c5" width="250">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Io}"
+                                                                                     id="it2" placeholder="Search I/O">
+                                                                       </af:inputText>
+                                                                            </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Io.inputValue}"
                                                                                         label="#{row.bindings.Io.label}"
                                                                                         required="#{bindings.TblProjCompView1.hints.Io.mandatory}"
@@ -140,7 +147,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Active" 
-                                                                           id="c4" width="65">
+                                                                           id="c4" width="80">
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
@@ -171,7 +178,7 @@
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
                                                     <h:panelGroup id="pg3">
-                                                    <af:spacer width="252" height="10" id="s2"/>
+                                                    <af:spacer width="343" height="10" id="s2"/>
                                                         <af:button actionListener="#{bindings.CreateInsert2.execute}"
                                                                text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
@@ -230,7 +237,9 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_BeneficiaryView1Query.processQuery}"
                                                                       varStatus="vs" id="t4"
-                                                                      partialTriggers="::b4 ::b12 ::b19">
+                                                                      partialTriggers="::b4 ::b12 ::b19 ::b6"
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="569">
                                                                 <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText=" Beneficiary ID"
@@ -311,9 +320,14 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
+                                                            <af:button actionListener="#{bindings.Execute3.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute3.enabled}"
+                                                                       id="b6"
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                             <af:spacer width="30" height="40" id="s14"/>
                                                     <h:panelGroup id="pg4">
-                                                        <af:spacer width="200" height="20" id="s15"/>
+                                                        <af:spacer width="138" height="20" id="s15"/>
                                                         <af:button actionListener="#{bindings.CreateInsert3.execute}"
                                                                text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
@@ -330,7 +344,8 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                text="Delete" disabled="#{!bindings.Delete3.enabled}"
                                                                icon="#{resource['images:delete.png']}"
-                                                               id="b19"/>
+                                                               id="b19"
+                                                                immediate="true" action="Project_Components.jsf"/>
                                                                 <af:spacer width="5" height="10" id="s21"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"

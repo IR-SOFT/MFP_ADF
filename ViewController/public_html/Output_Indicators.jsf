@@ -165,7 +165,8 @@
                                                                                   columns="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.tooltip}"
-                                                                                  id="it1"  contentStyle='text-align:center'>
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
