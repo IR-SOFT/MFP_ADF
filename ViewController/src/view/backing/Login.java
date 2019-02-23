@@ -505,7 +505,7 @@ public class Login {
 //                //                return "good";
 //                
 //                conn.close();
-//                return "/faces/mainPage.jsf?faces-redirect=true";
+//                return "/faces/Dashboard.jsf?faces-redirect=true";
 //            } else {
 //                System.out.println("........wrong login credentials........");
 //
@@ -517,7 +517,7 @@ public class Login {
 //        }
 //
 //        return role_master_id;
-        return "/faces/mainPage.jsf?faces-redirect=true";
+        return "/faces/Dashboard.jsf?faces-redirect=true";
     }
 
 
