@@ -342,4 +342,9 @@
     ViewLink="model.vo.FkTblSupplierRateMasterFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblSupplierPartView"
+    ViewLink="model.vo.FKLinkSupplierPartFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>
