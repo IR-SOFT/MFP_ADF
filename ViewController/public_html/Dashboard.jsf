@@ -6,14 +6,17 @@
         <af:form id="f1" inlineStyle="background-color: White;">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
             <af:panelGridLayout id="pgl1">
-                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                <!--<af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="5px" width="34%" id="gc1"/>
                     <af:gridCell marginStart="5px" width="33%" id="gc2"/>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3"/>
-                </af:gridRow>
+                </af:gridRow>-->
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="34%" id="gc4"/>
-                    <af:gridCell marginStart="5px" width="33%" id="gc5"/>
+                    <af:gridCell marginStart="5px" width="33%" id="gc5">
+                        <af:image id="i1" inlineStyle="width:405px; height:139px;"
+                                  source="#{resource['images:mfp.png']}"/>
+                    </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc6"/>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr3">
@@ -34,27 +37,23 @@
                                     <af:link id="l6" icon="#{resource['images:dash_management.png']}"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc92">
-                                    
-                                        <af:panelGridLayout id="pgl13" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr42">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc93">
-                                                <af:link text="Management" id="l17" inlineStyle="font-size:x-large; color: #00adff;font-weight: bold;"/>
+                                    <af:panelGridLayout id="pgl13" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr42">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc93">
+                                                <af:link text="Management" id="l17"
+                                                         inlineStyle="font-size:x-large; color: #008442;font-weight: bold;"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr43">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc94">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr43">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc94">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol12"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr44">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc95"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr44">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc95"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc96"/>
                             </af:gridRow>
@@ -77,27 +76,23 @@
                                     <af:link id="l7" icon="#{resource['images:dash_infrastructure.png']}"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc68">
-                                    
-                                        <af:panelGridLayout id="pgl9" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr30">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc69">
-                                                         <af:link text="Infrastructure" id="l18" inlineStyle="font-size:x-large; color: #00adff;font-weight: bold;"/>
+                                    <af:panelGridLayout id="pgl9" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr30">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc69">
+                                                <af:link text="Infrastructure" id="l18"
+                                                         inlineStyle="font-size:x-large; color: #008442;font-weight: bold;"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr31">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc70">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr31">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc70">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol8"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr32">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc71"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr32">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc71"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc72"/>
                             </af:gridRow>
@@ -120,28 +115,24 @@
                                     <af:link id="l8" icon="#{resource['images:dash_setup.png']}" action="setup.jsf"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc32">
-                                    
-                                        <af:panelGridLayout id="pgl3" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr13">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc36">
+                                    <af:panelGridLayout id="pgl3" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr13">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc36">
                                                 <af:link text="Setup" id="l1"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"
                                                          action="setup.jsf"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr14">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc38">
-                                                <af:outputLabel value="Here information goes about what we call setup or what setup include" id="ol2"/>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr14">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc38">
+                                                <af:outputLabel value="Here information goes about what we call setup or what setup include"
+                                                                id="ol2"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr15">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc41"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr15">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc41"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc33"/>
                             </af:gridRow>
@@ -172,29 +163,24 @@
                                              action="Clusters.jsf"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc116">
-                                    
-                                        <af:panelGridLayout id="pgl17" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr54">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc117">
-                                                                <af:link text="Clusters" id="l4"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"
+                                    <af:panelGridLayout id="pgl17" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr54">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc117">
+                                                <af:link text="Clusters" id="l4"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"
                                                          action="Clusters.jsf"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr55">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc118">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr55">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc118">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol16"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr56">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc119"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr56">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc119"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc120"/>
                             </af:gridRow>
@@ -218,29 +204,24 @@
                                              action="Course_Training.jsf"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc43">
-                                    
-                                        <af:panelGridLayout id="pgl5" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr18">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc45">
+                                    <af:panelGridLayout id="pgl5" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr18">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc45">
                                                 <af:link text="Training" id="l2"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"
                                                          action="Course_Training.jsf"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr19">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc46">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr19">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc46">
                                                 <af:outputLabel value="Here information goes about what we call Training or what Training include"
                                                                 id="ol4"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr20">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc47"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr20">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc47"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc48"/>
                             </af:gridRow>
@@ -252,7 +233,7 @@
                         </af:panelGridLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc18">
-                         <af:panelGridLayout id="pgl18" inlineStyle="width:419px;">
+                        <af:panelGridLayout id="pgl18" inlineStyle="width:419px;">
                             <af:gridRow marginTop="5px" height="auto" id="gr58">
                                 <af:gridCell marginStart="5px" width="34%" id="gc124"/>
                                 <af:gridCell marginStart="5px" width="46%" id="gc125"/>
@@ -264,29 +245,24 @@
                                              action="Monitoring.jsf"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc128">
-                                    
-                                        <af:panelGridLayout id="pgl19" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr60">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc129">
-                                                                <af:link text="Monitoring" id="l19"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"
+                                    <af:panelGridLayout id="pgl19" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr60">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc129">
+                                                <af:link text="Monitoring" id="l19"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"
                                                          action="Monitoring.jsf"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr61">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc130">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr61">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc130">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol3"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr62">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc131"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr62">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc131"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc132"/>
                             </af:gridRow>
@@ -316,29 +292,24 @@
                                     <af:link id="l12" icon="#{resource['images:main_grants.png']}"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc155">
-                                    
-                                        <af:panelGridLayout id="pgl23" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr72">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc156">
-                                                                <af:link text="Grants" id="l20"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"
+                                    <af:panelGridLayout id="pgl23" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr72">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc156">
+                                                <af:link text="Grants" id="l20"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"
                                                          action="setup.jsf"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr73">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc157">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr73">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc157">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol7"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr74">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc158"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr74">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc158"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc159"/>
                             </af:gridRow>
@@ -350,7 +321,7 @@
                         </af:panelGridLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" id="gc23">
-                       <af:panelGridLayout id="pgl6" inlineStyle="width:419px;">
+                        <af:panelGridLayout id="pgl6" inlineStyle="width:419px;">
                             <af:gridRow marginTop="5px" height="auto" id="gr22">
                                 <af:gridCell marginStart="5px" width="34%" id="gc52"/>
                                 <af:gridCell marginStart="5px" width="46%" id="gc53"/>
@@ -362,29 +333,24 @@
                                              action="Cert_Expo.jsf"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc56">
-                                    
-                                        <af:panelGridLayout id="pgl7" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr24">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc57">
+                                    <af:panelGridLayout id="pgl7" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr24">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc57">
                                                 <af:link text="Certification" id="l3"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"
                                                          action="Cert_Expo.jsf"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr25">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc58">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr25">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc58">
                                                 <af:outputLabel value="Here information goes about what we call Certification or what Certification include"
                                                                 id="ol6"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr26">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc59"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr26">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc59"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc62"/>
                             </af:gridRow>
@@ -396,7 +362,7 @@
                         </af:panelGridLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc24">
-                       <af:panelGridLayout id="pgl10" inlineStyle="width:419px;">
+                        <af:panelGridLayout id="pgl10" inlineStyle="width:419px;">
                             <af:gridRow marginTop="5px" height="auto" id="gr34">
                                 <af:gridCell marginStart="5px" width="34%" id="gc76"/>
                                 <af:gridCell marginStart="5px" width="46%" id="gc77"/>
@@ -407,29 +373,23 @@
                                     <af:link id="l14" icon="#{resource['images:dash_marketing.png']}"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc80">
-                                    
-                                        <af:panelGridLayout id="pgl11" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr36">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc81">
-                                                                 <af:link text="Marketing" id="l5"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"/>
-                                            
+                                    <af:panelGridLayout id="pgl11" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr36">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc81">
+                                                <af:link text="Marketing" id="l5"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr37">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc82">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr37">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc82">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol10"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr38">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc83"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr38">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc83"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc84"/>
                             </af:gridRow>
@@ -459,28 +419,23 @@
                                     <af:link id="l15" icon="#{resource['images:main_financial.png']}"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc146">
-                                    
-                                        <af:panelGridLayout id="pgl20" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr67">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc145">
-                                                                <af:link text="Financial" id="l21"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"/>
+                                    <af:panelGridLayout id="pgl20" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr67">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc145">
+                                                <af:link text="Financial" id="l21"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr83">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc180">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr83">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc180">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol24"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr84">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc179"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr84">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc179"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc178"/>
                             </af:gridRow>
@@ -503,28 +458,23 @@
                                     <af:link id="l16" icon="#{resource['images:dash_reports.png']}"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="46%" id="gc104">
-                                    
-                                        <af:panelGridLayout id="pgl15" inlineStyle="width:175px;">
-                                            <af:gridRow marginTop="5px" height="auto" id="gr48">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc105">
-                                                                <af:link text="Reports" id="l22"
-                                                         inlineStyle="font-size:x-large; color:#00adff;font-weight: bold;"/>
+                                    <af:panelGridLayout id="pgl15" inlineStyle="width:175px;">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr48">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc105">
+                                                <af:link text="Reports" id="l22"
+                                                         inlineStyle="font-size:x-large; color:#008442;font-weight: bold;"/>
                                             </af:gridCell>
-                                              
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr49">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc106">
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr49">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc106">
                                                 <af:outputLabel value="Here information goes about what we call Infrastructure or what Infrastructure include"
                                                                 id="ol14"/>
                                             </af:gridCell>
-                                                
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr50">
-                                                
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc107"/>
-                                            </af:gridRow>
-                                        </af:panelGridLayout>
-                                    
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr50">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc107"/>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc108"/>
                             </af:gridRow>
@@ -535,9 +485,7 @@
                             </af:gridRow>
                         </af:panelGridLayout>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc138">
-                        
-                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc138"></af:gridCell>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr65">
                     <af:gridCell marginStart="5px" width="34%" id="gc139"/>
