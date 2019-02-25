@@ -173,7 +173,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                                                    <af:spacer width="277" height="15" id="s8"/>
+                                                    <af:spacer width="277" height="15" id="s16"/>
                                                     <h:panelGroup id="pg2">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add"
@@ -453,7 +453,7 @@
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                    rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
                                                                    text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                                   id="b8" icon="#{resource['images:edit.png']}"
+                                                                   id="b18" icon="#{resource['images:edit.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
