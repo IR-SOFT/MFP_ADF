@@ -487,7 +487,7 @@
                                                             <af:panelGroupLayout id="pgl5">
                                                                 <af:spacer width="113" height="10" id="s19"/>
                                                                 <af:button actionListener="#{bindings.CreateInsert1.execute}"
-                                                                           text="Create"
+                                                                           text="Add"
                                                                            disabled="#{!bindings.CreateInsert1.enabled}"
                                                                            id="b18"
                                                                            icon="#{resource['images:add.png']}"/>
