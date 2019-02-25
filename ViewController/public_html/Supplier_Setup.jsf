@@ -339,7 +339,8 @@
                                                                                          inlineStyle="width:982px;">
                                                                         <af:panelGroupLayout layout="horizontal"
                                                                                              id="pgl4">
-                                                                            <af:spacer width="100" height="20" id="s8"/>
+                                                                            <af:spacer width="100" height="20"
+                                                                                       id="s17"/>
                                                                             <af:button actionListener="#{bindings.First.execute}"
                                                                                        text="First"
                                                                                        icon="#{resource['images:first.png']}"
@@ -350,7 +351,7 @@
                                                                                        text="Previous"
                                                                                        icon="#{resource['images:backward.png']}"
                                                                                        disabled="#{!bindings.Previous.enabled}"
-                                                                                       partialSubmit="true" id="b8"/>
+                                                                                       partialSubmit="true" id="b17"/>
                                                                             <af:spacer width="5" height="10" id="s11"/>
                                                                             <af:button actionListener="#{bindings.Next.execute}"
                                                                                        text="Next"
@@ -396,6 +397,120 @@
                                                                     </af:panelGroupLayout>
                                                                 </f:facet>
                                                             </af:panelFormLayout>
+                                                        </af:showDetailItem>
+                                                        <af:showDetailItem text="Partner/Director" id="sdi2">
+                                                            <af:table value="#{bindings.TblSupplierPartView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblSupplierPartView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblSupplierPartView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblSupplierPartView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblSupplierPartView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblSupplierPartView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblSupplierPartView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblSupplierPartView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b18 ::b19 ::b20 ::b22"
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="519">
+                                                                <af:column sortProperty="#{bindings.TblSupplierPartView3.hints.SupplierPartId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Partner/Director ID"
+                                                                           id="c5" align="center" width="100">
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.SupplierPartId}"
+                                                                        id="it20" placeholder="Search ID ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.SupplierPartId.inputValue}"
+                                                                                  label="#{bindings.TblSupplierPartView3.hints.SupplierPartId.label}"
+                                                                                  required="#{bindings.TblSupplierPartView3.hints.SupplierPartId.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierPartView3.hints.SupplierPartId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierPartView3.hints.SupplierPartId.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierPartView3.hints.SupplierPartId.tooltip}"
+                                                                                  id="it19" readOnly="true"
+                                                                                contentStyle='text-align:center'>
+                                                                        <f:validator binding="#{row.bindings.SupplierPartId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                
+                                                                <af:column sortProperty="#{bindings.TblSupplierPartView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Partner/Director"
+                                                                           id="c7" width="300" >
+                                                                          <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Name}"
+                                                                        id="it23" placeholder="Search Partner/Director ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblSupplierPartView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblSupplierPartView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierPartView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierPartView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierPartView3.hints.Name.tooltip}"
+                                                                                  id="it21">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierPartView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
+                                                                           id="c8" width="80">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Ast}"
+                                                                        id="it24" placeholder="Search Status ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblSupplierPartView3.hints.Ast.label}"
+                                                                                  required="#{bindings.TblSupplierPartView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierPartView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierPartView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierPartView3.hints.Ast.tooltip}"
+                                                                                  id="it22">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                       text="Refresh"
+                                                                       disabled="#{!bindings.Execute1.enabled}"
+                                                                       id="b22"
+                                                                       icon="#{resource['images:refresh.png']}"/>
+                                                            <af:spacer width="10" height="10" id="s18"/>
+                                                            <af:panelGroupLayout id="pgl5">
+                                                                <af:spacer width="113" height="10" id="s19"/>
+                                                                <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                                           text="Create"
+                                                                           disabled="#{!bindings.CreateInsert1.enabled}"
+                                                                           id="b18"
+                                                                           icon="#{resource['images:add.png']}"/>
+                                                                           <af:spacer width="5" height="10" id="s20"/>
+                                                                <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                           text="Edit"
+                                                                           disabled="#{!bindings.Execute1.enabled}"
+                                                                           id="b19"
+                                                                           icon="#{resource['images:edit.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s21"/>
+                                                                <af:button actionListener="#{bindings.Delete1.execute}"
+                                                                           text="Delete"
+                                                                           disabled="#{!bindings.Delete1.enabled}"
+                                                                           id="b20"
+                                                                           immediate="true" action="Supplier_Setup.jsf"
+                                                                           icon="#{resource['images:delete.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s22"/>
+                                                                <af:button actionListener="#{bindings.Commit.execute}"
+                                                                           text="Save"
+                                                                           disabled="#{!bindings.Commit.enabled}"
+                                                                           id="b21"
+                                                                           icon="#{resource['images:save.png']}"/>
+                                                            </af:panelGroupLayout>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>

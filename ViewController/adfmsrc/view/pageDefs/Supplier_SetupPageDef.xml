@@ -7,6 +7,10 @@
     <iterator Binds="TblSupplierView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblSupplierView1Iterator"/>
     <searchRegion Binds="TblSupplierView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSupplierView1Query"/>
+    <iterator Binds="TblSupplierPartView3" RangeSize="7" DataControl="AppModuleDataControl"
+              id="TblSupplierPartView3Iterator"/>
+    <searchRegion Binds="TblSupplierPartView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSupplierPartView3Query"/>
   </executables>
   <bindings>
     <tree IterBinding="TblSupplierView1Iterator" id="TblSupplierView1">
@@ -108,5 +112,21 @@
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="TblSupplierView1Iterator" StaticList="false" Uses="LOV_VendorType" id="VendorType"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <tree IterBinding="TblSupplierPartView3Iterator" id="TblSupplierPartView3">
+      <nodeDefinition DefName="model.vo.TblSupplierPartView" Name="TblSupplierPartView30">
+        <AttrNames>
+          <Item Value="SupplierPartId"/>
+          <Item Value="SupplierId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblSupplierPartView3Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblSupplierPartView3Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblSupplierPartView3Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
