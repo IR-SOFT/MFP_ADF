@@ -60,8 +60,6 @@
           <Item Value="ItemL1Id"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
-          <Item Value="L2_Name"/>
-          <Item Value="L1_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

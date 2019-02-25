@@ -498,24 +498,6 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblItemL3View3.hints.L1_Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Level-1" id="c27" width="153">
-                                                                    <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.L1_Name}"
-                                                                                      id="it38" placeholder="Search Level-1">
-                                                                       </af:inputText>
-                                                                   </f:facet> 
-                                                                    <af:inputText value="#{row.bindings.L1_Name.inputValue}"
-                                                                                  label="#{bindings.TblItemL3View3.hints.L1_Name.label}"
-                                                                                  required="#{bindings.TblItemL3View3.hints.L1_Name.mandatory}"
-                                                                                  columns="#{bindings.TblItemL3View3.hints.L1_Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblItemL3View3.hints.L1_Name.precision}"
-                                                                                  shortDesc="#{bindings.TblItemL3View3.hints.L1_Name.tooltip}"
-                                                                                  id="it15">
-                                                                        <f:validator binding="#{row.bindings.L1_Name.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL2Id.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-2 ID" id="c14" width="52"
@@ -533,24 +515,6 @@
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.ItemL2Id.tooltip}"
                                                                                   id="it8">
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblItemL3View3.hints.L2_Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Level-2" id="c26" width="148">
-                                                                    <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.L2_Name}"
-                                                                                      id="it40" placeholder="Search Level-2">
-                                                                       </af:inputText>
-                                                                   </f:facet> 
-                                                                    <af:inputText value="#{row.bindings.L2_Name.inputValue}"
-                                                                                  label="#{bindings.TblItemL3View3.hints.L2_Name.label}"
-                                                                                  required="#{bindings.TblItemL3View3.hints.L2_Name.mandatory}"
-                                                                                  columns="#{bindings.TblItemL3View3.hints.L2_Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblItemL3View3.hints.L2_Name.precision}"
-                                                                                  shortDesc="#{bindings.TblItemL3View3.hints.L2_Name.tooltip}"
-                                                                                  id="it11">
-                                                                        <f:validator binding="#{row.bindings.L2_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL3Id.name}"

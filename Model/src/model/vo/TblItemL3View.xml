@@ -4,20 +4,32 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblItemL3View"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
   SelectListFlags="1"
   FromListFlags="1"
   WhereFlags="1"
-  BindingStyle="OracleName"
-  CustomQuery="false"
-  SelectAllAttributes="false"
-  PageIterMode="Full">
+  SelectAllAttributes="false">
   <ViewAccessor
     Name="AppModule_Active_Status1_1"
     ViewObjectName="model.lov.Active_Status"
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_L2_Name_LOV1_1"
+    ViewObjectName="model.lov.L2_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="L2_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_L1_Name_LOV1_1"
+    ViewObjectName="model.lov.L1_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="L1_Name_LOV1"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
@@ -36,47 +48,43 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_ItemL2Id"
+    ListVOName="AppModule_L2_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL2Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL2Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ItemL1Id"
+    ListVOName="AppModule_L1_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL1Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL1Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblItemL3"
     Entity="model.eo.TblItemL3"/>
-  <EntityUsage
-    Name="TblItemL2"
-    Entity="model.eo.TblItemL2"
-    Association="model.eo.FkTblItemL3FkAssoc"
-    AssociationEnd="model.eo.FkTblItemL3FkAssoc.TblItemL2"
-    SourceUsage="model.vo.TblItemL3View.TblItemL3"
-    ReadOnly="true"
-    Reference="true"
-    DeleteParticipant="false"
-    JoinType="INNER JOIN">
-    <DesignTime>
-      <AttrArray Name="_dstAttributes">
-        <Item Value="model.eo.TblItemL2.ItemL2Id"/>
-      </AttrArray>
-      <AttrArray Name="_srcAttributes">
-        <Item Value="model.eo.TblItemL3.ItemL2Id"/>
-      </AttrArray>
-    </DesignTime>
-  </EntityUsage>
-  <EntityUsage
-    Name="TblItemL1"
-    Entity="model.eo.TblItemL1"
-    Association="model.eo.Fk2TblItemL2FkAssoc"
-    AssociationEnd="model.eo.Fk2TblItemL2FkAssoc.TblItemL1"
-    SourceUsage="model.vo.TblItemL3View.TblItemL3"
-    ReadOnly="true"
-    Reference="true"
-    DeleteParticipant="false"
-    JoinType="INNER JOIN">
-    <DesignTime>
-      <AttrArray Name="_dstAttributes">
-        <Item Value="model.eo.TblItemL1.ItemL1Id"/>
-      </AttrArray>
-      <AttrArray Name="_srcAttributes">
-        <Item Value="model.eo.TblItemL3.ItemL1Id"/>
-      </AttrArray>
-    </DesignTime>
-  </EntityUsage>
   <ViewAttribute
     Name="ItemL3Id"
     IsNotNull="true"
@@ -90,14 +98,30 @@
     PrecisionRule="true"
     EntityAttrName="ItemL2Id"
     EntityUsage="TblItemL3"
-    AliasName="ITEM_L2_ID"/>
+    AliasName="ITEM_L2_ID"
+    LOVName="LOV_ItemL2Id">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ItemL1Id"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="ItemL1Id"
     EntityUsage="TblItemL3"
-    AliasName="ITEM_L1_ID"/>
+    AliasName="ITEM_L1_ID"
+    LOVName="LOV_ItemL1Id">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Name"
     IsUnique="true"
@@ -121,36 +145,6 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewAttribute
-    Name="L2_Name"
-    IsUnique="true"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Name"
-    EntityUsage="TblItemL2"
-    AliasName="NAME1"/>
-  <ViewAttribute
-    Name="ItemL2Id1"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ItemL2Id"
-    EntityUsage="TblItemL2"
-    AliasName="ITEM_L2ID1"/>
-  <ViewAttribute
-    Name="L1_Name"
-    IsUnique="true"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Name"
-    EntityUsage="TblItemL1"
-    AliasName="NAME1"/>
-  <ViewAttribute
-    Name="ItemL1Id1"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ItemL1Id"
-    EntityUsage="TblItemL1"
-    AliasName="ITEM_L1ID1"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="ItemL3Id"/>
   </AttrArray>
