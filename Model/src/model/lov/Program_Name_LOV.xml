@@ -25,7 +25,6 @@
   <SQLQuery><![CDATA[select prog_id,name from tbl_prog where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="ProgId"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="255"
@@ -40,7 +39,6 @@
   </ViewAttribute>
   <ViewAttribute
     Name="Name"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="150"
