@@ -9,7 +9,7 @@
     <page path="/Program.jsf" usageId="view_Prog_SetupPageDef"/>
     <page path="/Project.jsf" usageId="view_Project_SetupPageDef"/>
     <page path="/Project_Crops.jsf" usageId="view_Project_CropsPageDef"/>
-    <page path="/mainPage.jsf" usageId="view_mainPagePageDef"/>
+    <page path="/map.jsf" usageId="view_mainPagePageDef"/>
     <page path="/Project_Components.jsf" usageId="view_Project_ComponentsPageDef"/>
     <page path="/Clusters_Setup.jsf" usageId="view_Clusters_SetupPageDef"/>
     <page path="/Course_Setup.jsf" usageId="view_course_setupPageDef"/>
