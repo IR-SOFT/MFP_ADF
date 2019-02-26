@@ -1036,7 +1036,7 @@
   <ViewLinkUsage
     Name="FkTblItemL3FkLink1"
     ViewLinkObjectName="model.vo.FkTblItemL3FkLink"
-    SrcViewUsageName="model.eo.AppModule.TblItemL2View1"
+    SrcViewUsageName="model.eo.AppModule.TblItemL2View3"
     DstViewUsageName="model.eo.AppModule.TblItemL3View4"
     Reversed="false"/>
   <ViewLinkUsage
@@ -1054,7 +1054,7 @@
   <ViewLinkUsage
     Name="FkTblItemL4FkLink1"
     ViewLinkObjectName="model.vo.FkTblItemL4FkLink"
-    SrcViewUsageName="model.eo.AppModule.TblItemL3View1"
+    SrcViewUsageName="model.eo.AppModule.TblItemL3View4"
     DstViewUsageName="model.eo.AppModule.TblItemL4View5"
     Reversed="false"/>
   <ViewLinkUsage

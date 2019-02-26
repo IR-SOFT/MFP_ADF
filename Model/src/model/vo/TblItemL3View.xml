@@ -19,18 +19,6 @@
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
     RowLevelBinds="true"/>
-  <ViewAccessor
-    Name="AppModule_L2_Name_LOV1_1"
-    ViewObjectName="model.lov.L2_Name_LOV"
-    AMUsageName="AppModule"
-    ViewInstanceName="L2_Name_LOV1"
-    RowLevelBinds="true"/>
-  <ViewAccessor
-    Name="AppModule_L1_Name_LOV1_1"
-    ViewObjectName="model.lov.L1_Name_LOV"
-    AMUsageName="AppModule"
-    ViewInstanceName="L1_Name_LOV1"
-    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="AppModule_Active_Status1_1"
@@ -45,40 +33,6 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_ItemL2Id"
-    ListVOName="AppModule_L2_Name_LOV1_1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ItemL2Id"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL2Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_ItemL1Id"
-    ListVOName="AppModule_L1_Name_LOV1_1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ItemL1Id"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ItemL1Id"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -98,30 +52,14 @@
     PrecisionRule="true"
     EntityAttrName="ItemL2Id"
     EntityUsage="TblItemL3"
-    AliasName="ITEM_L2_ID"
-    LOVName="LOV_ItemL2Id">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="ITEM_L2_ID"/>
   <ViewAttribute
     Name="ItemL1Id"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="ItemL1Id"
     EntityUsage="TblItemL3"
-    AliasName="ITEM_L1_ID"
-    LOVName="LOV_ItemL1Id">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="ITEM_L1_ID"/>
   <ViewAttribute
     Name="Name"
     IsUnique="true"

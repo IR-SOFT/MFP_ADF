@@ -115,10 +115,4 @@
   <ViewUsage
     Name="Output_Ind_Name_LOV1"
     ViewObjectName="model.lov.Output_Ind_Name_LOV"/>
-  <ViewUsage
-    Name="L2_Name_LOV1"
-    ViewObjectName="model.lov.L2_Name_LOV"/>
-  <ViewUsage
-    Name="L1_Name_LOV1"
-    ViewObjectName="model.lov.L1_Name_LOV"/>
 </AppModule>
