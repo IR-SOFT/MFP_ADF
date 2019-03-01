@@ -27,6 +27,7 @@
           <Item Value="Remarks"/>
           <Item Value="Trainer_Name"/>
           <Item Value="TrainerId1"/>
+          <Item Value="ClusterId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

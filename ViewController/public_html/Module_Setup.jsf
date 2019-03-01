@@ -80,19 +80,7 @@
                                                                       partialTriggers="::b13"
                                                                       scrollPolicy="page" autoHeightRows="0">
                                                                 
-                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.ProjCompId.name}"
-                                                                           filterable="true"
-                                                                           headerText="Project Component Input "
-                                                                           id="c2" width="300">
-                                                                           <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.ProjCompId}"
-                                                                                     id="it5" placeholder="Search Component">
-                                                                       </af:inputText>
-                                                                            </f:facet>
-                                                                    <af:outputText value="#{row.ProjCompId}"
-                                                                                   shortDesc="#{bindings.TblCourseView1.hints.ProjCompId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
+                
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
                                                                            filterable="true" headerText="Training"
                                                                            id="c3" width="300">

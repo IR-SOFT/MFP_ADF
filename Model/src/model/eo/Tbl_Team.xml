@@ -54,19 +54,6 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
-  <Attribute
-    Name="ProjCompId"
-    IsNotNull="true"
-    Precision="3"
-    ColumnName="PROJ_COMP_ID"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_TEAM">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </Attribute>
   <AccessorAttribute
     Name="Tbl_TrainingSchMaster"
     Association="model.eo.Fk5TblTrainingSchMasterFkAssoc"

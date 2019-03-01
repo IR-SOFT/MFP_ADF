@@ -4,32 +4,17 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblProjCompView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblProjCompView1Iterator"/>
-    <searchRegion Binds="TblProjCompView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompView1Query"/>
+    
      <iterator Binds="Tbl_BeneficiaryView1" RangeSize="7" DataControl="AppModuleDataControl"
               id="Tbl_BeneficiaryView1Iterator"/>
     <searchRegion Binds="Tbl_BeneficiaryView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_BeneficiaryView1Query"/>
-  </executables>
+  
+    <iterator Binds="TblProjCompView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProjCompView1Iterator"/>
+    <searchRegion Binds="TblProjCompView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompView1Query"/></executables>
   <bindings>
-    <tree IterBinding="TblProjCompView1Iterator" id="TblProjCompView1">
-      <nodeDefinition DefName="model.vo.TblProjCompView" Name="TblProjCompView10">
-        <AttrNames>
-          <Item Value="ProjCompId"/>
-          <Item Value="ProjId"/>
-          <Item Value="Name"/>
-          <Item Value="Ast"/>
-          <Item Value="Project_Name"/>
-          <Item Value="Io"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <action IterBinding="TblProjCompView1Iterator" id="CreateInsert2" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="TblProjCompView1Iterator" id="Execute2" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <action IterBinding="TblProjCompView1Iterator" id="Delete2" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    
     <tree IterBinding="Tbl_BeneficiaryView1Iterator" id="Tbl_BeneficiaryView1">
       <nodeDefinition DefName="model.vo.Tbl_BeneficiaryView" Name="Tbl_BeneficiaryView10">
         <AttrNames>
@@ -46,5 +31,18 @@
             Action="iteratorExecute"/>
     <action IterBinding="Tbl_BeneficiaryView1Iterator" id="Delete3" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
-  </bindings>
+  
+    <tree IterBinding="TblProjCompView1Iterator" id="TblProjCompView1">
+      <nodeDefinition DefName="model.vo.TblProjCompView" Name="TblProjCompView10">
+        <AttrNames>
+          <Item Value="ProjCompId"/>
+          <Item Value="ProjId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+          <Item Value="Project_Name"/>
+          <Item Value="ProjId1"/>
+          <Item Value="Io"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree></bindings>
 </pageDefinition>

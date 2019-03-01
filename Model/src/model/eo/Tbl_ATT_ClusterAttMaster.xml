@@ -65,6 +65,19 @@
       <Attr Name="_DisplaySize" Value="300"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="ClusterId"
+    Precision="3"
+    ColumnName="CLUSTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER_ATT_MASTER"
+    IsNotNull="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="Tbl_ATT_ClusterAttDetail"
     Association="model.eo.FkTblClusterAttDetailFkAssoc"
@@ -87,6 +100,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.Tbl_ATT_ClusterAttMaster.ClusterAttMasterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblClusterAttMasterClusterIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"CLUSTER_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_CLUSTER_ATT_MASTER_CLUSTER"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_ATT_ClusterAttMaster.ClusterId"/>
     </AttrArray>
   </Key>
   <Key

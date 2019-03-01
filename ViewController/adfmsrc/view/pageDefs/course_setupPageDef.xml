@@ -4,34 +4,17 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblProjCompView5" RangeSize="7" DataControl="AppModuleDataControl" id="TblProjCompView5Iterator"/>
-    <searchRegion Binds="TblProjCompView5Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompView5Query"/>
     <iterator Binds="TblCourseView3" RangeSize="7" DataControl="AppModuleDataControl" id="TblCourseView3Iterator"/>
     <searchRegion Binds="TblCourseView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblCourseView3Query"/>
   </executables>
   <bindings>
-    <tree IterBinding="TblProjCompView5Iterator" id="TblProjCompView5">
-      <nodeDefinition DefName="model.vo.TblProjCompView" Name="TblProjCompView50">
-        <AttrNames>
-          <Item Value="ProjCompId"/>
-          <Item Value="ProjId"/>
-          <Item Value="Name"/>
-          <Item Value="Ast"/>
-          <Item Value="Project_Name"/>
-          <Item Value="ProjId1"/>
-          <Item Value="Io"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="TblCourseView3Iterator" id="TblCourseView3">
       <nodeDefinition DefName="model.vo.TblCourseView" Name="TblCourseView30">
         <AttrNames>
           <Item Value="CourseId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
-          <Item Value="ProjCompId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -39,6 +22,5 @@
     <action IterBinding="TblCourseView3Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblCourseView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <action IterBinding="TblProjCompView5Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
   </bindings>
 </pageDefinition>

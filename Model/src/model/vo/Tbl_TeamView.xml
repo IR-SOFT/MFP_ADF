@@ -48,23 +48,6 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
-  <ListBinding
-    Name="LOV_ProjCompId"
-    ListVOName="AppModule_Proj_Comp_Name_LOV1_1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ProjCompId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ProjCompId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
   <EntityUsage
     Name="Tbl_Team"
     Entity="model.eo.Tbl_Team"/>
@@ -91,21 +74,6 @@
     EntityUsage="Tbl_Team"
     AliasName="AST"
     LOVName="LOV_Ast">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="ProjCompId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompId"
-    EntityUsage="Tbl_Team"
-    AliasName="PROJ_COMP_ID"
-    LOVName="LOV_ProjCompId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

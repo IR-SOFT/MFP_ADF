@@ -38,13 +38,6 @@
     EntityAttrName="Ast"
     EntityUsage="Tbl_Course"
     AliasName="AST"/>
-  <ViewAttribute
-    Name="ProjCompId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompId"
-    EntityUsage="Tbl_Course"
-    AliasName="PROJ_COMP_ID"/>
   <ViewLinkAccessor
     Name="Tbl_TrainingSchMasterView"
     ViewLink="model.vo.Fk2TblTrainingSchMasterFkLink"

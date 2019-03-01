@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-        <f:metadata>
+        <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Attendance_Detail')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Attendance_Detail.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -78,6 +78,18 @@
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b8 ::b9 ::b10 ::b15"
                                                                       scrollPolicy="page" autoHeightRows="0" >
+                                                                <af:column headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterId.label}"
+                                                                           id="c14">
+                                                                    <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
+                                                                                        label="#{row.bindings.ClusterId.label}"
+                                                                                        required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterId.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.ClusterId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster Attendance Master ID"

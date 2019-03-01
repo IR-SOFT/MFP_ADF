@@ -1322,24 +1322,6 @@
     DstViewUsageName="model.eo.AppModule.TblTeamFormationView2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FKTblMonitoringOutputIndFKLink"
-    ViewLinkObjectName="model.vo.FKTblMonitoringOutputIndFKLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompView3"
-    DstViewUsageName="model.eo.AppModule.TblMonitoringOutputIndView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FKTblClusterFKLink"
-    ViewLinkObjectName="model.vo.FKTblClusterFKLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompView4"
-    DstViewUsageName="model.eo.AppModule.TblClusterView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FKTblCourseFKLink"
-    ViewLinkObjectName="model.vo.FKTblCourseFKLink"
-    SrcViewUsageName="model.eo.AppModule.TblProjCompView5"
-    DstViewUsageName="model.eo.AppModule.TblCourseView3"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FKLinkSupplierPartFKLink"
     ViewLinkObjectName="model.vo.FKLinkSupplierPartFKLink"
     SrcViewUsageName="model.eo.AppModule.TblSupplierView1"

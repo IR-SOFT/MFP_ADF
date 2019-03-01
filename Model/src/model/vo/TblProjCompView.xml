@@ -188,19 +188,4 @@
     ViewLink="model.vo.FKTblTrainingSchMasterFKLink2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblMonitoringOutputIndView"
-    ViewLink="model.vo.FKTblMonitoringOutputIndFKLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblClusterView"
-    ViewLink="model.vo.FKTblClusterFKLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TblCourseView"
-    ViewLink="model.vo.FKTblCourseFKLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>

@@ -19,23 +19,6 @@
     AMUsageName="AppModule"
     ViewInstanceName="Proj_Comp_Name_Input_LOV1"
     RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_ProjCompId"
-    ListVOName="AppModule_Proj_Comp_Name_Input_LOV1_1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ProjCompId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ProjCompId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Name"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
   <EntityUsage
     Name="Tbl_Cluster"
     Entity="model.eo.Tbl_Cluster"/>
@@ -96,21 +79,6 @@
     EntityAttrName="CropId"
     EntityUsage="Tbl_Cluster"
     AliasName="CROP_ID"/>
-  <ViewAttribute
-    Name="ProjCompId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ProjCompId"
-    EntityUsage="Tbl_Cluster"
-    AliasName="PROJ_COMP_ID"
-    LOVName="LOV_ProjCompId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
   <ViewLinkAccessor
     Name="Tbl_TrainingSchMasterView"
     ViewLink="model.vo.Fk4TblTrainingSchMasterFkLink"

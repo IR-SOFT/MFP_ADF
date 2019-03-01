@@ -133,7 +133,7 @@
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:827px;">
                                                         <af:showDetailItem id="tab2" text="Output Indicators">
-                                                            <af:table value="#{bindings.TblMonitoringOutputIndView3.collectionModel}"
+                                                            <!--<af:table value="#{bindings.TblMonitoringOutputIndView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblMonitoringOutputIndView3.rangeSize}"
                                                                       emptyText="#{bindings.TblMonitoringOutputIndView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -190,26 +190,6 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Project Component"
-                                                                           id="c11"  width="300">
-                                                                            <f:facet name="filter">
-                                                                       <af:inputText 
-                                                                       value="#{vs.filterCriteria.ProjCompId}"
-                                                                        id="it5" placeholder="Search Component ">
-                                                                       </af:inputText>
-                                                                   </f:facet>
-                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
-                                                                                        label="#{row.bindings.ProjCompId.label}"
-                                                                                        required="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompId.mandatory}"
-                                                                                        shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompId.tooltip}"
-                                                                                        id="soc2">
-                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
-                                                                                       id="si2"/>
-                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
-                                                                    </af:selectOneChoice>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
@@ -231,12 +211,12 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                                 
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                            </af:table>-->
+                                                            <!--<af:button actionListener="#{bindings.Execute1.execute}"
                                                                        text="Refresh"
                                                                        icon="#{resource['images:refresh.png']}"
                                                                        disabled="#{!bindings.Execute1.enabled}"
-                                                                       id="b9"/>
+                                                                       id="b9"/>-->
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -244,7 +224,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="260" height="20" id="s2"/>
-                                                    <h:panelGroup id="pg1">
+                                                    <!--<h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
                                                                    text="Add"
@@ -267,7 +247,7 @@
                                                                    text="Save" icon="#{resource['images:save.png']}"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    disabled="#{!bindings.Commit.enabled}" id="b8"/>
-                                                    </h:panelGroup>
+                                                    </h:panelGroup>-->
                                                    
                                                 </af:gridCell>
                                             </af:gridRow>

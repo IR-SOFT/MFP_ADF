@@ -37,98 +37,12 @@
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Cluster Setup">
                                         <af:panelGridLayout id="pgl2">
-                                            <!--<af:gridRow marginTop="5px" height="auto" id="gr2">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1012px;">
-                                                        <af:showDetailItem id="tab1" text="Input Component">
-                                                            <af:table value="#{bindings.TblProjCompView4.collectionModel}"
-                                                                      var="row"
-                                                                      rows="#{bindings.TblProjCompView4.rangeSize}"
-                                                                      emptyText="#{bindings.TblProjCompView4.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                                      rowBandingInterval="0"
-                                                                      selectedRowKeys="#{bindings.TblProjCompView4.collectionModel.selectedRow}"
-                                                                      selectionListener="#{bindings.TblProjCompView4.collectionModel.makeCurrent}"
-                                                                      rowSelection="single"
-                                                                      fetchSize="#{bindings.TblProjCompView4.rangeSize}"
-                                                                      filterModel="#{bindings.TblProjCompView4Query.queryDescriptor}"
-                                                                      filterVisible="true"
-                                                                      queryListener="#{bindings.TblProjCompView4Query.processQuery}"
-                                                                      varStatus="vs" id="t1" partialTriggers="::b4"
-                                                                      scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.ProjCompId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView4.hints.ProjCompId.label}"
-                                                                           id="c1">
-                                                                    <af:outputText value="#{row.ProjCompId}"
-                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.ProjCompId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.ProjId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView4.hints.ProjId.label}"
-                                                                           id="c2">
-                                                                    <af:outputText value="#{row.ProjId}"
-                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.ProjId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView4.hints.Name.label}"
-                                                                           id="c3">
-                                                                    <af:outputText value="#{row.Name}"
-                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Name.tooltip}"
-                                                                                   id="ot3"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView4.hints.Ast.label}"
-                                                                           id="c4">
-                                                                    <af:outputText value="#{row.Ast}"
-                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Ast.tooltip}"
-                                                                                   id="ot4"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Project_Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView4.hints.Project_Name.label}"
-                                                                           id="c5">
-                                                                    <af:outputText value="#{row.Project_Name}"
-                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Project_Name.tooltip}"
-                                                                                   id="ot5"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.ProjId1.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView4.hints.ProjId1.label}"
-                                                                           id="c6">
-                                                                    <af:outputText value="#{row.ProjId1}"
-                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.ProjId1.tooltip}"
-                                                                                   id="ot6"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView4.hints.Io.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView4.hints.Io.label}"
-                                                                           id="c7">
-                                                                    <af:outputText value="#{row.Io}"
-                                                                                   shortDesc="#{bindings.TblProjCompView4.hints.Io.tooltip}"
-                                                                                   id="ot7"/>
-                                                                </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute.execute}"
-                                                                       text="Refresh"
-                                                                       disabled="#{!bindings.Execute.enabled}" id="b4"/>
-                                                        </af:showDetailItem>
-                                                    </af:panelTabbed>
-                                                </af:gridCell>
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
-                                            </af:gridRow>-->
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1015px;">
                                                         <af:showDetailItem id="tab2" text="Clusters Setup">
-                                                            <af:table value="#{bindings.TblClusterView3.collectionModel}"
+                                                            <!--<af:table value="#{bindings.TblClusterView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblClusterView3.rangeSize}"
                                                                       emptyText="#{bindings.TblClusterView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -144,26 +58,6 @@
                                                                       partialTriggers="::b6 ::b7 ::b8 ::b9"
                                                                       scrollPolicy="page" autoHeightRows="0"
                                                                       width="993">
-                                                                      <af:column sortProperty="#{bindings.TblClusterView3.hints.ProjCompId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Project Component"
-                                                                           id="c17" width="100">
-                                                                            <f:facet name="filter">
-                                                                       <af:inputText 
-                                                                       value="#{vs.filterCriteria.ProjCompId}"
-                                                                        id="it2" placeholder="Search Component ">
-                                                                       </af:inputText>
-                                                                   </f:facet>
-                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
-                                                                                        label="#{row.bindings.ProjCompId.label}"
-                                                                                        required="#{bindings.TblClusterView3.hints.ProjCompId.mandatory}"
-                                                                                        shortDesc="#{bindings.TblClusterView3.hints.ProjCompId.tooltip}"
-                                                                                        id="soc8">
-                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
-                                                                                       id="si8"/>
-                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
-                                                                    </af:selectOneChoice>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster ID"
@@ -346,12 +240,12 @@
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute1.execute}"
+                                                            </af:table>-->
+                                                            <!--<af:button actionListener="#{bindings.Execute1.execute}"
                                                                        text="Refresh"
                                                                        disabled="#{!bindings.Execute1.enabled}"
                                                                        id="b6"
-                                                                       icon="#{resource['images:refresh.png']}"/>
+                                                                       icon="#{resource['images:refresh.png']}"/>-->
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -359,7 +253,7 @@
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="350" height="10" id="s7"/>
-                                                    <h:panelGroup id="pg1">
+                                                    <!--<h:panelGroup id="pg1">
                                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
@@ -387,7 +281,7 @@
                                                                    icon="#{resource['images:save.png']}"
                                                                     disabled="#{!bindings.Commit.enabled}"
                                                                    id="b10"/>
-                                                    </h:panelGroup>
+                                                    </h:panelGroup>-->
                                                    
                                                 </af:gridCell>
                                             </af:gridRow>
