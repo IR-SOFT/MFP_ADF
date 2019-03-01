@@ -55,6 +55,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="Village_Name_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Phase_Name_LOV1_1"
+    ViewObjectName="model.lov.Phase_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Phase_Name_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="AppModule_Active_Status1_1"
@@ -168,6 +174,23 @@
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
       <Item Value="LibrDetailId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PhaseId"
+    ListVOName="AppModule_Phase_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PhaseId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="PhaseId"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
@@ -290,6 +313,21 @@
     EntityUsage="TblCluster"
     AliasName="VILLAGE_LIBR_DETAIL"
     LOVName="LOV_VillageLibrDetail">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PhaseId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="PhaseId"
+    EntityUsage="TblCluster"
+    AliasName="PHASE_ID"
+    LOVName="LOV_PhaseId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

@@ -23,6 +23,7 @@
           <Item Value="TehsilLibrDetail"/>
           <Item Value="MauzaLibrDetail"/>
           <Item Value="VillageLibrDetail"/>
+          <Item Value="PhaseId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

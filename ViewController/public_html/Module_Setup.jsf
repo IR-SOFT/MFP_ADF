@@ -79,8 +79,18 @@
                                                                       varStatus="vs" id="t1" width="730"
                                                                       partialTriggers="::b13"
                                                                       scrollPolicy="page" autoHeightRows="0">
-                                                                
-                
+                                                                <af:column headerText="#{bindings.TblCourseView1.hints.CourseId.label}"
+                                                                           id="c1">
+                                                                    <af:outputText value="#{row.CourseId}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.CourseId.tooltip}"
+                                                                                   id="ot1"/>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblCourseView1.hints.PhaseId.label}"
+                                                                           id="c2">
+                                                                    <af:outputText value="#{row.PhaseId}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.PhaseId.tooltip}"
+                                                                                   id="ot2"/>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
                                                                            filterable="true" headerText="Training"
                                                                            id="c3" width="300">

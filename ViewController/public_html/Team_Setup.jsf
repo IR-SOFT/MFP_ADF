@@ -99,7 +99,18 @@
                                                                         <f:validator binding="#{row.bindings.TeamId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                
+                                                                <af:column headerText="#{bindings.Tbl_TeamView1.hints.PhaseId.label}"
+                                                                           id="c2">
+                                                                    <af:selectOneChoice value="#{row.bindings.PhaseId.inputValue}"
+                                                                                        label="#{row.bindings.PhaseId.label}"
+                                                                                        required="#{bindings.Tbl_TeamView1.hints.PhaseId.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TeamView1.hints.PhaseId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.PhaseId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.PhaseId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Team"

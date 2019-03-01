@@ -32,6 +32,7 @@
     <page path="/Library.jsf" usageId="view_LibraryPageDef"/>
     <page path="/Users.jsf" usageId="view_UsersPageDef"/>
     <page path="/Users_Role.jsf" usageId="view_Users_RolePageDef"/>
+    <page path="/Phase.jsf" usageId="view_PhasePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -62,6 +63,7 @@
     <page id="view_LibraryPageDef" path="view.pageDefs.LibraryPageDef"/>
     <page id="view_UsersPageDef" path="view.pageDefs.UsersPageDef"/>
     <page id="view_Users_RolePageDef" path="view.pageDefs.Users_RolePageDef"/>
+    <page id="view_PhasePageDef" path="view.pageDefs.PhasePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

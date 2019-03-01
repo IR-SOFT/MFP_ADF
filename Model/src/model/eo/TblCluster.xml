@@ -132,6 +132,19 @@
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="PhaseId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PHASE_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblClusterMaster"
     Association="model.eo.FKTblClusterMasterAssoc"

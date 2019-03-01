@@ -721,6 +721,12 @@
   <ViewUsage
     Name="TblSupplierPartView3"
     ViewObjectName="model.vo.TblSupplierPartView"/>
+  <ViewUsage
+    Name="TblPhaseView1"
+    ViewObjectName="model.vo.TblPhaseView"/>
+  <ViewUsage
+    Name="TblPhaseView2"
+    ViewObjectName="model.queryBasedVO.TblPhaseView"/>
   <ViewLinkUsage
     Name="FkTblProgOffTblProgFkLink1"
     ViewLinkObjectName="model.vo.FkTblProgOffTblProgFkLink"

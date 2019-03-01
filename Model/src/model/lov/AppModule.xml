@@ -115,4 +115,7 @@
   <ViewUsage
     Name="Output_Ind_Name_LOV1"
     ViewObjectName="model.lov.Output_Ind_Name_LOV"/>
+  <ViewUsage
+    Name="Phase_Name_LOV1"
+    ViewObjectName="model.lov.Phase_Name_LOV"/>
 </AppModule>

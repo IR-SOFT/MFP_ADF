@@ -39,101 +39,14 @@
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Output Indicators">
                                         <af:panelGridLayout id="pgl2">
-                                            <!--<af:gridRow marginTop="5px" height="auto" id="gr2">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1015px;">
-                                                        <af:showDetailItem id="tab1" text="OutputComponent">
-                                                            <af:table value="#{bindings.TblProjCompView3.collectionModel}"
-                                                                      var="row"
-                                                                      rows="#{bindings.TblProjCompView3.rangeSize}"
-                                                                      emptyText="#{bindings.TblProjCompView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                                      rowBandingInterval="0"
-                                                                      selectedRowKeys="#{bindings.TblProjCompView3.collectionModel.selectedRow}"
-                                                                      selectionListener="#{bindings.TblProjCompView3.collectionModel.makeCurrent}"
-                                                                      rowSelection="single"
-                                                                      fetchSize="#{bindings.TblProjCompView3.rangeSize}"
-                                                                      filterModel="#{bindings.TblProjCompView3Query.queryDescriptor}"
-                                                                      filterVisible="true"
-                                                                      queryListener="#{bindings.TblProjCompView3Query.processQuery}"
-                                                                      varStatus="vs" id="t1" width="987"
-                                                                      partialTriggers="::b2"
-                                                                      scrollPolicy="page" autoHeightRows="0">
-                                                                <af:column sortProperty="#{bindings.TblProjCompView3.hints.ProjCompId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Project Component ID"
-                                                                           id="c1" >
-                                                                           
-                                                                    <af:outputText value="#{row.ProjCompId}"
-                                                                                   shortDesc="#{bindings.TblProjCompView3.hints.ProjCompId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView3.hints.ProjId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView3.hints.ProjId.label}"
-                                                                           id="c2">
-                                                                    <af:outputText value="#{row.ProjId}"
-                                                                                   shortDesc="#{bindings.TblProjCompView3.hints.ProjId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView3.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView3.hints.Name.label}"
-                                                                           id="c3">
-                                                                    <af:outputText value="#{row.Name}"
-                                                                                   shortDesc="#{bindings.TblProjCompView3.hints.Name.tooltip}"
-                                                                                   id="ot3"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView3.hints.Ast.label}"
-                                                                           id="c4">
-                                                                    <af:outputText value="#{row.Ast}"
-                                                                                   shortDesc="#{bindings.TblProjCompView3.hints.Ast.tooltip}"
-                                                                                   id="ot4"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView3.hints.Project_Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView3.hints.Project_Name.label}"
-                                                                           id="c5">
-                                                                    <af:outputText value="#{row.Project_Name}"
-                                                                                   shortDesc="#{bindings.TblProjCompView3.hints.Project_Name.tooltip}"
-                                                                                   id="ot5"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView3.hints.ProjId1.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView3.hints.ProjId1.label}"
-                                                                           id="c6">
-                                                                    <af:outputText value="#{row.ProjId1}"
-                                                                                   shortDesc="#{bindings.TblProjCompView3.hints.ProjId1.tooltip}"
-                                                                                   id="ot6"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView3.hints.Io.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView3.hints.Io.label}"
-                                                                           id="c7">
-                                                                    <af:outputText value="#{row.Io}"
-                                                                                   shortDesc="#{bindings.TblProjCompView3.hints.Io.tooltip}"
-                                                                                   id="ot7"/>
-                                                                </af:column>
-                                                            </af:table>
-                                                            <af:button actionListener="#{bindings.Execute.execute}"
-                                                                       text="Refresh"
-                                                                       disabled="#{!bindings.Execute.enabled}" id="b2"
-                                                                       icon="#{resource['images:refresh.png']}"/>
-                                                        </af:showDetailItem>
-                                                    </af:panelTabbed>
-                                                </af:gridCell>
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
-                                            </af:gridRow>-->
+                                           
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:827px;">
                                                         <af:showDetailItem id="tab2" text="Output Indicators">
-                                                            <!--<af:table value="#{bindings.TblMonitoringOutputIndView3.collectionModel}"
+                                                            
+                                                            <af:table value="#{bindings.TblMonitoringOutputIndView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblMonitoringOutputIndView3.rangeSize}"
                                                                       emptyText="#{bindings.TblMonitoringOutputIndView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -169,6 +82,18 @@
                                                                                   contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
                                                                     </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblMonitoringOutputIndView3.hints.PhaseId.label}"
+                                                                           id="c1">
+                                                                    <af:selectOneChoice value="#{row.bindings.PhaseId.inputValue}"
+                                                                                        label="#{row.bindings.PhaseId.label}"
+                                                                                        required="#{bindings.TblMonitoringOutputIndView3.hints.PhaseId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.PhaseId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.PhaseId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.PhaseId.validator}"/>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
@@ -211,12 +136,12 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                                 
-                                                            </af:table>-->
-                                                            <!--<af:button actionListener="#{bindings.Execute1.execute}"
+                                                            </af:table>
+                                                            <af:button actionListener="#{bindings.Execute.execute}"
                                                                        text="Refresh"
                                                                        icon="#{resource['images:refresh.png']}"
-                                                                       disabled="#{!bindings.Execute1.enabled}"
-                                                                       id="b9"/>-->
+                                                                       disabled="#{!bindings.Execute.enabled}"
+                                                                       id="b9"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -224,18 +149,18 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="260" height="20" id="s2"/>
-                                                    <!--<h:panelGroup id="pg1">
+                                                    <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
                                                                    text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:add.png']}" id="b4"/>
                                                         <af:spacer width="5" height="10" id="s4"/>
-                                                        <af:button actionListener="#{bindings.Execute1.execute}"
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
                                                                    text="Edit"
                                                                    rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:edit.png']}"
-                                                                   disabled="#{!bindings.Execute1.enabled}" id="b6"/>
+                                                                   disabled="#{!bindings.Execute.enabled}" id="b6"/>
                                                         <af:spacer width="5" height="10" id="s6"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
@@ -247,8 +172,7 @@
                                                                    text="Save" icon="#{resource['images:save.png']}"
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    disabled="#{!bindings.Commit.enabled}" id="b8"/>
-                                                    </h:panelGroup>-->
-                                                   
+                                                    </h:panelGroup>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">

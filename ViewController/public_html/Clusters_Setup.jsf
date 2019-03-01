@@ -42,7 +42,7 @@
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1015px;">
                                                         <af:showDetailItem id="tab2" text="Clusters Setup">
-                                                            <!--<af:table value="#{bindings.TblClusterView3.collectionModel}"
+                                                            <af:table value="#{bindings.TblClusterView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblClusterView3.rangeSize}"
                                                                       emptyText="#{bindings.TblClusterView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -68,6 +68,7 @@
                                                                         id="it3" placeholder="Search ID ">
                                                                        </af:inputText>
                                                                    </f:facet>
+                                                                   
                                                                     <af:inputText value="#{row.bindings.ClusterId.inputValue}"
                                                                                   label="#{bindings.TblClusterView3.hints.ClusterId.label}"
                                                                                   required="#{bindings.TblClusterView3.hints.ClusterId.mandatory}"
@@ -78,6 +79,18 @@
                                                                                   contentStyle='text-align:center' >
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
                                                                     </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblClusterView3.hints.PhaseId.label}"
+                                                                           id="c1">
+                                                                    <af:selectOneChoice value="#{row.bindings.PhaseId.inputValue}"
+                                                                                        label="#{row.bindings.PhaseId.label}"
+                                                                                        required="#{bindings.TblClusterView3.hints.PhaseId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView3.hints.PhaseId.tooltip}"
+                                                                                        id="soc8">
+                                                                        <f:selectItems value="#{row.bindings.PhaseId.items}"
+                                                                                       id="si8"/>
+                                                                        <f:validator binding="#{row.bindings.PhaseId.validator}"/>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
@@ -240,12 +253,12 @@
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                            </af:table>-->
-                                                            <!--<af:button actionListener="#{bindings.Execute1.execute}"
+                                                            </af:table>
+                                                            <af:button actionListener="#{bindings.Execute1.execute}"
                                                                        text="Refresh"
                                                                        disabled="#{!bindings.Execute1.enabled}"
                                                                        id="b6"
-                                                                       icon="#{resource['images:refresh.png']}"/>-->
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -253,7 +266,7 @@
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="350" height="10" id="s7"/>
-                                                    <!--<h:panelGroup id="pg1">
+                                                    <h:panelGroup id="pg1">
                                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
@@ -281,7 +294,7 @@
                                                                    icon="#{resource['images:save.png']}"
                                                                     disabled="#{!bindings.Commit.enabled}"
                                                                    id="b10"/>
-                                                    </h:panelGroup>-->
+                                                    </h:panelGroup>
                                                    
                                                 </af:gridCell>
                                             </af:gridRow>

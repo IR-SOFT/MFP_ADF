@@ -64,7 +64,7 @@
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:828px;">
                                                         <af:showDetailItem id="tab2" text="Training Setup">
-                                                            <!--<af:table value="#{bindings.TblCourseView3.collectionModel}"
+                                                            <af:table value="#{bindings.TblCourseView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblCourseView3.rangeSize}"
                                                                       emptyText="#{bindings.TblCourseView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -100,6 +100,18 @@
                                                                                   contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.CourseId.validator}"/>
                                                                     </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblCourseView3.hints.PhaseId.label}"
+                                                                           id="c1">
+                                                                    <af:selectOneChoice value="#{row.bindings.PhaseId.inputValue}"
+                                                                                        label="#{row.bindings.PhaseId.label}"
+                                                                                        required="#{bindings.TblCourseView3.hints.PhaseId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCourseView3.hints.PhaseId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.PhaseId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.PhaseId.validator}"/>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
@@ -147,7 +159,7 @@
                                                                        text="Refresh"
                                                                        disabled="#{!bindings.Execute.enabled}"
                                                                        id="b13"
-                                                                       icon="#{resource['images:refresh.png']}"/>-->
+                                                                       icon="#{resource['images:refresh.png']}"/>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
@@ -155,7 +167,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="260" height="20" id="s9"/>
-                                                    <!--<h:panelGroup id="pg1">
+                                                    <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    icon="#{resource['images:add.png']}"
@@ -181,7 +193,7 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:save.png']}"
                                                                    id="b12"/>
-                                                    </h:panelGroup>-->
+                                                    </h:panelGroup>
                                                   
                                                 </af:gridCell>
                                             </af:gridRow>
