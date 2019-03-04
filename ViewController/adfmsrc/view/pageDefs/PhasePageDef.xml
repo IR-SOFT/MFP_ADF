@@ -4,7 +4,7 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblPhaseView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblPhaseView1Iterator"/>
+    <iterator Binds="TblPhaseView1" RangeSize="7" DataControl="AppModuleDataControl" id="TblPhaseView1Iterator"/>
     <searchRegion Binds="TblPhaseView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPhaseView1Query"/>
   </executables>

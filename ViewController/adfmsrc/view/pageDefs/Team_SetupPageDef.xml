@@ -15,7 +15,6 @@
           <Item Value="TeamId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
-          <Item Value="ProjCompId"/>
           <Item Value="PhaseId"/>
         </AttrNames>
       </nodeDefinition>

@@ -77,9 +77,17 @@
                                                                       queryListener="#{bindings.Tbl_ATT_ClusterAttMasterView1_1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b8 ::b9 ::b10 ::b15"
-                                                                      scrollPolicy="page" autoHeightRows="0" >
-                                                                <af:column headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterId.label}"
-                                                                           id="c14">
+                                                                      scrollPolicy="page" autoHeightRows="0"
+                                                                      width="1014">
+                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Cluster"
+                                                                           id="c14" width="150">
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ClusterId}"
+                                                                                     id="it12" placeholder="Search Cluster">
+                                                                       </af:inputText>
+                                                                            </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
                                                                                         label="#{row.bindings.ClusterId.label}"
                                                                                         required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterId.mandatory}"
@@ -93,7 +101,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster Attendance Master ID"
-                                                                           id="c1" align="center">
+                                                                           id="c1" align="center" width="80">
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ClusterAttMasterId}"
@@ -107,7 +115,8 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.tooltip}"
-                                                                                  id="it1" readOnly="true">
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ClusterAttMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -115,7 +124,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Dated.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Date"
-                                                                           id="c3">
+                                                                           id="c3" width="80">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.Tbl_ATT_ClusterAttMasterView1_1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                                                       id="id1">
@@ -135,7 +144,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Status"
-                                                                           id="c4">
+                                                                           id="c4" width="80">
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Status}"
@@ -158,7 +167,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
-                                                                           id="c2" width="60">
+                                                                           id="c2" width="60" >
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.TrainerId}"
@@ -172,14 +181,14 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.tooltip}"
-                                                                                  id="it2" >
+                                                                                  id="it2" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer"
-                                                                           id="c6" width="250">
+                                                                           id="c6" width="200">
                                                                            
                                                                              <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Trainer_Name}"
@@ -200,7 +209,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.label}"
-                                                                           id="c5" width="325">
+                                                                           id="c5" width="300">
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Remarks}"
@@ -286,7 +295,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Cluster Attendance Master ID"
-                                                                           id="c9" width="72">
+                                                                           id="c9" width="72" >
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ClusterAttMasterId}"
@@ -307,7 +316,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Cluster Attendance Detail ID"
-                                                                           id="c8" width="69">
+                                                                           id="c8" width="69" >
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ClusterAttDetailId}"
@@ -321,7 +330,8 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.tooltip}"
-                                                                                  id="it7" readOnly="true">
+                                                                                  id="it7" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ClusterAttDetailId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -410,12 +420,13 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Ast.name}"
-                                                                           filterable="true" sortable="true" headerText="Attendance"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
                                                                            id="c13" width="80">
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     id="it12" placeholder="Search Status">
+                                                                                     id="it24" placeholder="Search Status">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            

@@ -80,8 +80,16 @@
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblClusterView3.hints.PhaseId.label}"
-                                                                           id="c1">
+                                                                <af:column sortProperty="#{bindings.TblClusterView3.hints.PhaseId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Phase"
+                                                                           id="c1" width="100">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.PhaseId}"
+                                                                        id="it2" placeholder="Search Phase ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.PhaseId.inputValue}"
                                                                                         label="#{row.bindings.PhaseId.label}"
                                                                                         required="#{bindings.TblClusterView3.hints.PhaseId.mandatory}"
